@@ -1,0 +1,104 @@
+/* Global animation definitions: entrance / card glow / gradient flow */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease both;
+}
+
+@keyframes subtle-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px var(--border),
+      0 0 18px rgba(108, 62, 245, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px var(--border-strong),
+      0 0 28px rgba(108, 62, 245, 0.24);
+  }
+}
+
+/* Card hover glow (more pronounced in dark mode) */
+.glow-hover {
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.glow-hover:hover {
+  border-color: color-mix(in srgb, var(--primary) 45%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--primary) 30%, transparent),
+    0 4px 24px rgba(108, 62, 245, 0.14);
+  transform: translateY(-2px);
+}
+
+.dark .glow-hover:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--primary) 40%, transparent),
+    0 4px 32px rgba(139, 108, 247, 0.28);
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Brand gradient text: primary → accent flow */
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    var(--primary),
+    var(--accent),
+    var(--primary)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* Home page background: subtle grid + radial glow (light / dark variants) */
+.hero-bg {
+  background-image:
+    radial-gradient(
+      ellipse 60% 45% at 50% 0%,
+      rgba(108, 62, 245, 0.1),
+      transparent 70%
+    ),
+    linear-gradient(rgba(15, 18, 34, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 18, 34, 0.035) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    36px 36px,
+    36px 36px;
+}
+
+.dark .hero-bg {
+  background-image:
+    radial-gradient(
+      ellipse 60% 45% at 50% 0%,
+      rgba(139, 108, 247, 0.18),
+      transparent 70%
+    ),
+    linear-gradient(rgba(230, 232, 242, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(230, 232, 242, 0.04) 1px, transparent 1px);
+}

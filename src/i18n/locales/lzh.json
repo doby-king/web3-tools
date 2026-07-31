@@ -1,0 +1,55 @@
+{
+  "common": {
+    "appName": "Web3 Tools",
+    "language": "言語",
+    "copy": "抄録",
+    "copied": "已録",
+    "copyFailed": "録之未成",
+    "showContent": "顯其文",
+    "hideContent": "隱其文",
+    "showQRCode": "顯碼",
+    "hideQRCode": "隱碼",
+    "switchToLightMode": "易為明",
+    "switchToDarkMode": "易為暗"
+  },
+  "layout": {
+    "footer": "Web3 Tools · 諸器悉行於瀏覽器本地 · 開源之項"
+  },
+  "home": {
+    "subtitle": "以太坊 / 區塊鏈輕巧之器數則，悉於瀏覽器本地離線而行，不假外求。",
+    "badges": {
+      "local": "行於本地",
+      "openSource": "開源",
+      "privacy": "隱密無虞"
+    }
+  },
+  "tools": {
+    "ethMnemonic": {
+      "name": "ETH 助記詞生成器",
+      "description": "於本地造 BIP-39 助記詞，或十二詞，或廿四詞，循 BIP-44 以衍私鑰及以太坊之址，資料不出瀏覽器。",
+      "subtitle": "於本地造 BIP-39 助記詞，循 BIP-44 之準，以衍以太坊私鑰與地址。",
+      "privacyNotice": "凡所運算，皆於瀏覽器本地為之，不發分毫網絡之請；助記詞與私鑰，不離汝之設備",
+      "securityWarning": "助記詞者，資產也，慎勿洩於他人；本器所造之詞，宜僅供習學、試驗之用",
+      "mnemonic": {
+        "title": "助記詞",
+        "words12": "十二詞",
+        "words24": "廿四詞",
+        "regenerate": "更造一組",
+        "copy": "抄録助記詞",
+        "qrTitle": "助記詞之碼",
+        "qrWarning": "碼中具載助記詞全文，慎防他人窺掃、截屏"
+      },
+      "privateKey": {
+        "title": "私鑰",
+        "copy": "抄録私鑰",
+        "note": "取自派生路徑之首戶"
+      },
+      "address": {
+        "title": "所衍之址",
+        "copy": "抄録其址",
+        "qrTitle": "地址之碼",
+        "walletNote": "持此助記詞納於 MetaMask、Trust Wallet 諸主流錢囊，其首戶之址與此處所示者合（循 BIP-44 之準而衍）"
+      }
+    }
+  }
+}

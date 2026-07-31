@@ -1,0 +1,55 @@
+{
+  "common": {
+    "appName": "Web3 Tools",
+    "language": "언어",
+    "copy": "복사",
+    "copied": "복사됨",
+    "copyFailed": "복사 실패",
+    "showContent": "내용 표시",
+    "hideContent": "내용 숨기기",
+    "showQRCode": "QR 코드 표시",
+    "hideQRCode": "QR 코드 숨기기",
+    "switchToLightMode": "라이트 모드로 전환",
+    "switchToDarkMode": "다크 모드로 전환"
+  },
+  "layout": {
+    "footer": "Web3 Tools · 모든 도구는 브라우저에서 로컬로 실행됩니다 · 오픈 소스"
+  },
+  "home": {
+    "subtitle": "가벼운 이더리움 / 블록체인 유틸리티 모음. 모두 브라우저에서 오프라인으로 실행됩니다.",
+    "badges": {
+      "local": "로컬 실행",
+      "openSource": "오픈 소스",
+      "privacy": "프라이버시 우선"
+    }
+  },
+  "tools": {
+    "ethMnemonic": {
+      "name": "ETH 니모닉 생성기",
+      "description": "BIP-39 니모닉(12/24단어)을 로컬에서 생성하고, BIP-44에 따라 개인 키와 이더리움 주소를 파생합니다. 데이터는 브라우저를 떠나지 않습니다.",
+      "subtitle": "BIP-39 니모닉을 로컬에서 생성하고, BIP-44 표준에 따라 이더리움 개인 키와 주소를 파생합니다.",
+      "privacyNotice": "모든 연산은 브라우저에서 로컬로 수행되며, 어떠한 네트워크 요청도 전송되지 않습니다. 니모닉과 개인 키는 기기를 떠나지 않습니다",
+      "securityWarning": "니모닉은 곧 자산입니다. 누구에게도 유출하지 마세요. 이 도구로 생성한 니모닉은 학습 / 테스트용으로만 사용하는 것을 권장합니다",
+      "mnemonic": {
+        "title": "니모닉",
+        "words12": "12단어",
+        "words24": "24단어",
+        "regenerate": "재생성",
+        "copy": "니모닉 복사",
+        "qrTitle": "니모닉 QR 코드",
+        "qrWarning": "QR 코드에는 전체 니모닉이 포함됩니다. 타인의 스캔 / 캡처를 주의하세요"
+      },
+      "privateKey": {
+        "title": "개인 키",
+        "copy": "개인 키 복사",
+        "note": "파생 경로의 첫 번째 계정에서 내보냄"
+      },
+      "address": {
+        "title": "파생 주소",
+        "copy": "주소 복사",
+        "qrTitle": "주소 QR 코드",
+        "walletNote": "이 니모닉을 MetaMask, Trust Wallet 등 주요 지갑에 가져오면 첫 번째 계정 주소가 여기에 표시된 주소와 일치합니다 (BIP-44 표준 파생)"
+      }
+    }
+  }
+}

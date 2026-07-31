@@ -1,0 +1,55 @@
+{
+  "common": {
+    "appName": "Web3 Tools",
+    "language": "语言",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyFailed": "复制失败",
+    "showContent": "显示内容",
+    "hideContent": "隐藏内容",
+    "showQRCode": "显示二维码",
+    "hideQRCode": "隐藏二维码",
+    "switchToLightMode": "切换到亮色模式",
+    "switchToDarkMode": "切换到暗色模式"
+  },
+  "layout": {
+    "footer": "Web3 Tools · 所有工具均在浏览器本地运行 · 开源项目"
+  },
+  "home": {
+    "subtitle": "一组轻量的以太坊 / 区块链实用工具，全部在浏览器本地离线运行。",
+    "badges": {
+      "local": "本地运行",
+      "openSource": "开源",
+      "privacy": "隐私安全"
+    }
+  },
+  "tools": {
+    "ethMnemonic": {
+      "name": "ETH 助记词生成器",
+      "description": "本地生成 12/24 词 BIP-39 助记词，按 BIP-44 派生私钥与以太坊地址，数据不出浏览器。",
+      "subtitle": "本地生成 BIP-39 助记词，并按 BIP-44 标准派生以太坊私钥与地址。",
+      "privacyNotice": "所有计算均在浏览器本地完成，不会发送任何网络请求，助记词与私钥不会离开你的设备",
+      "securityWarning": "助记词即资产，请勿泄露给任何人；本工具生成的助记词建议仅用于学习 / 测试",
+      "mnemonic": {
+        "title": "助记词",
+        "words12": "12 词",
+        "words24": "24 词",
+        "regenerate": "重新生成",
+        "copy": "复制助记词",
+        "qrTitle": "助记词二维码",
+        "qrWarning": "二维码含完整助记词，谨防他人扫描 / 截屏"
+      },
+      "privateKey": {
+        "title": "私钥",
+        "copy": "复制私钥",
+        "note": "由派生路径首个账户导出"
+      },
+      "address": {
+        "title": "派生地址",
+        "copy": "复制地址",
+        "qrTitle": "地址二维码",
+        "walletNote": "将此助记词导入 MetaMask、Trust Wallet 等主流钱包后，首个账户地址与此处一致（BIP44 标准派生）"
+      }
+    }
+  }
+}

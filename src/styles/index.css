@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "./animations.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Semantic tokens: light (default) */
+:root {
+  --bg: #f7f8fc;
+  --surface: #ffffff;
+  --surface-hover: #f1f2f8;
+  --text: #0f1222;
+  --text-secondary: #4a4f66;
+  --text-muted: #7c819a;
+  --primary: #6c3ef5;
+  --primary-hover: #5a2ee0;
+  --accent: #06b6d4;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --border: rgba(15, 18, 34, 0.08);
+  --border-strong: rgba(15, 18, 34, 0.16);
+}
+
+/* Semantic tokens: dark */
+.dark {
+  --bg: #0a0b14;
+  --surface: #12141f;
+  --surface-hover: #1a1d2e;
+  --text: #e6e8f2;
+  --text-secondary: #9ba0b8;
+  --text-muted: #6b7089;
+  --primary: #8b6cf7;
+  --primary-hover: #9d82f9;
+  --accent: #22d3ee;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --border: rgba(230, 232, 242, 0.08);
+  --border-strong: rgba(230, 232, 242, 0.16);
+}
+
+/* Map to Tailwind color / font tokens */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}

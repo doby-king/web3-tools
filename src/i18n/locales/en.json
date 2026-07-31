@@ -1,0 +1,55 @@
+{
+  "common": {
+    "appName": "Web3 Tools",
+    "language": "Language",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Copy failed",
+    "showContent": "Show content",
+    "hideContent": "Hide content",
+    "showQRCode": "Show QR code",
+    "hideQRCode": "Hide QR code",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode"
+  },
+  "layout": {
+    "footer": "Web3 Tools · All tools run locally in your browser · Open source"
+  },
+  "home": {
+    "subtitle": "A lightweight collection of Ethereum / blockchain utilities that run entirely offline in your browser.",
+    "badges": {
+      "local": "Runs locally",
+      "openSource": "Open source",
+      "privacy": "Privacy-first"
+    }
+  },
+  "tools": {
+    "ethMnemonic": {
+      "name": "ETH Mnemonic Generator",
+      "description": "Generate 12/24-word BIP-39 mnemonics locally and derive private keys and Ethereum addresses per BIP-44. Your data never leaves the browser.",
+      "subtitle": "Generate a BIP-39 mnemonic locally and derive an Ethereum private key and address per the BIP-44 standard.",
+      "privacyNotice": "All computations run locally in your browser. No network requests are made — your mnemonic and private key never leave your device",
+      "securityWarning": "Your mnemonic is your assets. Never share it with anyone. Mnemonics generated here should only be used for learning / testing",
+      "mnemonic": {
+        "title": "Mnemonic",
+        "words12": "12 words",
+        "words24": "24 words",
+        "regenerate": "Regenerate",
+        "copy": "Copy mnemonic",
+        "qrTitle": "Mnemonic QR code",
+        "qrWarning": "The QR code contains the full mnemonic — beware of others scanning or screenshotting it"
+      },
+      "privateKey": {
+        "title": "Private Key",
+        "copy": "Copy private key",
+        "note": "Exported from the first account of the derivation path"
+      },
+      "address": {
+        "title": "Derived Address",
+        "copy": "Copy address",
+        "qrTitle": "Address QR code",
+        "walletNote": "Import this mnemonic into MetaMask, Trust Wallet, or other major wallets and the first account address will match the one shown here (standard BIP-44 derivation)"
+      }
+    }
+  }
+}
