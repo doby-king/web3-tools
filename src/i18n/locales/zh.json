@@ -10,7 +10,8 @@
     "showQRCode": "显示二维码",
     "hideQRCode": "隐藏二维码",
     "switchToLightMode": "切换到亮色模式",
-    "switchToDarkMode": "切换到暗色模式"
+    "switchToDarkMode": "切换到暗色模式",
+    "github": "在 GitHub 上查看源码"
   },
   "layout": {
     "footer": "Web3 Tools · 所有工具均在浏览器本地运行 · 开源项目"

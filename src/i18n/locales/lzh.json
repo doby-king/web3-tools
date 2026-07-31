@@ -10,7 +10,8 @@
     "showQRCode": "顯碼",
     "hideQRCode": "隱碼",
     "switchToLightMode": "易為明",
-    "switchToDarkMode": "易為暗"
+    "switchToDarkMode": "易為暗",
+    "github": "觀其源碼於 GitHub"
   },
   "layout": {
     "footer": "Web3 Tools · 諸器悉行於瀏覽器本地 · 開源之項"

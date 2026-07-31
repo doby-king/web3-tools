@@ -4,6 +4,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "type": "module",
+  "description": "A privacy-first, local-only Web3 toolbox that runs entirely in your browser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doby-king/web3-tools.git"
+  },
+  "homepage": "https://github.com/doby-king/web3-tools#readme",
+  "bugs": {
+    "url": "https://github.com/doby-king/web3-tools/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
