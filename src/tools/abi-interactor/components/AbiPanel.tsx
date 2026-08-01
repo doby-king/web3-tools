@@ -22,8 +22,13 @@ export function AbiPanel({ parseResult }: AbiPanelProps) {
 
   const isCustom = abiPresetId === CUSTOM_ABI_ID;
   const preset = getPresetById(abiPresetId);
-  const abiText = isCustom ? customAbi : preset ? JSON.stringify(preset.abi, null, 2) : "";
-  const addressInvalid = contractAddress.length > 0 && !isAddress(contractAddress);
+  const abiText = isCustom
+    ? customAbi
+    : preset
+      ? JSON.stringify(preset.abi, null, 2)
+      : "";
+  const addressInvalid =
+    contractAddress.length > 0 && !isAddress(contractAddress);
 
   const presetOptions: SelectOption[] = useMemo(
     () => [

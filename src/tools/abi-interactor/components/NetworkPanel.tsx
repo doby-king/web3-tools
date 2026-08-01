@@ -11,11 +11,7 @@ import {
   type SelectOptionGroup,
 } from "@/components/ui";
 import { WarningIcon } from "@/components/ui/icons";
-import {
-  CUSTOM_NETWORK_ID,
-  NETWORKS,
-  getNetworkById,
-} from "../networks";
+import { CUSTOM_NETWORK_ID, NETWORKS, getNetworkById } from "../networks";
 import { useAbiInteractorStore } from "../store";
 
 type VerifyStatus =
@@ -108,7 +104,10 @@ export function NetworkPanel() {
         {/* Built-in network info */}
         {!isCustom && selectedNetwork && (
           <div className="flex items-center gap-2 rounded-lg bg-surface-hover px-3 py-2 text-xs text-text-secondary">
-            <span className="font-mono">{t("tools.abiInteractor.network.chainIdLabel")} {selectedNetwork.chainId}</span>
+            <span className="font-mono">
+              {t("tools.abiInteractor.network.chainIdLabel")}{" "}
+              {selectedNetwork.chainId}
+            </span>
             <span className="text-text-muted">·</span>
             <span className="truncate font-mono">{selectedNetwork.rpcUrl}</span>
           </div>

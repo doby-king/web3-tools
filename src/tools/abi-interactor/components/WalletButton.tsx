@@ -26,7 +26,9 @@ export function WalletButton({
   const [pickerOpen, setPickerOpen] = useState(false);
 
   const chainMismatch =
-    connected && selectedChainId !== null && connected.chainId !== selectedChainId;
+    connected &&
+    selectedChainId !== null &&
+    connected.chainId !== selectedChainId;
 
   // Connected state: show address + disconnect
   if (connected) {
@@ -78,11 +80,7 @@ export function WalletButton({
               }}
               className="flex w-full items-center gap-2.5 rounded-lg border border-border px-3 py-2.5 text-sm text-text transition-colors hover:bg-surface-hover disabled:opacity-50"
             >
-              <img
-                src={wallet.info.icon}
-                alt=""
-                className="h-6 w-6 rounded"
-              />
+              <img src={wallet.info.icon} alt="" className="h-6 w-6 rounded" />
               <span className="truncate">{wallet.info.name}</span>
             </button>
           ))}
@@ -101,7 +99,9 @@ export function WalletButton({
         </p>
       ) : (
         <Button
-          onClick={() => (wallets.length === 1 ? onConnect(wallets[0]) : setPickerOpen(true))}
+          onClick={() =>
+            wallets.length === 1 ? onConnect(wallets[0]) : setPickerOpen(true)
+          }
           disabled={connecting}
           className="w-full"
         >

@@ -49,6 +49,7 @@ src/
 
 ## 3. 代码规范
 
+- **格式化（Prettier）**：项目使用 Prettier 统一代码风格，配置见 `.prettierrc.json`。AI 助手在编写或修改代码后，**必须对所有编辑过的文件运行 `pnpm prettier --write <file>`** 进行格式化，确保与用户编辑器的保存自动格式化行为一致。全局格式化命令：`pnpm format`。
 - **TypeScript strict**：全项目 strict 模式，禁止 `any` 滥用，公共 API 显式标注类型；组件 Props 导出为 `XxxProps` 接口。
 - **组件写法**：一律函数式组件 + hooks，不使用 class 组件。
 - **导入路径**：src 内部模块统一用 `@` 别名（`@/components/ui`、`@/lib/storage`），不写多级相对路径。

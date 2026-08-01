@@ -35,15 +35,12 @@ export function MethodTabs({
     },
   ];
 
-  const functions = tab === "read" ? parsed.readFunctions : parsed.writeFunctions;
+  const functions =
+    tab === "read" ? parsed.readFunctions : parsed.writeFunctions;
 
   return (
     <div className="space-y-3">
-      <SegmentedControl
-        options={tabOptions}
-        value={tab}
-        onChange={setTab}
-      />
+      <SegmentedControl options={tabOptions} value={tab} onChange={setTab} />
 
       {functions.length === 0 ? (
         <p className="py-8 text-center text-sm text-text-muted">

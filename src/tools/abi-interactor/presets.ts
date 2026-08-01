@@ -365,9 +365,21 @@ const ERC1155_ABI = [
 ];
 
 export const ABI_PRESETS: AbiPreset[] = [
-  { id: "erc20", labelKey: "tools.abiInteractor.abi.presets.erc20", abi: ERC20_ABI },
-  { id: "erc721", labelKey: "tools.abiInteractor.abi.presets.erc721", abi: ERC721_ABI },
-  { id: "erc1155", labelKey: "tools.abiInteractor.abi.presets.erc1155", abi: ERC1155_ABI },
+  {
+    id: "erc20",
+    labelKey: "tools.abiInteractor.abi.presets.erc20",
+    abi: ERC20_ABI,
+  },
+  {
+    id: "erc721",
+    labelKey: "tools.abiInteractor.abi.presets.erc721",
+    abi: ERC721_ABI,
+  },
+  {
+    id: "erc1155",
+    labelKey: "tools.abiInteractor.abi.presets.erc1155",
+    abi: ERC1155_ABI,
+  },
 ];
 
 export function getPresetById(id: string): AbiPreset | undefined {

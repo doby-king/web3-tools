@@ -36,8 +36,8 @@ export function MethodSection({
 }: MethodSectionProps) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
-  const [params, setParams] = useState<string[]>(
-    () => fragment.inputs.map(() => ""),
+  const [params, setParams] = useState<string[]>(() =>
+    fragment.inputs.map(() => ""),
   );
   const [value, setValue] = useState("");
   const [gasLimit, setGasLimit] = useState("");
@@ -132,9 +132,7 @@ export function MethodSection({
                 <div key={i} className="space-y-1">
                   <label className="text-xs text-text-secondary">
                     <span className="font-mono">{input.name || `arg${i}`}</span>
-                    <span className="ml-1.5 text-text-muted">
-                      {input.type}
-                    </span>
+                    <span className="ml-1.5 text-text-muted">{input.type}</span>
                   </label>
                   <Input
                     value={params[i]}
@@ -175,7 +173,9 @@ export function MethodSection({
               <Input
                 value={gasLimit}
                 onChange={(e) => setGasLimit(e.target.value)}
-                placeholder={t("tools.abiInteractor.methods.gasLimitPlaceholder")}
+                placeholder={t(
+                  "tools.abiInteractor.methods.gasLimitPlaceholder",
+                )}
                 className="font-mono text-xs"
               />
             </div>

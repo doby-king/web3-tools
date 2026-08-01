@@ -25,7 +25,9 @@ export function parseAbiJson(raw: string): AbiParseResult {
   // Support both raw arrays and hardhat-style artifacts with .abi field
   const abiArray = Array.isArray(json)
     ? json
-    : typeof json === "object" && json !== null && Array.isArray((json as { abi?: unknown }).abi)
+    : typeof json === "object" &&
+        json !== null &&
+        Array.isArray((json as { abi?: unknown }).abi)
       ? (json as { abi: unknown[] }).abi
       : null;
 
@@ -40,7 +42,9 @@ export function parseAbiJson(raw: string): AbiParseResult {
     return { ok: false, error: "invalidAbi" };
   }
 
-  const functions = Array.from(iface.fragments.filter((f) => f.type === "function")) as FunctionFragment[];
+  const functions = Array.from(
+    iface.fragments.filter((f) => f.type === "function"),
+  ) as FunctionFragment[];
   if (functions.length === 0) {
     return { ok: false, error: "noFunctions" };
   }
@@ -49,7 +53,8 @@ export function parseAbiJson(raw: string): AbiParseResult {
     (f) => f.stateMutability === "view" || f.stateMutability === "pure",
   );
   const writeFunctions = functions.filter(
-    (f) => f.stateMutability === "nonpayable" || f.stateMutability === "payable",
+    (f) =>
+      f.stateMutability === "nonpayable" || f.stateMutability === "payable",
   );
 
   return { ok: true, parsed: { iface, readFunctions, writeFunctions } };

@@ -62,8 +62,7 @@ export default function AbiInteractorTool() {
   const explorerUrl = network?.explorerUrl ?? null;
   const selectedChainId = network?.chainId ?? null;
 
-  const addressValid =
-    contractAddress.length > 0 && isAddress(contractAddress);
+  const addressValid = contractAddress.length > 0 && isAddress(contractAddress);
 
   return (
     <div className="px-4 py-8 sm:px-6 lg:px-8">

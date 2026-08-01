@@ -21,7 +21,11 @@ export function formatResult(value: unknown): string {
 
   if (typeof value === "string") {
     // Attempt to decode hex data (e.g. bytes32) into a readable UTF-8 string
-    if (/^0x[0-9a-fA-F]*$/.test(value) && value.length > 2 && value.length % 2 === 0) {
+    if (
+      /^0x[0-9a-fA-F]*$/.test(value) &&
+      value.length > 2 &&
+      value.length % 2 === 0
+    ) {
       try {
         const decoded = toUtf8String(value);
         // Only show decoded form when it yields printable characters

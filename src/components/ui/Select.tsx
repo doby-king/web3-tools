@@ -175,9 +175,7 @@ export function Select(props: SelectProps) {
   const openPanel = () => {
     setOpen(true);
     // Highlight the first selected (or first enabled) option
-    const selectedIdx = flat.findIndex((o) =>
-      selectedValues.includes(o.value),
-    );
+    const selectedIdx = flat.findIndex((o) => selectedValues.includes(o.value));
     setHighlightIndex(selectedIdx >= 0 ? selectedIdx : 0);
   };
 
@@ -199,7 +197,11 @@ export function Select(props: SelectProps) {
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       moveHighlight(-1);
-    } else if (e.key === "Enter" && highlightIndex >= 0 && flat[highlightIndex]) {
+    } else if (
+      e.key === "Enter" &&
+      highlightIndex >= 0 &&
+      flat[highlightIndex]
+    ) {
       e.preventDefault();
       handleSelect(flat[highlightIndex]);
     } else if (e.key === "Escape") {
