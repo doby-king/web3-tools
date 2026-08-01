@@ -14,7 +14,11 @@
     "github": "觀其源碼於 GitHub"
   },
   "layout": {
-    "footer": "Web3 Tools · 諸器悉行於瀏覽器本地 · 開源之項"
+    "footer": "Web3 Tools · 諸器悉行於瀏覽器本地 · 開源之項",
+    "toolsNav": "諸器",
+    "backToHome": "返於首葉",
+    "openToolMenu": "啟器目",
+    "closeToolMenu": "閉器目"
   },
   "home": {
     "subtitle": "以太坊 / 區塊鏈輕巧之器數則，悉於瀏覽器本地離線而行，不假外求。",
@@ -50,6 +54,75 @@
         "copy": "抄録其址",
         "qrTitle": "地址之碼",
         "walletNote": "持此助記詞納於 MetaMask、Trust Wallet 諸主流錢囊，其首戶之址與此處所示者合（循 BIP-44 之準而衍）"
+      }
+    },
+    "abiInteractor": {
+      "name": "ABI 合約交互器",
+      "description": "以 ABI 與任意合約交——或讀其狀，或藉錢囊以發交易。內置廿五有餘之網，亦可自定 RPC。",
+      "subtitle": "供合約之 ABI，即可呼其讀寫之法。接 EIP-6963 錢囊，而後可發寫入之交易。",
+      "privacyNotice": "讀取之呼與 ABI 之析，皆於瀏覽器本地為之；RPC 之請，徑達汝所擇之節點，不經中介之服器",
+      "network": {
+        "title": "網絡",
+        "mainnets": "主網",
+        "testnets": "試網",
+        "customGroup": "自定",
+        "custom": "自定 RPC",
+        "rpcPlaceholder": "https://your-rpc-endpoint.com",
+        "verify": "驗之",
+        "verifying": "方驗之...",
+        "verifyFailed": "RPC 不可達",
+        "chainIdLabel": "Chain ID:"
+      },
+      "contract": {
+        "title": "合約",
+        "addressLabel": "合約之址",
+        "addressPlaceholder": "0x...",
+        "invalidAddress": "非有效之以太坊址"
+      },
+      "abi": {
+        "presetLabel": "ABI 預設",
+        "custom": "自定 ABI",
+        "editorLabel": "ABI JSON",
+        "placeholder": "於此貼入 ABI JSON 之陣...",
+        "parsedSummary": "析之已成：讀取 {{read}} 法、寫入 {{write}} 法",
+        "presets": {
+          "erc20": "ERC-20 代幣",
+          "erc721": "ERC-721 NFT",
+          "erc1155": "ERC-1155 多幣"
+        },
+        "errors": {
+          "invalidJson": "JSON 之式有誤，請察其語法",
+          "invalidAbi": "非有效之 ABI，當為 ABI 條目之 JSON 陣列",
+          "noFunctions": "此 ABI 中未見一法"
+        }
+      },
+      "wallet": {
+        "connect": "接錢囊",
+        "connecting": "方接之...",
+        "selectWallet": "擇一錢囊以接",
+        "disconnect": "絕之",
+        "noWallets": "未察 EIP-6963 錢囊。請裝瀏覽器錢囊之插件（如 MetaMask），而後可用寫入之功。",
+        "wrongChain": "錢囊今在鏈 {{wallet}}，而所擇之網為鏈 {{selected}}。發交易前，請於錢囊中易其網。"
+      },
+      "methods": {
+        "readTab": "讀取",
+        "writeTab": "寫入",
+        "empty": "此類之下無法",
+        "noParams": "無須參數",
+        "call": "呼之",
+        "send": "發之",
+        "calling": "方行之...",
+        "result": "其果",
+        "error": "其誤",
+        "txHash": "交易之哈希",
+        "viewOnExplorer": "觀於瀏覽器",
+        "valueLabel": "Value（原生幣數）",
+        "gasLimitLabel": "Gas Limit（可選）",
+        "gasLimitPlaceholder": "留空則自估之",
+        "connectToWrite": "接錢囊後可用寫入之法",
+        "payableBadge": "payable",
+        "fixAbiFirst": "請先修左側 ABI 之誤，而後可見法目",
+        "awaitingSetup": "入有效之合約址並擇 ABI，法目將顯於此"
       }
     }
   }

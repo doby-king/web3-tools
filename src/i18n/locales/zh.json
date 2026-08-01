@@ -14,7 +14,11 @@
     "github": "在 GitHub 上查看源码"
   },
   "layout": {
-    "footer": "Web3 Tools · 所有工具均在浏览器本地运行 · 开源项目"
+    "footer": "Web3 Tools · 所有工具均在浏览器本地运行 · 开源项目",
+    "toolsNav": "工具",
+    "backToHome": "返回首页",
+    "openToolMenu": "打开工具导航",
+    "closeToolMenu": "关闭工具导航"
   },
   "home": {
     "subtitle": "一组轻量的以太坊 / 区块链实用工具，全部在浏览器本地离线运行。",
@@ -50,6 +54,75 @@
         "copy": "复制地址",
         "qrTitle": "地址二维码",
         "walletNote": "将此助记词导入 MetaMask、Trust Wallet 等主流钱包后，首个账户地址与此处一致（BIP44 标准派生）"
+      }
+    },
+    "abiInteractor": {
+      "name": "ABI 合约交互器",
+      "description": "通过 ABI 与任意合约交互——读取状态或通过钱包发送交易。内置 25+ 常用网络，支持自定义 RPC。",
+      "subtitle": "提供合约 ABI 即可调用其读/写方法。连接 EIP-6963 钱包后可发送写入交易。",
+      "privacyNotice": "Read 调用与 ABI 解析均在浏览器本地完成，RPC 请求直接发往你选择的节点，不经过任何中间服务器",
+      "network": {
+        "title": "网络",
+        "mainnets": "主网",
+        "testnets": "测试网",
+        "customGroup": "自定义",
+        "custom": "自定义 RPC",
+        "rpcPlaceholder": "https://your-rpc-endpoint.com",
+        "verify": "验证",
+        "verifying": "验证中...",
+        "verifyFailed": "RPC 不可达",
+        "chainIdLabel": "Chain ID:"
+      },
+      "contract": {
+        "title": "合约",
+        "addressLabel": "合约地址",
+        "addressPlaceholder": "0x...",
+        "invalidAddress": "无效的以太坊地址"
+      },
+      "abi": {
+        "presetLabel": "ABI 预设",
+        "custom": "自定义 ABI",
+        "editorLabel": "ABI JSON",
+        "placeholder": "在此粘贴 ABI JSON 数组...",
+        "parsedSummary": "解析成功：{{read}} 个读取 / {{write}} 个写入方法",
+        "presets": {
+          "erc20": "ERC-20 代币",
+          "erc721": "ERC-721 NFT",
+          "erc1155": "ERC-1155 多代币"
+        },
+        "errors": {
+          "invalidJson": "JSON 格式无效，请检查语法",
+          "invalidAbi": "不是有效的 ABI，应为 ABI 条目的 JSON 数组",
+          "noFunctions": "该 ABI 中未找到任何方法"
+        }
+      },
+      "wallet": {
+        "connect": "连接钱包",
+        "connecting": "连接中...",
+        "selectWallet": "选择要连接的钱包",
+        "disconnect": "断开连接",
+        "noWallets": "未检测到 EIP-6963 钱包。请安装浏览器钱包插件（如 MetaMask）以使用写入功能。",
+        "wrongChain": "钱包当前链为 {{wallet}}，所选网络链为 {{selected}}。发送交易前请在钱包中切换网络。"
+      },
+      "methods": {
+        "readTab": "读取",
+        "writeTab": "写入",
+        "empty": "该分类下没有方法",
+        "noParams": "无需参数",
+        "call": "调用",
+        "send": "发送",
+        "calling": "执行中...",
+        "result": "结果",
+        "error": "错误",
+        "txHash": "交易哈希",
+        "viewOnExplorer": "在浏览器中查看",
+        "valueLabel": "Value（原生代币数量）",
+        "gasLimitLabel": "Gas Limit（可选）",
+        "gasLimitPlaceholder": "留空则自动估算",
+        "connectToWrite": "连接钱包后可使用写入方法",
+        "payableBadge": "payable",
+        "fixAbiFirst": "请先修复左侧 ABI 错误以查看方法列表",
+        "awaitingSetup": "输入有效的合约地址并选择 ABI 后，方法列表将显示在此处"
       }
     }
   }

@@ -14,7 +14,11 @@
     "github": "GitHub에서 소스 코드 보기"
   },
   "layout": {
-    "footer": "Web3 Tools · 모든 도구는 브라우저에서 로컬로 실행됩니다 · 오픈 소스"
+    "footer": "Web3 Tools · 모든 도구는 브라우저에서 로컬로 실행됩니다 · 오픈 소스",
+    "toolsNav": "도구",
+    "backToHome": "홈으로 돌아가기",
+    "openToolMenu": "도구 내비게이션 열기",
+    "closeToolMenu": "도구 내비게이션 닫기"
   },
   "home": {
     "subtitle": "가벼운 이더리움 / 블록체인 유틸리티 모음. 모두 브라우저에서 오프라인으로 실행됩니다.",
@@ -50,6 +54,75 @@
         "copy": "주소 복사",
         "qrTitle": "주소 QR 코드",
         "walletNote": "이 니모닉을 MetaMask, Trust Wallet 등 주요 지갑에 가져오면 첫 번째 계정 주소가 여기에 표시된 주소와 일치합니다 (BIP-44 표준 파생)"
+      }
+    },
+    "abiInteractor": {
+      "name": "ABI 컨트랙트 인터랙터",
+      "description": "ABI를 통해 모든 컨트랙트와 상호작용 — 상태 읽기 또는 지갑을 통한 트랜잭션 전송. 25개 이상의 네트워크를 내장하고 사용자 정의 RPC를 지원합니다.",
+      "subtitle": "컨트랙트의 ABI만 제공하면 읽기/쓰기 함수를 호출할 수 있습니다. EIP-6963 지갑을 연결하면 쓰기 트랜잭션을 전송할 수 있습니다.",
+      "privacyNotice": "읽기 호출과 ABI 파싱은 브라우저에서 로컬로 실행됩니다. RPC 요청은 선택한 엔드포인트로 직접 전송되며 중간 서버를 거치지 않습니다",
+      "network": {
+        "title": "네트워크",
+        "mainnets": "메인넷",
+        "testnets": "테스트넷",
+        "customGroup": "사용자 정의",
+        "custom": "사용자 정의 RPC",
+        "rpcPlaceholder": "https://your-rpc-endpoint.com",
+        "verify": "검증",
+        "verifying": "검증 중...",
+        "verifyFailed": "RPC에 연결할 수 없습니다",
+        "chainIdLabel": "Chain ID:"
+      },
+      "contract": {
+        "title": "컨트랙트",
+        "addressLabel": "컨트랙트 주소",
+        "addressPlaceholder": "0x...",
+        "invalidAddress": "유효하지 않은 이더리움 주소입니다"
+      },
+      "abi": {
+        "presetLabel": "ABI 프리셋",
+        "custom": "사용자 정의 ABI",
+        "editorLabel": "ABI JSON",
+        "placeholder": "여기에 ABI JSON 배열을 붙여넣으세요...",
+        "parsedSummary": "파싱 완료: 읽기 {{read}}개 / 쓰기 {{write}}개 함수",
+        "presets": {
+          "erc20": "ERC-20 토큰",
+          "erc721": "ERC-721 NFT",
+          "erc1155": "ERC-1155 멀티 토큰"
+        },
+        "errors": {
+          "invalidJson": "JSON이 유효하지 않습니다. 구문을 확인하세요",
+          "invalidAbi": "유효한 ABI가 아닙니다. ABI 항목의 JSON 배열이 필요합니다",
+          "noFunctions": "이 ABI에서 함수를 찾을 수 없습니다"
+        }
+      },
+      "wallet": {
+        "connect": "지갑 연결",
+        "connecting": "연결 중...",
+        "selectWallet": "연결할 지갑 선택",
+        "disconnect": "연결 해제",
+        "noWallets": "EIP-6963 지갑이 감지되지 않았습니다. 쓰기 기능을 사용하려면 브라우저 지갑 확장 프로그램(예: MetaMask)을 설치하세요.",
+        "wrongChain": "지갑은 체인 {{wallet}}에 연결되어 있지만 선택한 네트워크는 체인 {{selected}}입니다. 트랜잭션 전송 전에 지갑의 네트워크를 전환하세요."
+      },
+      "methods": {
+        "readTab": "읽기",
+        "writeTab": "쓰기",
+        "empty": "이 카테고리에 함수가 없습니다",
+        "noParams": "파라미터 불필요",
+        "call": "호출",
+        "send": "전송",
+        "calling": "실행 중...",
+        "result": "결과",
+        "error": "오류",
+        "txHash": "트랜잭션 해시",
+        "viewOnExplorer": "익스플로러에서 보기",
+        "valueLabel": "Value (네이티브 토큰 수량)",
+        "gasLimitLabel": "Gas Limit (선택)",
+        "gasLimitPlaceholder": "비워두면 자동 추정",
+        "connectToWrite": "쓰기 함수를 사용하려면 지갑을 연결하세요",
+        "payableBadge": "payable",
+        "fixAbiFirst": "메서드 목록을 보려면 왼쪽의 ABI 오류를 수정하세요",
+        "awaitingSetup": "유효한 컨트랙트 주소를 입력하고 ABI를 선택하면 메서드 목록이 여기에 표시됩니다"
       }
     }
   }

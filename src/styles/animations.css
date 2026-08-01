@@ -76,6 +76,33 @@
   animation: gradient-shift 6s ease infinite;
 }
 
+/* Drawer: slide in from left (mobile tool nav) */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.25s ease both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease both;
+}
+
 /* Home page background: subtle grid + radial glow (light / dark variants) */
 .hero-bg {
   background-image:

@@ -14,7 +14,11 @@
     "github": "GitHub でソースコードを見る"
   },
   "layout": {
-    "footer": "Web3 Tools · すべてのツールはブラウザ内でローカルに動作 · オープンソース"
+    "footer": "Web3 Tools · すべてのツールはブラウザ内でローカルに動作 · オープンソース",
+    "toolsNav": "ツール",
+    "backToHome": "ホームに戻る",
+    "openToolMenu": "ツールナビゲーションを開く",
+    "closeToolMenu": "ツールナビゲーションを閉じる"
   },
   "home": {
     "subtitle": "軽量なイーサリアム / ブロックチェーンユーティリティ集。すべてブラウザ内でオフラインに動作します。",
@@ -50,6 +54,75 @@
         "copy": "アドレスをコピー",
         "qrTitle": "アドレス QR コード",
         "walletNote": "このニーモニックを MetaMask、Trust Wallet などの主要ウォレットにインポートすると、最初のアカウントアドレスはここに表示されるものと一致します（BIP-44 標準派生）"
+      }
+    },
+    "abiInteractor": {
+      "name": "ABI コントラクトインタラクター",
+      "description": "ABI を介して任意のコントラクトと対話——状態の読み取りやウォレット経由のトランザクション送信。25以上のネットワークを内蔵し、カスタム RPC にも対応。",
+      "subtitle": "コントラクトの ABI を指定するだけで、読み取り/書き込み関数を呼び出せます。EIP-6963 ウォレットを接続すると書き込みトランザクションを送信できます。",
+      "privacyNotice": "読み取り呼び出しと ABI 解析はブラウザ内でローカルに実行されます。RPC リクエストは選択したエンドポイントに直接送信され、中間サーバーを介しません",
+      "network": {
+        "title": "ネットワーク",
+        "mainnets": "メインネット",
+        "testnets": "テストネット",
+        "customGroup": "カスタム",
+        "custom": "カスタム RPC",
+        "rpcPlaceholder": "https://your-rpc-endpoint.com",
+        "verify": "検証",
+        "verifying": "検証中...",
+        "verifyFailed": "RPC に接続できません",
+        "chainIdLabel": "Chain ID:"
+      },
+      "contract": {
+        "title": "コントラクト",
+        "addressLabel": "コントラクトアドレス",
+        "addressPlaceholder": "0x...",
+        "invalidAddress": "無効なイーサリアムアドレスです"
+      },
+      "abi": {
+        "presetLabel": "ABI プリセット",
+        "custom": "カスタム ABI",
+        "editorLabel": "ABI JSON",
+        "placeholder": "ここに ABI JSON 配列を貼り付けてください...",
+        "parsedSummary": "解析完了：読み取り {{read}} 件 / 書き込み {{write}} 件",
+        "presets": {
+          "erc20": "ERC-20 トークン",
+          "erc721": "ERC-721 NFT",
+          "erc1155": "ERC-1155 マルチトークン"
+        },
+        "errors": {
+          "invalidJson": "JSON が無効です。構文を確認してください",
+          "invalidAbi": "有効な ABI ではありません。ABI エントリの JSON 配列が必要です",
+          "noFunctions": "この ABI に関数が見つかりません"
+        }
+      },
+      "wallet": {
+        "connect": "ウォレット接続",
+        "connecting": "接続中...",
+        "selectWallet": "接続するウォレットを選択",
+        "disconnect": "切断",
+        "noWallets": "EIP-6963 ウォレットが検出されません。書き込み機能を使用するには、ブラウザウォレット拡張機能（MetaMask など）をインストールしてください。",
+        "wrongChain": "ウォレットはチェーン {{wallet}} に接続されていますが、選択中のネットワークはチェーン {{selected}} です。トランザクション送信前にウォレットのネットワークを切り替えてください。"
+      },
+      "methods": {
+        "readTab": "読み取り",
+        "writeTab": "書き込み",
+        "empty": "このカテゴリに関数はありません",
+        "noParams": "パラメータ不要",
+        "call": "呼び出し",
+        "send": "送信",
+        "calling": "実行中...",
+        "result": "結果",
+        "error": "エラー",
+        "txHash": "トランザクションハッシュ",
+        "viewOnExplorer": "エクスプローラーで表示",
+        "valueLabel": "Value（ネイティブトークン数量）",
+        "gasLimitLabel": "Gas Limit（任意）",
+        "gasLimitPlaceholder": "空欄の場合は自動推定",
+        "connectToWrite": "書き込み関数を使用するにはウォレットを接続してください",
+        "payableBadge": "payable",
+        "fixAbiFirst": "メソッド一覧を表示するには、左側の ABI エラーを修正してください",
+        "awaitingSetup": "有効なコントラクトアドレスを入力し ABI を選択すると、メソッド一覧がここに表示されます"
       }
     }
   }

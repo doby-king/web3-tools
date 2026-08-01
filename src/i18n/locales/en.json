@@ -14,7 +14,11 @@
     "github": "View source on GitHub"
   },
   "layout": {
-    "footer": "Web3 Tools · All tools run locally in your browser · Open source"
+    "footer": "Web3 Tools · All tools run locally in your browser · Open source",
+    "toolsNav": "Tools",
+    "backToHome": "Back to Home",
+    "openToolMenu": "Open tool navigation",
+    "closeToolMenu": "Close tool navigation"
   },
   "home": {
     "subtitle": "A lightweight collection of Ethereum / blockchain utilities that run entirely offline in your browser.",
@@ -50,6 +54,75 @@
         "copy": "Copy address",
         "qrTitle": "Address QR code",
         "walletNote": "Import this mnemonic into MetaMask, Trust Wallet, or other major wallets and the first account address will match the one shown here (standard BIP-44 derivation)"
+      }
+    },
+    "abiInteractor": {
+      "name": "ABI Interactor",
+      "description": "Interact with any contract via its ABI — read state or send transactions through your wallet. Supports 25+ built-in networks and custom RPC endpoints.",
+      "subtitle": "Call read/write functions of any contract by providing its ABI. Connect an EIP-6963 wallet to send write transactions.",
+      "privacyNotice": "Read calls and ABI parsing run locally in your browser. RPC requests go directly to the endpoint you select — no intermediary server is involved",
+      "network": {
+        "title": "Network",
+        "mainnets": "Mainnets",
+        "testnets": "Testnets",
+        "customGroup": "Custom",
+        "custom": "Custom RPC",
+        "rpcPlaceholder": "https://your-rpc-endpoint.com",
+        "verify": "Verify",
+        "verifying": "Verifying...",
+        "verifyFailed": "RPC unreachable",
+        "chainIdLabel": "Chain ID:"
+      },
+      "contract": {
+        "title": "Contract",
+        "addressLabel": "Contract Address",
+        "addressPlaceholder": "0x...",
+        "invalidAddress": "Invalid Ethereum address"
+      },
+      "abi": {
+        "presetLabel": "ABI Preset",
+        "custom": "Custom ABI",
+        "editorLabel": "ABI JSON",
+        "placeholder": "Paste your ABI JSON array here...",
+        "parsedSummary": "Parsed: {{read}} read / {{write}} write functions",
+        "presets": {
+          "erc20": "ERC-20 Token",
+          "erc721": "ERC-721 NFT",
+          "erc1155": "ERC-1155 Multi Token"
+        },
+        "errors": {
+          "invalidJson": "Invalid JSON — please check the syntax",
+          "invalidAbi": "Not a valid ABI — expected a JSON array of ABI entries",
+          "noFunctions": "No functions found in this ABI"
+        }
+      },
+      "wallet": {
+        "connect": "Connect Wallet",
+        "connecting": "Connecting...",
+        "selectWallet": "Select a wallet to connect",
+        "disconnect": "Disconnect",
+        "noWallets": "No EIP-6963 wallet detected. Install a browser wallet extension (e.g. MetaMask) to use write functions.",
+        "wrongChain": "Wallet is on chain {{wallet}}, but the selected network is chain {{selected}}. Switch your wallet's network before sending transactions."
+      },
+      "methods": {
+        "readTab": "Read",
+        "writeTab": "Write",
+        "empty": "No functions in this category",
+        "noParams": "No parameters required",
+        "call": "Call",
+        "send": "Send",
+        "calling": "Executing...",
+        "result": "Result",
+        "error": "Error",
+        "txHash": "Transaction Hash",
+        "viewOnExplorer": "View on Explorer",
+        "valueLabel": "Value (native token)",
+        "gasLimitLabel": "Gas Limit (optional)",
+        "gasLimitPlaceholder": "Auto-estimate if empty",
+        "connectToWrite": "Connect a wallet to use write functions",
+        "payableBadge": "payable",
+        "fixAbiFirst": "Fix the ABI errors on the left to see the method list",
+        "awaitingSetup": "Enter a valid contract address and select an ABI to see the method list"
       }
     }
   }

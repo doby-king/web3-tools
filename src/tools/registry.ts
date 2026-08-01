@@ -6,7 +6,7 @@ import {
   type ReactNode,
 } from "react";
 import type { ParseKeys } from "i18next";
-import { KeyIcon } from "@/components/ui/icons";
+import { CodeIcon, KeyIcon } from "@/components/ui/icons";
 
 export interface ToolMeta {
   id: string;
@@ -33,5 +33,16 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/eth-mnemonic`,
     component: lazy(() => import("@/tools/eth-mnemonic")),
+  },
+  {
+    id: "abi-interactor",
+    nameKey: "tools.abiInteractor.name",
+    descriptionKey: "tools.abiInteractor.description",
+    icon: createElement(CodeIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/abi-interactor`,
+    component: lazy(() => import("@/tools/abi-interactor")),
   },
 ];
