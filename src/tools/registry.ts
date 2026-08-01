@@ -6,7 +6,7 @@ import {
   type ReactNode,
 } from "react";
 import type { ParseKeys } from "i18next";
-import { CodeIcon, KeyIcon } from "@/components/ui/icons";
+import { CodeIcon, KeyIcon, WalletIcon } from "@/components/ui/icons";
 
 export interface ToolMeta {
   id: string;
@@ -44,5 +44,16 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/abi-interactor`,
     component: lazy(() => import("@/tools/abi-interactor")),
+  },
+  {
+    id: "aa-address-calculator",
+    nameKey: "tools.aaAddressCalculator.name",
+    descriptionKey: "tools.aaAddressCalculator.description",
+    icon: createElement(WalletIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/aa-address-calculator`,
+    component: lazy(() => import("@/tools/aa-address-calculator")),
   },
 ];

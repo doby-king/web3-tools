@@ -34,7 +34,7 @@ export const NETWORKS: Network[] = [
     id: "polygon",
     name: "Polygon",
     chainId: 137,
-    rpcUrl: "https://polygon-rpc.com",
+    rpcUrl: "https://polygon-bor-rpc.publicnode.com",
     explorerUrl: "https://polygonscan.com",
     symbol: "POL",
   },

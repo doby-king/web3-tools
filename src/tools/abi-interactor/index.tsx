@@ -4,7 +4,7 @@ import { isAddress } from "ethers";
 import { Callout } from "@/components/ui";
 import { parseAbiJson } from "./lib/abi";
 import { useEip6963Wallets } from "./lib/wallet";
-import { CUSTOM_NETWORK_ID, getNetworkById } from "./networks";
+import { CUSTOM_NETWORK_ID, getNetworkById } from "@/lib/networks";
 import { CUSTOM_ABI_ID, getPresetById } from "./presets";
 import { useAbiInteractorStore } from "./store";
 import { AbiPanel } from "./components/AbiPanel";

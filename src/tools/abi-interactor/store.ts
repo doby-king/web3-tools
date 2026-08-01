@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { createToolStorage } from "@/lib/storage";
-import { CUSTOM_NETWORK_ID, getNetworkById } from "./networks";
+import { CUSTOM_NETWORK_ID, getNetworkById } from "@/lib/networks";
 import { CUSTOM_ABI_ID, getPresetById } from "./presets";
 
 interface AbiInteractorState {

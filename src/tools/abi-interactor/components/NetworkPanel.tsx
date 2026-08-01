@@ -11,7 +11,7 @@ import {
   type SelectOptionGroup,
 } from "@/components/ui";
 import { WarningIcon } from "@/components/ui/icons";
-import { CUSTOM_NETWORK_ID, NETWORKS, getNetworkById } from "../networks";
+import { CUSTOM_NETWORK_ID, NETWORKS, getNetworkById } from "@/lib/networks";
 import { useAbiInteractorStore } from "../store";
 
 type VerifyStatus =
