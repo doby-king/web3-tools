@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { JsonRpcProvider } from "ethers";
-import { Button, Card, Input, SpinnerIcon, CheckIcon } from "@/components/ui";
+import {
+  Button,
+  Card,
+  Input,
+  Select,
+  SpinnerIcon,
+  CheckIcon,
+  type SelectOptionGroup,
+} from "@/components/ui";
 import { WarningIcon } from "@/components/ui/icons";
 import {
   CUSTOM_NETWORK_ID,
@@ -49,6 +57,40 @@ export function NetworkPanel() {
     setVerify({ state: "idle" });
   };
 
+  const networkOptions: SelectOptionGroup[] = useMemo(
+    () => [
+      {
+        label: t("tools.abiInteractor.network.mainnets"),
+        options: mainnets.map((n) => ({
+          value: n.id,
+          label: `${n.name} (${n.symbol})`,
+        })),
+      },
+      {
+        label: t("tools.abiInteractor.network.testnets"),
+        options: testnets.map((n) => ({
+          value: n.id,
+          label: `${n.name} (${n.symbol})`,
+        })),
+      },
+      {
+        label: t("tools.abiInteractor.network.customGroup"),
+        options: [
+          {
+            value: CUSTOM_NETWORK_ID,
+            label: t("tools.abiInteractor.network.custom"),
+          },
+        ],
+      },
+    ],
+    [t, mainnets, testnets],
+  );
+
+  const handleNetworkChange = (value: string) => {
+    setNetworkId(value);
+    setVerify({ state: "idle" });
+  };
+
   return (
     <Card>
       <h2 className="font-display text-sm font-semibold text-text">
@@ -56,34 +98,12 @@ export function NetworkPanel() {
       </h2>
 
       <div className="mt-3 space-y-3">
-        <select
+        <Select
+          searchable
+          options={networkOptions}
           value={networkId}
-          onChange={(e) => {
-            setNetworkId(e.target.value);
-            setVerify({ state: "idle" });
-          }}
-          className="h-10 w-full rounded-lg border border-border bg-surface px-3 text-sm text-text outline-none transition-colors focus:border-primary"
-        >
-          <optgroup label={t("tools.abiInteractor.network.mainnets")}>
-            {mainnets.map((n) => (
-              <option key={n.id} value={n.id}>
-                {n.name} ({n.symbol})
-              </option>
-            ))}
-          </optgroup>
-          <optgroup label={t("tools.abiInteractor.network.testnets")}>
-            {testnets.map((n) => (
-              <option key={n.id} value={n.id}>
-                {n.name} ({n.symbol})
-              </option>
-            ))}
-          </optgroup>
-          <optgroup label={t("tools.abiInteractor.network.customGroup")}>
-            <option value={CUSTOM_NETWORK_ID}>
-              {t("tools.abiInteractor.network.custom")}
-            </option>
-          </optgroup>
-        </select>
+          onChange={handleNetworkChange}
+        />
 
         {/* Built-in network info */}
         {!isCustom && selectedNetwork && (

@@ -11,7 +11,9 @@
     "hideQRCode": "Hide QR code",
     "switchToLightMode": "Switch to light mode",
     "switchToDarkMode": "Switch to dark mode",
-    "github": "View source on GitHub"
+    "github": "View source on GitHub",
+    "search": "Search...",
+    "noResults": "No results"
   },
   "layout": {
     "footer": "Web3 Tools · All tools run locally in your browser · Open source",

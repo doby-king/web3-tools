@@ -1,6 +1,7 @@
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { isAddress } from "ethers";
-import { Card, Input } from "@/components/ui";
+import { Card, Input, Select, type SelectOption } from "@/components/ui";
 import { WarningIcon, CheckIcon } from "@/components/ui/icons";
 import { ABI_PRESETS, CUSTOM_ABI_ID, getPresetById } from "../presets";
 import { useAbiInteractorStore } from "../store";
@@ -23,6 +24,14 @@ export function AbiPanel({ parseResult }: AbiPanelProps) {
   const preset = getPresetById(abiPresetId);
   const abiText = isCustom ? customAbi : preset ? JSON.stringify(preset.abi, null, 2) : "";
   const addressInvalid = contractAddress.length > 0 && !isAddress(contractAddress);
+
+  const presetOptions: SelectOption[] = useMemo(
+    () => [
+      ...ABI_PRESETS.map((p) => ({ value: p.id, label: t(p.labelKey) })),
+      { value: CUSTOM_ABI_ID, label: t("tools.abiInteractor.abi.custom") },
+    ],
+    [t],
+  );
 
   return (
     <Card>
@@ -55,20 +64,11 @@ export function AbiPanel({ parseResult }: AbiPanelProps) {
           <label className="text-xs font-medium text-text-secondary">
             {t("tools.abiInteractor.abi.presetLabel")}
           </label>
-          <select
+          <Select
+            options={presetOptions}
             value={abiPresetId}
-            onChange={(e) => setAbiPresetId(e.target.value)}
-            className="h-10 w-full rounded-lg border border-border bg-surface px-3 text-sm text-text outline-none transition-colors focus:border-primary"
-          >
-            {ABI_PRESETS.map((p) => (
-              <option key={p.id} value={p.id}>
-                {t(p.labelKey)}
-              </option>
-            ))}
-            <option value={CUSTOM_ABI_ID}>
-              {t("tools.abiInteractor.abi.custom")}
-            </option>
-          </select>
+            onChange={setAbiPresetId}
+          />
         </div>
 
         {/* ABI editor */}

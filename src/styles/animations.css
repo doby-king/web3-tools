@@ -103,6 +103,23 @@
   animation: fade-in 0.2s ease both;
 }
 
+/* Dropdown panel: scale + fade in from top */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+.animate-scale-in {
+  transform-origin: top;
+  animation: scale-in 0.15s ease both;
+}
+
 /* Home page background: subtle grid + radial glow (light / dark variants) */
 .hero-bg {
   background-image:

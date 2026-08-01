@@ -11,7 +11,9 @@
     "hideQRCode": "QRコードを非表示",
     "switchToLightMode": "ライトモードに切り替え",
     "switchToDarkMode": "ダークモードに切り替え",
-    "github": "GitHub でソースコードを見る"
+    "github": "GitHub でソースコードを見る",
+    "search": "検索...",
+    "noResults": "結果なし"
   },
   "layout": {
     "footer": "Web3 Tools · すべてのツールはブラウザ内でローカルに動作 · オープンソース",

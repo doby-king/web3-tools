@@ -11,7 +11,9 @@
     "hideQRCode": "QR 코드 숨기기",
     "switchToLightMode": "라이트 모드로 전환",
     "switchToDarkMode": "다크 모드로 전환",
-    "github": "GitHub에서 소스 코드 보기"
+    "github": "GitHub에서 소스 코드 보기",
+    "search": "검색...",
+    "noResults": "결과 없음"
   },
   "layout": {
     "footer": "Web3 Tools · 모든 도구는 브라우저에서 로컬로 실행됩니다 · 오픈 소스",
