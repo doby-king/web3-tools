@@ -126,6 +126,37 @@
         "payableBadge": "payable",
         "fixAbiFirst": "请先修复左侧 ABI 错误以查看方法列表",
         "awaitingSetup": "输入有效的合约地址并选择 ABI 后，方法列表将显示在此处"
+      },
+      "rpc": {
+        "tab": "RPC",
+        "contractTab": "合约",
+        "call": "调用",
+        "calling": "调用中...",
+        "result": "结果",
+        "error": "错误",
+        "noParams": "无需参数",
+        "noRpc": "请先选择网络或输入自定义 RPC URL",
+        "custom": {
+          "title": "自定义 RPC 调用",
+          "methodLabel": "方法",
+          "methodPlaceholder": "eth_methodName",
+          "paramsLabel": "参数（JSON 数组）",
+          "paramsPlaceholder": "[\"param1\", \"param2\"]",
+          "invalidParams": "JSON 格式无效 — 参数必须是合法的 JSON 数组"
+        },
+        "descriptions": {
+          "eth_chainId": "返回当前链 ID",
+          "eth_blockNumber": "返回最新区块号",
+          "eth_gasPrice": "返回当前 Gas 价格（wei）",
+          "eth_getBalance": "返回指定地址的余额",
+          "eth_getTransactionCount": "返回指定地址的 nonce（交易计数）",
+          "eth_getCode": "返回指定地址的已部署字节码",
+          "eth_getTransactionByHash": "根据交易哈希返回交易详情",
+          "eth_getTransactionReceipt": "返回已打包交易的收据",
+          "eth_getBlockByNumber": "根据区块号返回区块信息",
+          "eth_call": "对合约执行只读调用",
+          "eth_estimateGas": "估算交易所需的 Gas 量"
+        }
       }
     },
     "aaAddressCalculator": {

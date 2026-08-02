@@ -126,6 +126,37 @@
         "payableBadge": "payable",
         "fixAbiFirst": "請先修左側 ABI 之誤，而後可見法目",
         "awaitingSetup": "入有效之合約址並擇 ABI，法目將顯於此"
+      },
+      "rpc": {
+        "tab": "RPC",
+        "contractTab": "合約",
+        "call": "呼之",
+        "calling": "方呼之...",
+        "result": "其果",
+        "error": "其誤",
+        "noParams": "無須參數",
+        "noRpc": "請先擇網絡或入自定 RPC URL",
+        "custom": {
+          "title": "自定 RPC 之呼",
+          "methodLabel": "方法",
+          "methodPlaceholder": "eth_methodName",
+          "paramsLabel": "參數（JSON 陣列）",
+          "paramsPlaceholder": "[\"param1\", \"param2\"]",
+          "invalidParams": "JSON 之式無效 — 參數須為合法之 JSON 陣列"
+        },
+        "descriptions": {
+          "eth_chainId": "返當前鏈之 ID",
+          "eth_blockNumber": "返最新之區塊號",
+          "eth_gasPrice": "返當前 Gas 之價（wei）",
+          "eth_getBalance": "返所指址之餘額",
+          "eth_getTransactionCount": "返所指址之 nonce（交易計數）",
+          "eth_getCode": "返所指址之已部署字節碼",
+          "eth_getTransactionByHash": "據交易哈希返交易詳情",
+          "eth_getTransactionReceipt": "返已打包交易之收據",
+          "eth_getBlockByNumber": "據區塊號返區塊之資訊",
+          "eth_call": "對合約行唯讀之呼",
+          "eth_estimateGas": "估交易所需之 Gas 量"
+        }
       }
     },
     "aaAddressCalculator": {

@@ -126,6 +126,37 @@
         "payableBadge": "payable",
         "fixAbiFirst": "메서드 목록을 보려면 왼쪽의 ABI 오류를 수정하세요",
         "awaitingSetup": "유효한 컨트랙트 주소를 입력하고 ABI를 선택하면 메서드 목록이 여기에 표시됩니다"
+      },
+      "rpc": {
+        "tab": "RPC",
+        "contractTab": "컨트랙트",
+        "call": "호출",
+        "calling": "호출 중...",
+        "result": "결과",
+        "error": "오류",
+        "noParams": "파라미터 불필요",
+        "noRpc": "먼저 네트워크를 선택하거나 사용자 정의 RPC URL을 입력하세요",
+        "custom": {
+          "title": "사용자 정의 RPC 호출",
+          "methodLabel": "메서드",
+          "methodPlaceholder": "eth_methodName",
+          "paramsLabel": "파라미터 (JSON 배열)",
+          "paramsPlaceholder": "[\"param1\", \"param2\"]",
+          "invalidParams": "잘못된 JSON — 파라미터는 유효한 JSON 배열이어야 합니다"
+        },
+        "descriptions": {
+          "eth_chainId": "현재 체인 ID를 반환",
+          "eth_blockNumber": "최신 블록 번호를 반환",
+          "eth_gasPrice": "현재 가스 가격(wei)을 반환",
+          "eth_getBalance": "지정된 주소의 잔액을 반환",
+          "eth_getTransactionCount": "지정된 주소의 nonce(트랜잭션 수)를 반환",
+          "eth_getCode": "지정된 주소의 배포된 바이트코드를 반환",
+          "eth_getTransactionByHash": "트랜잭션 해시로 상세 정보를 반환",
+          "eth_getTransactionReceipt": "채굴된 트랜잭션의 영수증을 반환",
+          "eth_getBlockByNumber": "블록 번호로 블록 정보를 반환",
+          "eth_call": "컨트랙트에 대해 읽기 전용 호출을 실행",
+          "eth_estimateGas": "트랜잭션에 필요한 가스량을 추정"
+        }
       }
     },
     "aaAddressCalculator": {

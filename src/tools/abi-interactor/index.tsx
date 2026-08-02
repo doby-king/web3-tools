@@ -1,7 +1,7 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isAddress } from "ethers";
-import { Callout } from "@/components/ui";
+import { Callout, SegmentedControl } from "@/components/ui";
 import { parseAbiJson } from "./lib/abi";
 import { useEip6963Wallets } from "./lib/wallet";
 import { CUSTOM_NETWORK_ID, getNetworkById } from "@/lib/networks";
@@ -10,6 +10,7 @@ import { useAbiInteractorStore } from "./store";
 import { AbiPanel } from "./components/AbiPanel";
 import { MethodTabs } from "./components/MethodTabs";
 import { NetworkPanel } from "./components/NetworkPanel";
+import { RpcCallPanel } from "./components/RpcCallPanel";
 import { WalletButton } from "./components/WalletButton";
 
 /** Skeleton shown until hydration completes */
@@ -24,6 +25,7 @@ function Skeleton() {
 
 export default function AbiInteractorTool() {
   const { t } = useTranslation();
+  const [mode, setMode] = useState<"contract" | "rpc">("contract");
   const hydrated = useAbiInteractorStore((s) => s._hasHydrated);
   const networkId = useAbiInteractorStore((s) => s.networkId);
   const customRpc = useAbiInteractorStore((s) => s.customRpc);
@@ -64,6 +66,11 @@ export default function AbiInteractorTool() {
 
   const addressValid = contractAddress.length > 0 && isAddress(contractAddress);
 
+  const modeOptions: Array<{ label: string; value: "contract" | "rpc" }> = [
+    { label: t("tools.abiInteractor.rpc.contractTab"), value: "contract" },
+    { label: t("tools.abiInteractor.rpc.tab"), value: "rpc" },
+  ];
+
   return (
     <div className="px-4 py-8 sm:px-6 lg:px-8">
       {/* Page header */}
@@ -100,24 +107,34 @@ export default function AbiInteractorTool() {
               />
             </div>
 
-            {/* Right column: parsed methods */}
-            <div>
-              {parseResult?.ok && addressValid ? (
-                <MethodTabs
-                  parsed={parseResult.parsed}
-                  rpcUrl={rpcUrl}
-                  contractAddress={contractAddress}
-                  explorerUrl={explorerUrl}
-                  wallet={wallet.connected}
-                />
+            {/* Right column: parsed methods / RPC calls */}
+            <div className="space-y-3">
+              <SegmentedControl
+                options={modeOptions}
+                value={mode}
+                onChange={setMode}
+              />
+
+              {mode === "contract" ? (
+                parseResult?.ok && addressValid ? (
+                  <MethodTabs
+                    parsed={parseResult.parsed}
+                    rpcUrl={rpcUrl}
+                    contractAddress={contractAddress}
+                    explorerUrl={explorerUrl}
+                    wallet={wallet.connected}
+                  />
+                ) : (
+                  <div className="flex h-full min-h-[300px] items-center justify-center rounded-xl border border-dashed border-border">
+                    <p className="max-w-xs text-center text-sm text-text-muted">
+                      {parseResult && !parseResult.ok
+                        ? t("tools.abiInteractor.methods.fixAbiFirst")
+                        : t("tools.abiInteractor.methods.awaitingSetup")}
+                    </p>
+                  </div>
+                )
               ) : (
-                <div className="flex h-full min-h-[300px] items-center justify-center rounded-xl border border-dashed border-border">
-                  <p className="max-w-xs text-center text-sm text-text-muted">
-                    {parseResult && !parseResult.ok
-                      ? t("tools.abiInteractor.methods.fixAbiFirst")
-                      : t("tools.abiInteractor.methods.awaitingSetup")}
-                  </p>
-                </div>
+                <RpcCallPanel rpcUrl={rpcUrl} />
               )}
             </div>
           </div>

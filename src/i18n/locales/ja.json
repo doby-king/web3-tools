@@ -126,6 +126,37 @@
         "payableBadge": "payable",
         "fixAbiFirst": "メソッド一覧を表示するには、左側の ABI エラーを修正してください",
         "awaitingSetup": "有効なコントラクトアドレスを入力し ABI を選択すると、メソッド一覧がここに表示されます"
+      },
+      "rpc": {
+        "tab": "RPC",
+        "contractTab": "コントラクト",
+        "call": "呼び出し",
+        "calling": "呼び出し中...",
+        "result": "結果",
+        "error": "エラー",
+        "noParams": "パラメータ不要",
+        "noRpc": "先にネットワークを選択するか、カスタム RPC URL を入力してください",
+        "custom": {
+          "title": "カスタム RPC コール",
+          "methodLabel": "メソッド",
+          "methodPlaceholder": "eth_methodName",
+          "paramsLabel": "パラメータ（JSON 配列）",
+          "paramsPlaceholder": "[\"param1\", \"param2\"]",
+          "invalidParams": "無効な JSON — パラメータは有効な JSON 配列である必要があります"
+        },
+        "descriptions": {
+          "eth_chainId": "現在のチェーン ID を返す",
+          "eth_blockNumber": "最新のブロック番号を返す",
+          "eth_gasPrice": "現在のガス価格（wei）を返す",
+          "eth_getBalance": "指定アドレスの残高を返す",
+          "eth_getTransactionCount": "指定アドレスの nonce（トランザクション数）を返す",
+          "eth_getCode": "指定アドレスのデプロイ済みバイトコードを返す",
+          "eth_getTransactionByHash": "トランザクションハッシュで詳細を返す",
+          "eth_getTransactionReceipt": "マイニング済みトランザクションのレシートを返す",
+          "eth_getBlockByNumber": "ブロック番号でブロック情報を返す",
+          "eth_call": "コントラクトに対して読み取り専用コールを実行する",
+          "eth_estimateGas": "トランザクションに必要なガス量を推定する"
+        }
       }
     },
     "aaAddressCalculator": {

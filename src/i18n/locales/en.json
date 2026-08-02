@@ -126,6 +126,37 @@
         "payableBadge": "payable",
         "fixAbiFirst": "Fix the ABI errors on the left to see the method list",
         "awaitingSetup": "Enter a valid contract address and select an ABI to see the method list"
+      },
+      "rpc": {
+        "tab": "RPC",
+        "contractTab": "Contract",
+        "call": "Call",
+        "calling": "Calling...",
+        "result": "Result",
+        "error": "Error",
+        "noParams": "No parameters required",
+        "noRpc": "Select a network or enter a custom RPC URL first",
+        "custom": {
+          "title": "Custom RPC Call",
+          "methodLabel": "Method",
+          "methodPlaceholder": "eth_methodName",
+          "paramsLabel": "Params (JSON array)",
+          "paramsPlaceholder": "[\"param1\", \"param2\"]",
+          "invalidParams": "Invalid JSON — params must be a valid JSON array"
+        },
+        "descriptions": {
+          "eth_chainId": "Returns the current chain ID",
+          "eth_blockNumber": "Returns the latest block number",
+          "eth_gasPrice": "Returns the current gas price in wei",
+          "eth_getBalance": "Returns the balance of an address",
+          "eth_getTransactionCount": "Returns the nonce (transaction count) of an address",
+          "eth_getCode": "Returns the deployed bytecode at an address",
+          "eth_getTransactionByHash": "Returns transaction details by hash",
+          "eth_getTransactionReceipt": "Returns the receipt of a mined transaction",
+          "eth_getBlockByNumber": "Returns block information by number",
+          "eth_call": "Executes a read-only call against a contract",
+          "eth_estimateGas": "Estimates the gas needed for a transaction"
+        }
       }
     },
     "aaAddressCalculator": {
