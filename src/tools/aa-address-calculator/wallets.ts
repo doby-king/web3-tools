@@ -39,7 +39,7 @@ export interface InitCodeParams {
 export interface WalletVariant {
   id: string;
   labelKey: ParseKeys;
-  entryPoint: "v0.6" | "v0.7";
+  entryPoint?: "v0.6" | "v0.7";
   factory: string;
   ownerMode: OwnerMode;
   /** Encode the initCode for this variant */
@@ -57,6 +57,11 @@ export interface WalletVariant {
    * Alchemy v2 uses keccak256(abi.encode(owner(s), salt)) as the combined salt.
    */
   encodeSalt?: (params: InitCodeParams) => string;
+  /**
+   * Custom initCodeHash computation. If set, overrides the default logic.
+   * Used for beacon proxy with immutable args (Polymarket).
+   */
+  getInitCodeHash?: (params: InitCodeParams) => string;
 }
 
 export interface WalletPreset {
@@ -212,6 +217,38 @@ function encodeMultiOwnerLightAccountSalt(params: InitCodeParams): string {
       [owners, params.salt ?? DEFAULT_SALT],
     ),
   );
+}
+
+// ─── Polymarket Deposit Wallet ───────────────────────────────────────────────
+
+const POLYMARKET_FACTORY = "0x00000000000Fb5C9ADea0298D729A0CB3823Cc07";
+const POLYMARKET_BEACON = "0x7A18EDfe055488A3128f01F563e5B479D92ffc3a";
+
+/** Build Polymarket beacon proxy args: abi.encode(factory, bytes32(owner)) */
+function polymarketArgs(params: InitCodeParams): string {
+  const walletId =
+    "0x" + (params.owner ?? ZERO_ADDRESS).slice(2).toLowerCase().padStart(64, "0");
+  return abiCoder.encode(["address", "bytes32"], [POLYMARKET_FACTORY, walletId]);
+}
+
+/** Polymarket salt: keccak256(args) */
+function encodePolymarketSalt(params: InitCodeParams): string {
+  return keccak256(polymarketArgs(params));
+}
+
+/** Polymarket initCodeHash: keccak256(beaconProxyCreationCode(beacon, args)) */
+function polymarketInitCodeHash(params: InitCodeParams): string {
+  const args = polymarketArgs(params);
+  const n = (args.length - 2) / 2;
+  const prefixValue = 0x6100523d8160233d3973n + (BigInt(n) << 56n);
+  const prefixHex = prefixValue.toString(16).padStart(20, "0");
+  const beaconHex = POLYMARKET_BEACON.slice(2).toLowerCase();
+  const constructorTail = "60195155f3";
+  const runtime =
+    "363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e604d573d6000fd5b3d6000f3";
+  const creationCode =
+    "0x" + prefixHex + beaconHex + constructorTail + runtime + args.slice(2);
+  return keccak256(creationCode);
 }
 
 // ─── Kernel (ZeroDev) ────────────────────────────────────────────────────────
@@ -374,23 +411,6 @@ export const WALLET_BRANDS: WalletBrand[] = [
       },
     ],
     presets: [
-      {
-        id: "polymarket",
-        labelKey: "tools.aaAddressCalculator.presets.polymarket",
-        variantId: "safe-v130-l1",
-        fixedParams: {
-          threshold: 1,
-          fallbackHandler: "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
-          to: ZERO_ADDRESS,
-          data: "0x",
-          paymentToken: ZERO_ADDRESS,
-          payment: "0",
-          paymentReceiver: ZERO_ADDRESS,
-        },
-        userInputFields: ["owner", "salt"],
-        chainIds: [137],
-        descriptionKey: "tools.aaAddressCalculator.presets.polymarketDesc",
-      },
       {
         id: "standard-safe",
         labelKey: "tools.aaAddressCalculator.presets.standardSafe",
@@ -566,6 +586,35 @@ export const WALLET_BRANDS: WalletBrand[] = [
         userInputFields: ["owner"],
         descriptionKey:
           "tools.aaAddressCalculator.presets.biconomyStandardDesc",
+      },
+    ],
+  },
+
+  // 7. Polymarket Deposit Wallet
+  {
+    id: "polymarket",
+    labelKey: "tools.aaAddressCalculator.brands.polymarket",
+    variants: [
+      {
+        id: "polymarket-deposit",
+        labelKey: "tools.aaAddressCalculator.variants.polymarketDeposit",
+        factory: POLYMARKET_FACTORY,
+        ownerMode: "single",
+        encodeInitCode: () => "0x",
+        ownerQuery: "function owner() view returns (address)",
+        encodeSalt: encodePolymarketSalt,
+        getInitCodeHash: polymarketInitCodeHash,
+      },
+    ],
+    presets: [
+      {
+        id: "polymarket-standard",
+        labelKey: "tools.aaAddressCalculator.presets.polymarket",
+        variantId: "polymarket-deposit",
+        fixedParams: {},
+        userInputFields: ["owner"],
+        chainIds: [137],
+        descriptionKey: "tools.aaAddressCalculator.presets.polymarketDesc",
       },
     ],
   },

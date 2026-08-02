@@ -181,7 +181,8 @@
         "coinbase": "Coinbase Smart Wallet",
         "alchemy": "Alchemy LightAccount",
         "kernel": "Kernel (ZeroDev)",
-        "biconomy": "Biconomy"
+        "biconomy": "Biconomy",
+        "polymarket": "Polymarket"
       },
       "variants": {
         "simpleV06": "v0.6 (EP v0.6)",
@@ -197,11 +198,12 @@
         "kernelV22": "v2.2 (EP v0.6)",
         "kernelV3Ep06": "v3 (EP v0.6)",
         "kernelV3Ep07": "v3 (EP v0.7)",
-        "biconomyV2": "Smart Account v2"
+        "biconomyV2": "Smart Account v2",
+        "polymarketDeposit": "Deposit Wallet"
       },
       "presets": {
         "polymarket": "Polymarket",
-        "polymarketDesc": "Polymarket デポジットウォレット（Safe ベース、Polygon のみ）",
+        "polymarketDesc": "Polymarket デポジットウォレット（Polygon のみ）",
         "standardSafe": "標準 (1/1)",
         "standardSafeDesc": "単一 owner、閾値 1 の標準 Safe",
         "coinbaseStandard": "標準 (EOA)",

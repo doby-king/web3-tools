@@ -125,11 +125,15 @@ export function WalletConfigPanel() {
                 {t("tools.aaAddressCalculator.variant")}:
               </span>{" "}
               {t(v.labelKey)}
-              <span className="mx-1.5 text-border-strong">|</span>
-              <span className="font-medium text-text-secondary">
-                {t("tools.aaAddressCalculator.entryPoint")}:
-              </span>{" "}
-              {v.entryPoint}
+              {v.entryPoint && (
+                <>
+                  <span className="mx-1.5 text-border-strong">|</span>
+                  <span className="font-medium text-text-secondary">
+                    {t("tools.aaAddressCalculator.entryPoint")}:
+                  </span>{" "}
+                  {v.entryPoint}
+                </>
+              )}
               <span className="mx-1.5 text-border-strong">|</span>
               <span className="font-medium text-text-secondary">
                 {t("tools.aaAddressCalculator.factory")}:
