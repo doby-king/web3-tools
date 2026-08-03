@@ -427,6 +427,100 @@
         "scope": "此令牌所予之權限範圍",
         "custom": "自定義 / 未註冊之聲明"
       }
+    },
+    "codec": {
+      "name": "編解碼器",
+      "description": "於本地編解碼文本，可為 Base64、Base58、Hex、URL 等常見格式。",
+      "subtitle": "擇編碼格式，於左側貼入文本，點編碼或解碼以觀結果。",
+      "privacyNotice": "凡編解碼，皆於瀏覽器本地為之，數據不離汝之設備。",
+      "formatLabel": "編碼格式",
+      "formats": {
+        "base64": "Base64",
+        "base64url": "Base64URL",
+        "base58": "Base58",
+        "base32": "Base32",
+        "hex": "Hex",
+        "utf8": "UTF-8",
+        "ascii": "ASCII",
+        "url": "URL",
+        "binary": "Binary",
+        "html": "HTML",
+        "unicode": "Unicode"
+      },
+      "formatEncodeLabel": "編碼說明：",
+      "formatResultLabel": "結果格式：",
+      "formatHints": {
+        "base64": {
+          "encode": "將文本之 UTF-8 字節編碼為標準 Base64（含 padding）。",
+          "result": "A–Z、a–z、0–9、+、/ 與 = 填充，如 aGVsbG8="
+        },
+        "base64url": {
+          "encode": "URL 安全之 Base64：以 - 與 _ 代 + 與 /。",
+          "result": "A–Z、a–z、0–9、-、_，padding 可略，如 aGVsbG8"
+        },
+        "base58": {
+          "encode": "以 Bitcoin 字母表將 UTF-8 字節編碼為 Base58（無 0/O/I/l）。",
+          "result": "Base58 字串，如 Cn8eVZg"
+        },
+        "base32": {
+          "encode": "按 RFC 4648 將 UTF-8 字節編碼為 Base32。",
+          "result": "A–Z 與 2–7，如 NBSWY3DP"
+        },
+        "hex": {
+          "encode": "將 UTF-8 字節編碼為連續十六進制字串。",
+          "result": "無空格小寫 hex，如 68656c6c6f"
+        },
+        "utf8": {
+          "encode": "按 UTF-8 展每字節之十六進制，字節間以空格分隔。",
+          "result": "空格分隔之 hex 字節，如 68 65 6c 6c 6f"
+        },
+        "ascii": {
+          "encode": "按 ASCII 示每字節之十進制碼（0–127）；含非 ASCII 則敗。",
+          "result": "空格分隔之十進制碼，如 97 98 99 101 102"
+        },
+        "url": {
+          "encode": "以 encodeURIComponent 為百分號編碼。",
+          "result": "URL 編碼字串，如 hello%20world"
+        },
+        "binary": {
+          "encode": "將每 UTF-8 字節展為 8 位二進制。",
+          "result": "空格分隔之 0/1 分組，如 01101000 01100101"
+        },
+        "html": {
+          "encode": "將特殊字 / 非 ASCII 轉為 HTML 實體。",
+          "result": "命名或數字實體，如 &lt;div&gt; / &#20320;"
+        },
+        "unicode": {
+          "encode": "將每字符轉為 Unicode 轉義。",
+          "result": "\\uXXXX 或 \\u{...}，如 \\u0048\\u0069"
+        }
+      },
+      "inputLabel": "輸入",
+      "inputPlaceholder": "輸入欲編碼或解碼之文本...",
+      "statsChars": "{{count}} 字",
+      "statsBytes": "{{count}} 字節",
+      "encode": "編碼",
+      "decode": "解碼",
+      "outputLabel": "結果",
+      "copyResult": "抄録結果",
+      "empty": "點「編碼」或「解碼」後，結果現於此",
+      "errorTitle": "轉換敗",
+      "errors": {
+        "unsupported": "此格式不可用。",
+        "encodeFailed": "編碼敗。",
+        "decodeFailed": "解碼敗。",
+        "nonAscii": "輸入含非 ASCII 之字。",
+        "invalidBase64": "Base64 字串非法。",
+        "invalidBase64url": "Base64URL 字串非法。",
+        "invalidBase58": "Base58 字串非法。",
+        "invalidBase32": "Base32 字串非法。",
+        "invalidHex": "十六進制字串非法。",
+        "invalidAscii": "ASCII 十進制字節碼非法（或含非 ASCII 字節）。",
+        "invalidUrl": "URL 編碼字串非法。",
+        "invalidBinary": "二進制字串非法（當為 0/1 比特之分組）。",
+        "invalidHtml": "HTML 實體解碼敗。",
+        "invalidUnicode": "Unicode 轉義非法。"
+      }
     }
   }
 }

@@ -8,6 +8,7 @@ import {
 import type { ParseKeys } from "i18next";
 import {
   BracesIcon,
+  CodecIcon,
   CodeIcon,
   DropletIcon,
   GlobeIcon,
@@ -140,6 +141,18 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/jwt-parser`,
     component: lazy(() => import("@/tools/jwt-parser")),
+  },
+  {
+    id: "codec",
+    nameKey: "tools.codec.name",
+    descriptionKey: "tools.codec.description",
+    category: "general",
+    icon: createElement(CodecIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/codec`,
+    component: lazy(() => import("@/tools/codec")),
   },
 ];
 

@@ -427,6 +427,100 @@
         "scope": "このトークンで付与されたスコープ",
         "custom": "カスタム / 未登録クレーム"
       }
+    },
+    "codec": {
+      "name": "コーデック",
+      "description": "Base64、Base58、Hex、URL など一般的な形式でテキストをローカルにエンコード / デコードします。",
+      "subtitle": "形式を選び、左側にテキストを貼り付け、エンコードまたはデコードを実行します。",
+      "privacyNotice": "エンコードとデコードはすべてブラウザ内でローカルに実行されます。データがデバイスの外に出ることはありません。",
+      "formatLabel": "エンコード形式",
+      "formats": {
+        "base64": "Base64",
+        "base64url": "Base64URL",
+        "base58": "Base58",
+        "base32": "Base32",
+        "hex": "Hex",
+        "utf8": "UTF-8",
+        "ascii": "ASCII",
+        "url": "URL",
+        "binary": "Binary",
+        "html": "HTML",
+        "unicode": "Unicode"
+      },
+      "formatEncodeLabel": "エンコード：",
+      "formatResultLabel": "結果形式：",
+      "formatHints": {
+        "base64": {
+          "encode": "UTF-8 バイトを標準 Base64（パディングあり）に変換します。",
+          "result": "A–Z、a–z、0–9、+、/ と =、例: aGVsbG8="
+        },
+        "base64url": {
+          "encode": "URL 安全な Base64：+ / の代わりに - _ を使います。",
+          "result": "A–Z、a–z、0–9、-、_、パディング任意、例: aGVsbG8"
+        },
+        "base58": {
+          "encode": "Bitcoin アルファベットで UTF-8 バイトを Base58 化（0/O/I/l なし）。",
+          "result": "Base58 文字列、例: Cn8eVZg"
+        },
+        "base32": {
+          "encode": "RFC 4648 に従い UTF-8 バイトを Base32 化します。",
+          "result": "A–Z と 2–7、例: NBSWY3DP"
+        },
+        "hex": {
+          "encode": "UTF-8 バイトを連続する十六進文字列にします。",
+          "result": "空白なしの小文字 hex、例: 68656c6c6f"
+        },
+        "utf8": {
+          "encode": "各 UTF-8 バイトを十六進で示し、空白で区切ります。",
+          "result": "空白区切り hex、例: 68 65 6c 6c 6f"
+        },
+        "ascii": {
+          "encode": "各 ASCII バイトを十進コード（0–127）で表示。非 ASCII は失敗。",
+          "result": "空白区切りの十進、例: 97 98 99 101 102"
+        },
+        "url": {
+          "encode": "encodeURIComponent でパーセントエンコードします。",
+          "result": "URL エンコード文字列、例: hello%20world"
+        },
+        "binary": {
+          "encode": "各 UTF-8 バイトを 8 ビット二進に展開します。",
+          "result": "空白区切りの 0/1、例: 01101000 01100101"
+        },
+        "html": {
+          "encode": "特殊文字 / 非 ASCII を HTML エンティティにします。",
+          "result": "名前付きまたは数値エンティティ、例: &lt;div&gt; / &#20320;"
+        },
+        "unicode": {
+          "encode": "各文字を Unicode エスケープにします。",
+          "result": "\\uXXXX または \\u{...}、例: \\u0048\\u0069"
+        }
+      },
+      "inputLabel": "入力",
+      "inputPlaceholder": "エンコード / デコードするテキストを入力...",
+      "statsChars": "{{count}} 文字",
+      "statsBytes": "{{count}} バイト",
+      "encode": "エンコード",
+      "decode": "デコード",
+      "outputLabel": "結果",
+      "copyResult": "結果をコピー",
+      "empty": "エンコードまたはデコードを押すとここに結果が表示されます",
+      "errorTitle": "変換に失敗しました",
+      "errors": {
+        "unsupported": "この形式はサポートされていません。",
+        "encodeFailed": "エンコードに失敗しました。",
+        "decodeFailed": "デコードに失敗しました。",
+        "nonAscii": "入力に非 ASCII 文字が含まれています。",
+        "invalidBase64": "無効な Base64 文字列です。",
+        "invalidBase64url": "無効な Base64URL 文字列です。",
+        "invalidBase58": "無効な Base58 文字列です。",
+        "invalidBase32": "無効な Base32 文字列です。",
+        "invalidHex": "無効な十六進文字列です。",
+        "invalidAscii": "無効な ASCII 十進バイトコードです（または非 ASCII バイトを含みます）。",
+        "invalidUrl": "無効な URL エンコード文字列です。",
+        "invalidBinary": "無効なバイナリ文字列です（0/1 ビットのグループが必要）。",
+        "invalidHtml": "HTML エンティティのデコードに失敗しました。",
+        "invalidUnicode": "無効な Unicode エスケープです。"
+      }
     }
   }
 }

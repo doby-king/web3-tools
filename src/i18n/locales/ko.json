@@ -427,6 +427,100 @@
         "scope": "이 토큰이 부여한 스코프",
         "custom": "사용자 정의 / 미등록 클레임"
       }
+    },
+    "codec": {
+      "name": "코덱",
+      "description": "Base64, Base58, Hex, URL 등 일반적인 형식으로 텍스트를 로컬에서 인코딩/디코딩합니다.",
+      "subtitle": "형식을 선택하고 왼쪽에 텍스트를 붙여넣은 뒤 인코딩 또는 디코딩하세요.",
+      "privacyNotice": "모든 인코딩과 디코딩은 브라우저에서 로컬로 수행됩니다. 데이터는 기기를 떠나지 않습니다.",
+      "formatLabel": "인코딩 형식",
+      "formats": {
+        "base64": "Base64",
+        "base64url": "Base64URL",
+        "base58": "Base58",
+        "base32": "Base32",
+        "hex": "Hex",
+        "utf8": "UTF-8",
+        "ascii": "ASCII",
+        "url": "URL",
+        "binary": "Binary",
+        "html": "HTML",
+        "unicode": "Unicode"
+      },
+      "formatEncodeLabel": "인코딩:",
+      "formatResultLabel": "결과 형식:",
+      "formatHints": {
+        "base64": {
+          "encode": "UTF-8 바이트를 표준 Base64(패딩 포함)로 변환합니다.",
+          "result": "A–Z, a–z, 0–9, +, / 및 =, 예: aGVsbG8="
+        },
+        "base64url": {
+          "encode": "URL 안전 Base64: + / 대신 - _ 를 사용합니다.",
+          "result": "A–Z, a–z, 0–9, -, _, 패딩 선택, 예: aGVsbG8"
+        },
+        "base58": {
+          "encode": "Bitcoin 알파벳으로 UTF-8 바이트를 Base58 인코딩(0/O/I/l 없음).",
+          "result": "Base58 문자열, 예: Cn8eVZg"
+        },
+        "base32": {
+          "encode": "RFC 4648에 따라 UTF-8 바이트를 Base32로 인코딩합니다.",
+          "result": "A–Z 및 2–7, 예: NBSWY3DP"
+        },
+        "hex": {
+          "encode": "UTF-8 바이트를 연속 16진수 문자열로 인코딩합니다.",
+          "result": "공백 없는 소문자 hex, 예: 68656c6c6f"
+        },
+        "utf8": {
+          "encode": "각 UTF-8 바이트를 16진수로 표시하고 공백으로 구분합니다.",
+          "result": "공백 구분 hex, 예: 68 65 6c 6c 6f"
+        },
+        "ascii": {
+          "encode": "각 ASCII 바이트를 십진 코드(0–127)로 표시. 비 ASCII는 실패.",
+          "result": "공백 구분 십진 코드, 예: 97 98 99 101 102"
+        },
+        "url": {
+          "encode": "encodeURIComponent로 퍼센트 인코딩합니다.",
+          "result": "URL 인코딩 문자열, 예: hello%20world"
+        },
+        "binary": {
+          "encode": "각 UTF-8 바이트를 8비트 이진으로 펼칩니다.",
+          "result": "공백 구분 0/1 그룹, 예: 01101000 01100101"
+        },
+        "html": {
+          "encode": "특수 문자 / 비 ASCII를 HTML 엔티티로 이스케이프합니다.",
+          "result": "이름 또는 숫자 엔티티, 예: &lt;div&gt; / &#20320;"
+        },
+        "unicode": {
+          "encode": "각 문자를 Unicode 이스케이프로 변환합니다.",
+          "result": "\\uXXXX 또는 \\u{...}, 예: \\u0048\\u0069"
+        }
+      },
+      "inputLabel": "입력",
+      "inputPlaceholder": "인코딩 또는 디코딩할 텍스트를 입력하세요...",
+      "statsChars": "{{count}}자",
+      "statsBytes": "{{count}}바이트",
+      "encode": "인코딩",
+      "decode": "디코딩",
+      "outputLabel": "결과",
+      "copyResult": "결과 복사",
+      "empty": "인코딩 또는 디코딩을 누르면 여기에 결과가 표시됩니다",
+      "errorTitle": "변환 실패",
+      "errors": {
+        "unsupported": "지원하지 않는 형식입니다.",
+        "encodeFailed": "인코딩에 실패했습니다.",
+        "decodeFailed": "디코딩에 실패했습니다.",
+        "nonAscii": "입력에 비 ASCII 문자가 포함되어 있습니다.",
+        "invalidBase64": "잘못된 Base64 문자열입니다.",
+        "invalidBase64url": "잘못된 Base64URL 문자열입니다.",
+        "invalidBase58": "잘못된 Base58 문자열입니다.",
+        "invalidBase32": "잘못된 Base32 문자열입니다.",
+        "invalidHex": "잘못된 16진수 문자열입니다.",
+        "invalidAscii": "잘못된 ASCII 십진 바이트 코드입니다(또는 비 ASCII 바이트 포함).",
+        "invalidUrl": "잘못된 URL 인코딩 문자열입니다.",
+        "invalidBinary": "잘못된 이진 문자열입니다(0/1 비트 그룹 필요).",
+        "invalidHtml": "HTML 엔티티 디코딩에 실패했습니다.",
+        "invalidUnicode": "잘못된 Unicode 이스케이프입니다."
+      }
     }
   }
 }

@@ -427,6 +427,100 @@
         "scope": "此令牌授予的权限范围",
         "custom": "自定义 / 未注册声明"
       }
+    },
+    "codec": {
+      "name": "编解码器",
+      "description": "本地编解码文本，支持 Base64、Base58、Hex、URL 等常见格式。",
+      "subtitle": "选择编码格式，在左侧粘贴文本，点击编码或解码查看结果。",
+      "privacyNotice": "所有编解码均在浏览器本地完成，你的数据不会离开本设备。",
+      "formatLabel": "编码格式",
+      "formats": {
+        "base64": "Base64",
+        "base64url": "Base64URL",
+        "base58": "Base58",
+        "base32": "Base32",
+        "hex": "Hex",
+        "utf8": "UTF-8",
+        "ascii": "ASCII",
+        "url": "URL",
+        "binary": "Binary",
+        "html": "HTML",
+        "unicode": "Unicode"
+      },
+      "formatEncodeLabel": "编码说明：",
+      "formatResultLabel": "结果格式：",
+      "formatHints": {
+        "base64": {
+          "encode": "将文本的 UTF-8 字节编码为标准 Base64（含 padding）。",
+          "result": "A–Z、a–z、0–9、+、/ 与 = 填充，例如 aGVsbG8="
+        },
+        "base64url": {
+          "encode": "URL 安全的 Base64：用 - 与 _ 替代 + 与 /。",
+          "result": "A–Z、a–z、0–9、-、_，padding 可选，例如 aGVsbG8"
+        },
+        "base58": {
+          "encode": "以 Bitcoin 字母表将 UTF-8 字节编码为 Base58（不含 0/O/I/l）。",
+          "result": "Base58 字符串，例如 Cn8eVZg"
+        },
+        "base32": {
+          "encode": "按 RFC 4648 将 UTF-8 字节编码为 Base32。",
+          "result": "A–Z 与 2–7，例如 NBSWY3DP"
+        },
+        "hex": {
+          "encode": "将 UTF-8 字节编码为连续十六进制字符串。",
+          "result": "无空格小写 hex，例如 68656c6c6f"
+        },
+        "utf8": {
+          "encode": "按 UTF-8 展开每个字节的十六进制，字节之间用空格分隔。",
+          "result": "空格分隔的 hex 字节，例如 68 65 6c 6c 6f"
+        },
+        "ascii": {
+          "encode": "按 ASCII 显示每个字节的十进制码（0–127）；含非 ASCII 字符会失败。",
+          "result": "空格分隔的十进制码，例如 97 98 99 101 102"
+        },
+        "url": {
+          "encode": "使用 encodeURIComponent 进行百分号编码。",
+          "result": "URL 编码字符串，例如 hello%20world"
+        },
+        "binary": {
+          "encode": "将每个 UTF-8 字节展开为 8 位二进制。",
+          "result": "空格分隔的 0/1 分组，例如 01101000 01100101"
+        },
+        "html": {
+          "encode": "将特殊字符 / 非 ASCII 转义为 HTML 实体。",
+          "result": "命名或数字实体，例如 &lt;div&gt; / &#20320;"
+        },
+        "unicode": {
+          "encode": "将每个字符转义为 Unicode 转义序列。",
+          "result": "\\uXXXX 或 \\u{...}，例如 \\u0048\\u0069"
+        }
+      },
+      "inputLabel": "输入",
+      "inputPlaceholder": "输入要编码或解码的文本...",
+      "statsChars": "{{count}} 个字符",
+      "statsBytes": "{{count}} 字节",
+      "encode": "编码",
+      "decode": "解码",
+      "outputLabel": "结果",
+      "copyResult": "复制结果",
+      "empty": "点击「编码」或「解码」后在此显示结果",
+      "errorTitle": "转换失败",
+      "errors": {
+        "unsupported": "不支持该格式。",
+        "encodeFailed": "编码失败。",
+        "decodeFailed": "解码失败。",
+        "nonAscii": "输入包含非 ASCII 字符。",
+        "invalidBase64": "无效的 Base64 字符串。",
+        "invalidBase64url": "无效的 Base64URL 字符串。",
+        "invalidBase58": "无效的 Base58 字符串。",
+        "invalidBase32": "无效的 Base32 字符串。",
+        "invalidHex": "无效的十六进制字符串。",
+        "invalidAscii": "无效的 ASCII 十进制字节码（或包含非 ASCII 字节）。",
+        "invalidUrl": "无效的 URL 编码字符串。",
+        "invalidBinary": "无效的二进制字符串（应为 0/1 比特分组）。",
+        "invalidHtml": "HTML 实体解码失败。",
+        "invalidUnicode": "无效的 Unicode 转义序列。"
+      }
     }
   }
 }

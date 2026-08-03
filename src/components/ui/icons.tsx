@@ -177,6 +177,19 @@ export function JwtIcon(props: IconProps) {
   );
 }
 
+/** Binary brackets — used for encode / decode codec tools */
+export function CodecIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M4 7v10" />
+      <path d="M8 5v14" />
+      <path d="M16 5v14" />
+      <path d="M20 7v10" />
+      <path d="M10.5 9.5 13.5 12l-3 2.5" />
+    </svg>
+  );
+}
+
 export function ExternalLinkIcon(props: IconProps) {
   return (
     <svg {...base(props)}>

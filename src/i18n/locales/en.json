@@ -427,6 +427,100 @@
         "scope": "Scopes granted by this token",
         "custom": "Custom / unregistered claim"
       }
+    },
+    "codec": {
+      "name": "Codec",
+      "description": "Encode and decode text locally with Base64, Base58, Hex, URL, and other common formats.",
+      "subtitle": "Pick a format, paste text on the left, then encode or decode into the result panel.",
+      "privacyNotice": "All encoding and decoding run locally in your browser. Your data never leaves your device.",
+      "formatLabel": "Encoding format",
+      "formats": {
+        "base64": "Base64",
+        "base64url": "Base64URL",
+        "base58": "Base58",
+        "base32": "Base32",
+        "hex": "Hex",
+        "utf8": "UTF-8",
+        "ascii": "ASCII",
+        "url": "URL",
+        "binary": "Binary",
+        "html": "HTML",
+        "unicode": "Unicode"
+      },
+      "formatEncodeLabel": "Encoding:",
+      "formatResultLabel": "Result format:",
+      "formatHints": {
+        "base64": {
+          "encode": "Converts UTF-8 text bytes to standard Base64 (with padding).",
+          "result": "A–Z, a–z, 0–9, +, / and = padding, e.g. aGVsbG8="
+        },
+        "base64url": {
+          "encode": "URL-safe Base64: same as Base64 but uses - and _ instead of + and /.",
+          "result": "A–Z, a–z, 0–9, -, _ with optional padding, e.g. aGVsbG8"
+        },
+        "base58": {
+          "encode": "Bitcoin-alphabet Base58 encoding of UTF-8 bytes (no 0/O/I/l).",
+          "result": "Base58 alphabet string, e.g. Cn8eVZg"
+        },
+        "base32": {
+          "encode": "RFC 4648 Base32 encoding of UTF-8 bytes.",
+          "result": "A–Z and 2–7, e.g. NBSWY3DP"
+        },
+        "hex": {
+          "encode": "Encodes UTF-8 bytes as a continuous hexadecimal string.",
+          "result": "Lowercase hex without spaces, e.g. 68656c6c6f"
+        },
+        "utf8": {
+          "encode": "Shows each UTF-8 byte in hexadecimal, separated by spaces.",
+          "result": "Spaced hex bytes, e.g. 68 65 6c 6c 6f"
+        },
+        "ascii": {
+          "encode": "Shows each ASCII byte as a decimal code (0–127). Non-ASCII input fails.",
+          "result": "Spaced decimal codes, e.g. 97 98 99 101 102"
+        },
+        "url": {
+          "encode": "Percent-encodes text with encodeURIComponent.",
+          "result": "URL-encoded string, e.g. hello%20world"
+        },
+        "binary": {
+          "encode": "Expands each UTF-8 byte into an 8-bit binary group.",
+          "result": "Spaced 0/1 groups, e.g. 01101000 01100101"
+        },
+        "html": {
+          "encode": "Escapes special / non-ASCII characters as HTML entities.",
+          "result": "Named or numeric entities, e.g. &lt;div&gt; / &#20320;"
+        },
+        "unicode": {
+          "encode": "Escapes each character as a Unicode escape sequence.",
+          "result": "\\uXXXX or \\u{...}, e.g. \\u0048\\u0069"
+        }
+      },
+      "inputLabel": "Input",
+      "inputPlaceholder": "Enter text to encode or decode...",
+      "statsChars": "{{count}} characters",
+      "statsBytes": "{{count}} bytes",
+      "encode": "Encode",
+      "decode": "Decode",
+      "outputLabel": "Result",
+      "copyResult": "Copy result",
+      "empty": "Click Encode or Decode to see the result here",
+      "errorTitle": "Conversion failed",
+      "errors": {
+        "unsupported": "This format is not supported.",
+        "encodeFailed": "Failed to encode the input.",
+        "decodeFailed": "Failed to decode the input.",
+        "nonAscii": "Input contains non-ASCII characters.",
+        "invalidBase64": "Invalid Base64 string.",
+        "invalidBase64url": "Invalid Base64URL string.",
+        "invalidBase58": "Invalid Base58 string.",
+        "invalidBase32": "Invalid Base32 string.",
+        "invalidHex": "Invalid hexadecimal string.",
+        "invalidAscii": "Invalid ASCII decimal byte codes (or contains non-ASCII bytes).",
+        "invalidUrl": "Invalid URL-encoded string.",
+        "invalidBinary": "Invalid binary string (expect groups of 0/1 bits).",
+        "invalidHtml": "Failed to decode HTML entities.",
+        "invalidUnicode": "Invalid Unicode escape sequence."
+      }
     }
   }
 }
