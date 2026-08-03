@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { Badge, Card } from "@/components/ui";
-import { tools } from "@/tools/registry";
+import { getToolsByCategory, toolCategories } from "@/tools/registry";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -24,24 +24,38 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Tools grid */}
-        <section className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {tools.map((tool) => (
-            <Link key={tool.id} to={tool.path} className="group block">
-              <Card glow className="h-full">
-                <div className="flex items-center gap-2">
-                  {tool.icon}
-                  <h2 className="font-display text-base font-semibold text-text transition-colors group-hover:text-primary">
-                    {t(tool.nameKey)}
-                  </h2>
+        {/* Tools by category */}
+        <div className="mt-14 space-y-12">
+          {toolCategories.map((category) => {
+            const categoryTools = getToolsByCategory(category.id);
+            if (categoryTools.length === 0) return null;
+
+            return (
+              <section key={category.id} className="animate-fade-in-up">
+                <h2 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-text-muted">
+                  {t(category.nameKey)}
+                </h2>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {categoryTools.map((tool) => (
+                    <Link key={tool.id} to={tool.path} className="group block">
+                      <Card glow className="h-full">
+                        <div className="flex items-center gap-2">
+                          {tool.icon}
+                          <h3 className="font-display text-base font-semibold text-text transition-colors group-hover:text-primary">
+                            {t(tool.nameKey)}
+                          </h3>
+                        </div>
+                        <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                          {t(tool.descriptionKey)}
+                        </p>
+                      </Card>
+                    </Link>
+                  ))}
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                  {t(tool.descriptionKey)}
-                </p>
-              </Card>
-            </Link>
-          ))}
-        </section>
+              </section>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

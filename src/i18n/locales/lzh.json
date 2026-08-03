@@ -31,6 +31,10 @@
       "privacy": "隱密無虞"
     }
   },
+  "categories": {
+    "web3": "Web3 之器",
+    "general": "通用之器"
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH 助記詞生成器",
@@ -339,6 +343,24 @@
       "errInvalidDecimals": "请输入 0 至 36 之整数。",
       "customAmountLabel": "数量",
       "baseUnitRaw": "最小单位"
+    },
+    "jsonParser": {
+      "name": "JSON 解析器",
+      "description": "於本地解析、整飭、轉義與壓縮 JSON，可摺疊以覽，有行號，並示錯處。",
+      "subtitle": "貼入 JSON 或已轉義之 JSON 字串，於瀏覽器本地整飭、轉義或壓縮。",
+      "privacyNotice": "凡解析與整飭，皆於瀏覽器本地為之，JSON 不離汝之設備。",
+      "escape": "轉義",
+      "minify": "壓縮",
+      "inputLabel": "輸入",
+      "inputPlaceholder": "於此貼入 JSON 或已轉義之 JSON 字串...",
+      "previewLabel": "預覽",
+      "copyResult": "抄録結果",
+      "empty": "於左側貼入 JSON，以觀整飭之貌",
+      "errorTitle": "JSON 非法",
+      "errorAt": "在第 {{line}} 行、第 {{column}} 列",
+      "errorSnippet": "近處：{{snippet}}",
+      "collapse": "摺之",
+      "expand": "展之"
     }
   }
 }

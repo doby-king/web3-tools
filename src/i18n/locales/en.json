@@ -31,6 +31,10 @@
       "privacy": "Privacy-first"
     }
   },
+  "categories": {
+    "web3": "Web3 Tools",
+    "general": "General Tools"
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH Mnemonic Generator",
@@ -339,6 +343,24 @@
       "errInvalidDecimals": "Please enter an integer between 0 and 36.",
       "customAmountLabel": "Amount",
       "baseUnitRaw": "Base units"
+    },
+    "jsonParser": {
+      "name": "JSON Parser",
+      "description": "Parse, format, escape, and minify JSON locally — with foldable preview, line numbers, and error location hints.",
+      "subtitle": "Paste JSON or an escaped JSON string. Format, escape, or minify entirely in your browser.",
+      "privacyNotice": "All parsing and formatting run locally in your browser. Your JSON never leaves your device.",
+      "escape": "Escape",
+      "minify": "Minify",
+      "inputLabel": "Input",
+      "inputPlaceholder": "Paste JSON or an escaped JSON string here...",
+      "previewLabel": "Preview",
+      "copyResult": "Copy result",
+      "empty": "Paste JSON on the left to see the formatted preview",
+      "errorTitle": "Invalid JSON",
+      "errorAt": "At line {{line}}, column {{column}}",
+      "errorSnippet": "Near: {{snippet}}",
+      "collapse": "Collapse",
+      "expand": "Expand"
     }
   }
 }

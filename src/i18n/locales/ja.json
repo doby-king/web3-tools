@@ -31,6 +31,10 @@
       "privacy": "プライバシー重視"
     }
   },
+  "categories": {
+    "web3": "Web3 ツール",
+    "general": "汎用ツール"
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH ニーモニックジェネレーター",
@@ -339,6 +343,24 @@
       "errInvalidDecimals": "0 から 36 までの整数を入力してください。",
       "customAmountLabel": "数量",
       "baseUnitRaw": "最小単位"
+    },
+    "jsonParser": {
+      "name": "JSON パーサー",
+      "description": "JSON の解析・整形・エスケープ・圧縮をローカルで実行。折りたたみプレビュー、行番号、エラー位置のヒントに対応。",
+      "subtitle": "JSON またはエスケープ済み JSON 文字列を貼り付け、ブラウザ内で整形・エスケープ・圧縮します。",
+      "privacyNotice": "解析と整形はすべてブラウザ内でローカルに実行されます。JSON がデバイスの外に出ることはありません。",
+      "escape": "エスケープ",
+      "minify": "圧縮",
+      "inputLabel": "入力",
+      "inputPlaceholder": "JSON またはエスケープ済み JSON 文字列を貼り付け...",
+      "previewLabel": "プレビュー",
+      "copyResult": "結果をコピー",
+      "empty": "左側に JSON を貼り付けると整形プレビューが表示されます",
+      "errorTitle": "無効な JSON",
+      "errorAt": "{{line}} 行目、{{column}} 列目",
+      "errorSnippet": "付近: {{snippet}}",
+      "collapse": "折りたたむ",
+      "expand": "展開"
     }
   }
 }

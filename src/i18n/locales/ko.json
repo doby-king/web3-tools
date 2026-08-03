@@ -31,6 +31,10 @@
       "privacy": "프라이버시 우선"
     }
   },
+  "categories": {
+    "web3": "Web3 도구",
+    "general": "일반 도구"
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH 니모닉 생성기",
@@ -339,6 +343,24 @@
       "errInvalidDecimals": "0에서 36 사이의 정수를 입력하세요.",
       "customAmountLabel": "수량",
       "baseUnitRaw": "최소 단위"
+    },
+    "jsonParser": {
+      "name": "JSON 파서",
+      "description": "JSON을 로컬에서 파싱·포맷·이스케이프·압축합니다. 접기 미리보기, 줄 번호, 오류 위치 힌트를 지원합니다.",
+      "subtitle": "JSON 또는 이스케이프된 JSON 문자열을 붙여넣고, 브라우저에서 포맷·이스케이프·압축합니다.",
+      "privacyNotice": "모든 파싱과 포맷은 브라우저에서 로컬로 수행됩니다. JSON은 기기를 떠나지 않습니다.",
+      "escape": "이스케이프",
+      "minify": "압축",
+      "inputLabel": "입력",
+      "inputPlaceholder": "JSON 또는 이스케이프된 JSON 문자열을 붙여넣으세요...",
+      "previewLabel": "미리보기",
+      "copyResult": "결과 복사",
+      "empty": "왼쪽에 JSON을 붙여넣으면 포맷된 미리보기가 표시됩니다",
+      "errorTitle": "잘못된 JSON",
+      "errorAt": "{{line}}행 {{column}}열",
+      "errorSnippet": "근처: {{snippet}}",
+      "collapse": "접기",
+      "expand": "펼치기"
     }
   }
 }
