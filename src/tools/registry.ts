@@ -6,7 +6,12 @@ import {
   type ReactNode,
 } from "react";
 import type { ParseKeys } from "i18next";
-import { CodeIcon, KeyIcon, WalletIcon } from "@/components/ui/icons";
+import {
+  CodeIcon,
+  DropletIcon,
+  KeyIcon,
+  WalletIcon,
+} from "@/components/ui/icons";
 
 export interface ToolMeta {
   id: string;
@@ -55,5 +60,16 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/aa-address-calculator`,
     component: lazy(() => import("@/tools/aa-address-calculator")),
+  },
+  {
+    id: "faucet-hub",
+    nameKey: "tools.faucetHub.name",
+    descriptionKey: "tools.faucetHub.description",
+    icon: createElement(DropletIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/faucet-hub`,
+    component: lazy(() => import("@/tools/faucet-hub")),
   },
 ];

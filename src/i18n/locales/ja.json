@@ -248,6 +248,54 @@
         "biconomyStandard": "標準 v2",
         "biconomyStandardDesc": "デフォルト EntryPoint の Biconomy Smart Account v2"
       }
+    },
+    "faucetHub": {
+      "name": "Faucet Hub",
+      "description": "複数の EVM チェーンに対応したテストネットファセットの厳選リスト。ネットワークまたはアセットタイプで検索・フィルタリングできます。",
+      "subtitle": "EVM チェーンのテストネットファセットを閲覧・フィルタリングできます。すべてのリンクは新しいタブで開きます。",
+      "testnetNotice": "以下に記載されているファセットはすべてテストネット専用です。受け取ったトークンには実際の価値がなく、開発・テスト目的のみです。",
+      "securityWarning": "正規のファセットがニーモニックや秘密鍵を求めることは決してありません。シードフレーズや秘密鍵を要求するサイトはすべて詐欺です。",
+      "searchPlaceholder": "名前、ネットワーク、アセットで検索...",
+      "networkFilter": "ネットワーク",
+      "assetFilter": "アセット",
+      "sourceFilter": "ソース",
+      "sourceAll": "すべて",
+      "sourceOfficial": "公式",
+      "sourceProvider": "プロバイダー",
+      "sourceCommunity": "コミュニティ",
+      "totalFaucets": "{{count}} 件のファセット",
+      "networks": "ネットワーク",
+      "assets": "アセット",
+      "requirements": "受給条件",
+      "visitFaucet": "訪問",
+      "checkedAt": "最終確認日: {{date}}",
+      "noResults": "フィルターに一致するファセットがありません",
+      "networkOptions": {
+        "all": "すべてのネットワーク",
+        "multi": "マルチチェーン",
+        "cronos": "Cronos",
+        "ethereum": "Ethereum",
+        "arbitrum": "Arbitrum",
+        "base": "Base",
+        "optimism": "Optimism",
+        "polygon": "Polygon",
+        "bnb": "BNB Chain",
+        "avalanche": "Avalanche",
+        "zksync": "zkSync",
+        "mantle": "Mantle"
+      },
+      "assetOptions": {
+        "all": "すべてのアセット",
+        "native": "ネイティブ Gas",
+        "stablecoin": "USDC / ステーブルコイン",
+        "link": "LINK"
+      },
+      "colName": "名前",
+      "colNetworks": "ネットワーク",
+      "colAssets": "アセット",
+      "colRequirements": "受給条件",
+      "showMore": "+{{count}} 件",
+      "showLess": "折りたたむ"
     }
   }
 }

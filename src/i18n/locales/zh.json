@@ -248,6 +248,54 @@
         "biconomyStandard": "标准 v2",
         "biconomyStandardDesc": "使用默认 EntryPoint 的 Biconomy Smart Account v2"
       }
+    },
+    "faucetHub": {
+      "name": "Faucet Hub",
+      "description": "精选多链 EVM 测试网水龙头列表，支持按网络或资产类型搜索与筛选。",
+      "subtitle": "浏览并筛选 EVM 链的测试网水龙头，所有链接将在新标签页中打开。",
+      "testnetNotice": "以下所有水龙头均面向测试网，领取的代币无实际价值，仅用于开发和测试。",
+      "securityWarning": "正规水龙头绝不会要求你提供助记词或私钥。任何索要助记词或私钥的网站均为诈骗。",
+      "searchPlaceholder": "搜索名称、网络或资产...",
+      "networkFilter": "网络",
+      "assetFilter": "资产",
+      "sourceFilter": "来源",
+      "sourceAll": "全部",
+      "sourceOfficial": "官方",
+      "sourceProvider": "服务商",
+      "sourceCommunity": "社区",
+      "totalFaucets": "共 {{count}} 个水龙头",
+      "networks": "网络",
+      "assets": "资产",
+      "requirements": "领取要求",
+      "visitFaucet": "前往",
+      "checkedAt": "最近验证：{{date}}",
+      "noResults": "没有匹配的水龙头",
+      "networkOptions": {
+        "all": "全部网络",
+        "multi": "多链入口",
+        "cronos": "Cronos",
+        "ethereum": "Ethereum",
+        "arbitrum": "Arbitrum",
+        "base": "Base",
+        "optimism": "Optimism",
+        "polygon": "Polygon",
+        "bnb": "BNB Chain",
+        "avalanche": "Avalanche",
+        "zksync": "zkSync",
+        "mantle": "Mantle"
+      },
+      "assetOptions": {
+        "all": "全部资产",
+        "native": "原生 Gas",
+        "stablecoin": "USDC / 稳定币",
+        "link": "LINK"
+      },
+      "colName": "名称",
+      "colNetworks": "网络",
+      "colAssets": "资产",
+      "colRequirements": "领取要求",
+      "showMore": "+{{count}} 个",
+      "showLess": "收起"
     }
   }
 }

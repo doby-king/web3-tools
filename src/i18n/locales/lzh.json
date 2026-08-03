@@ -248,6 +248,54 @@
         "biconomyStandard": "標準 v2",
         "biconomyStandardDesc": "用默認 EntryPoint 之 Biconomy Smart Account v2"
       }
+    },
+    "faucetHub": {
+      "name": "Faucet Hub",
+      "description": "精選諸鏈 EVM 試網水龍頭之列，可依網絡、資產之類以尋之。",
+      "subtitle": "覽而篩之 EVM 鏈試網水龍頭，凡鏈皆啟於新籤。",
+      "testnetNotice": "下列水龍頭皆向試網而設，所領之幣無實值，唯供習學、試驗之用。",
+      "securityWarning": "正水龙头絕不索汝助記詞或私鑰。凡索助記詞或私鑰之站，皆詐騙也。",
+      "searchPlaceholder": "尋名、網絡或資產...",
+      "networkFilter": "網絡",
+      "assetFilter": "資產",
+      "sourceFilter": "來源",
+      "sourceAll": "皆",
+      "sourceOfficial": "官方的",
+      "sourceProvider": "服務商",
+      "sourceCommunity": "社群",
+      "totalFaucets": "凡 {{count}} 水龍頭",
+      "networks": "網絡",
+      "assets": "資產",
+      "requirements": "領之需",
+      "visitFaucet": "往之",
+      "checkedAt": "近驗：{{date}}",
+      "noResults": "無水龍頭合此篩",
+      "networkOptions": {
+        "all": "皆網絡",
+        "multi": "多鏈入口",
+        "cronos": "Cronos",
+        "ethereum": "Ethereum",
+        "arbitrum": "Arbitrum",
+        "base": "Base",
+        "optimism": "Optimism",
+        "polygon": "Polygon",
+        "bnb": "BNB Chain",
+        "avalanche": "Avalanche",
+        "zksync": "zkSync",
+        "mantle": "Mantle"
+      },
+      "assetOptions": {
+        "all": "皆資產",
+        "native": "原生 Gas",
+        "stablecoin": "USDC / 穩定幣",
+        "link": "LINK"
+      },
+      "colName": "名",
+      "colNetworks": "網絡",
+      "colAssets": "資產",
+      "colRequirements": "領之需",
+      "showMore": "+{{count}} 餘",
+      "showLess": "斂之"
     }
   }
 }

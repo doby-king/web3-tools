@@ -248,6 +248,54 @@
         "biconomyStandard": "표준 v2",
         "biconomyStandardDesc": "기본 EntryPoint의 Biconomy Smart Account v2"
       }
+    },
+    "faucetHub": {
+      "name": "Faucet Hub",
+      "description": "여러 EVM 체인의 테스트넷 파우셋 엄선 목록. 네트워크 또는 자산 유형별로 검색하고 필터링할 수 있습니다.",
+      "subtitle": "EVM 체인의 테스트넷 파우셋을 탐색하고 필터링하세요. 모든 링크는 새 탭에서 열립니다.",
+      "testnetNotice": "아래에 나열된 모든 파우셋은 테스트넷 전용입니다. 수령한 토큰은 실제 가치가 없으며 개발 및 테스트 목적으로만 사용됩니다.",
+      "securityWarning": "정당한 파우셋은 니모닉이나 개인 키를 절대 요구하지 않습니다. 시드 구문이나 개인 키를 요청하는 사이트는 사기입니다.",
+      "searchPlaceholder": "이름, 네트워크 또는 자산으로 검색...",
+      "networkFilter": "네트워크",
+      "assetFilter": "자산",
+      "sourceFilter": "출처",
+      "sourceAll": "전체",
+      "sourceOfficial": "공식",
+      "sourceProvider": "제공자",
+      "sourceCommunity": "커뮤니티",
+      "totalFaucets": "{{count}}개의 파우셋",
+      "networks": "네트워크",
+      "assets": "자산",
+      "requirements": "수령 조건",
+      "visitFaucet": "방문",
+      "checkedAt": "마지막 확인: {{date}}",
+      "noResults": "필터와 일치하는 파우셋이 없습니다",
+      "networkOptions": {
+        "all": "모든 네트워크",
+        "multi": "멀티체인",
+        "cronos": "Cronos",
+        "ethereum": "Ethereum",
+        "arbitrum": "Arbitrum",
+        "base": "Base",
+        "optimism": "Optimism",
+        "polygon": "Polygon",
+        "bnb": "BNB Chain",
+        "avalanche": "Avalanche",
+        "zksync": "zkSync",
+        "mantle": "Mantle"
+      },
+      "assetOptions": {
+        "all": "모든 자산",
+        "native": "네이티브 Gas",
+        "stablecoin": "USDC / 스테이블코인",
+        "link": "LINK"
+      },
+      "colName": "이름",
+      "colNetworks": "네트워크",
+      "colAssets": "자산",
+      "colRequirements": "수령 조건",
+      "showMore": "+{{count}}개",
+      "showLess": "접기"
     }
   }
 }

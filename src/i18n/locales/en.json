@@ -248,6 +248,54 @@
         "biconomyStandard": "Standard v2",
         "biconomyStandardDesc": "Biconomy Smart Account v2 with default EntryPoint"
       }
+    },
+    "faucetHub": {
+      "name": "Faucet Hub",
+      "description": "Curated list of testnet faucets across multiple EVM chains. Search, filter by network or asset type.",
+      "subtitle": "Browse and filter testnet faucets across EVM chains. All links open in a new tab.",
+      "testnetNotice": "All faucets listed below are for testnets only. Tokens received have no real value and are intended for development and testing.",
+      "securityWarning": "Legitimate faucets will NEVER ask for your mnemonic or private key. Any site requesting seed phrases or private keys is a scam.",
+      "searchPlaceholder": "Search by name, network, or asset...",
+      "networkFilter": "Network",
+      "assetFilter": "Asset",
+      "sourceFilter": "Source",
+      "sourceAll": "All",
+      "sourceOfficial": "Official",
+      "sourceProvider": "Provider",
+      "sourceCommunity": "Community",
+      "totalFaucets": "{{count}} faucet(s) found",
+      "networks": "Networks",
+      "assets": "Assets",
+      "requirements": "Requirements",
+      "visitFaucet": "Visit",
+      "checkedAt": "Last verified: {{date}}",
+      "noResults": "No faucets match your filters",
+      "networkOptions": {
+        "all": "All Networks",
+        "multi": "Multi-chain",
+        "cronos": "Cronos",
+        "ethereum": "Ethereum",
+        "arbitrum": "Arbitrum",
+        "base": "Base",
+        "optimism": "Optimism",
+        "polygon": "Polygon",
+        "bnb": "BNB Chain",
+        "avalanche": "Avalanche",
+        "zksync": "zkSync",
+        "mantle": "Mantle"
+      },
+      "assetOptions": {
+        "all": "All Assets",
+        "native": "Native Gas",
+        "stablecoin": "USDC / Stablecoin",
+        "link": "LINK"
+      },
+      "colName": "Name",
+      "colNetworks": "Networks",
+      "colAssets": "Assets",
+      "colRequirements": "Requirements",
+      "showMore": "+{{count}} more",
+      "showLess": "Show less"
     }
   }
 }
