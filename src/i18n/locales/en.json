@@ -35,10 +35,15 @@
     "web3": "Web3 Tools",
     "general": "General Tools"
   },
+  "seo": {
+    "homeTitle": "Web3 Tools — Free Privacy-First Ethereum & Blockchain Utilities",
+    "homeDescription": "Free open-source Web3 tools that run 100% locally in your browser: ETH mnemonic generator, Wei/GWei unit converter, ABI interactor, ERC-4337 smart account calculator, testnet faucets, JWT parser and more."
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH Mnemonic Generator",
       "description": "Generate 12/24-word BIP-39 mnemonics locally and derive private keys and Ethereum addresses per BIP-44. Your data never leaves the browser.",
+      "seoTitle": "Ethereum Mnemonic & Private Key Generator (BIP-39) — Web3 Tools",
       "subtitle": "Generate a BIP-39 mnemonic locally and derive an Ethereum private key and address per the BIP-44 standard.",
       "privacyNotice": "All computations run locally in your browser. No network requests are made — your mnemonic and private key never leave your device",
       "securityWarning": "Your mnemonic is your assets. Never share it with anyone. Mnemonics generated here should only be used for learning / testing",
@@ -66,6 +71,7 @@
     "abiInteractor": {
       "name": "ABI Interactor",
       "description": "Interact with any contract via its ABI — read state or send transactions through your wallet. Supports 25+ built-in networks and custom RPC endpoints.",
+      "seoTitle": "Ethereum ABI Decoder & Contract Interactor — Web3 Tools",
       "subtitle": "Call read/write functions of any contract by providing its ABI. Connect an EIP-6963 wallet to send write transactions.",
       "privacyNotice": "Read calls and ABI parsing run locally in your browser. RPC requests go directly to the endpoint you select — no intermediary server is involved",
       "network": {
@@ -129,7 +135,9 @@
         "connectToWrite": "Connect a wallet to use write functions",
         "payableBadge": "payable",
         "fixAbiFirst": "Fix the ABI errors on the left to see the method list",
-        "awaitingSetup": "Enter a valid contract address and select an ABI to see the method list"
+        "awaitingSetup": "Enter a valid contract address and select an ABI to see the method list",
+        "searchPlaceholder": "Filter by name or selector (0x…)",
+        "searchEmpty": "No methods match this name or selector"
       },
       "rpc": {
         "tab": "RPC",
@@ -166,6 +174,7 @@
     "aaAddressCalculator": {
       "name": "Smart Account Calculator",
       "description": "Calculate ERC-4337 smart account (AA) addresses locally using CREATE2. Support SimpleAccount, Safe, Coinbase, Alchemy, Kernel, Biconomy and more.",
+      "seoTitle": "ERC-4337 Smart Account Address Calculator (CREATE2) — Web3 Tools",
       "subtitle": "Compute counterfactual addresses for ERC-4337 smart accounts across multiple wallet brands. All calculations run locally.",
       "privacyNotice": "Address calculation runs entirely in your browser. On-chain queries (deployment check, owner lookup) send read-only requests to public RPC endpoints — no sensitive data is transmitted",
       "network": "Network",
@@ -256,6 +265,7 @@
     "faucetHub": {
       "name": "Faucet Hub",
       "description": "Curated list of testnet faucets across multiple EVM chains. Search, filter by network or asset type.",
+      "seoTitle": "Crypto Testnet Faucet List — EVM Chains — Web3 Tools",
       "subtitle": "Browse and filter testnet faucets across EVM chains. All links open in a new tab.",
       "testnetNotice": "All faucets listed below are for testnets only. Tokens received have no real value and are intended for development and testing.",
       "securityWarning": "Legitimate faucets will NEVER ask for your mnemonic or private key. Any site requesting seed phrases or private keys is a scam.",
@@ -304,12 +314,14 @@
     "chainList": {
       "name": "Chain List",
       "description": "Browse the EVM chain list from ChainList — chain IDs, RPCs, and explorers at a glance.",
+      "seoTitle": "EVM Chain List — Chain IDs, RPCs & Explorers — Web3 Tools",
       "subtitle": "Embedded view of ChainList.org for quick EVM chain lookups.",
       "embedNotice": "This page embeds ChainList.org. If the content does not load, please check your network connection."
     },
     "unitConverter": {
       "name": "Unit Converter",
       "description": "Convert token amounts between display units and base units — presets, on-chain ERC-20 lookup, or custom decimals.",
+      "seoTitle": "Wei / GWei / ETH Unit Converter & ERC-20 Decimals — Web3 Tools",
       "subtitle": "Convert amounts between human-readable units and base units with lossless BigInt precision.",
       "noticeLocal": "Preset and custom conversions run entirely in your browser. The on-chain lookup tab sends one read-only RPC request to the selected network.",
       "tabPreset": "Presets",
@@ -347,6 +359,7 @@
     "jsonParser": {
       "name": "JSON Parser",
       "description": "Parse, format, escape, and minify JSON locally — with foldable preview, line numbers, and error location hints.",
+      "seoTitle": "JSON Parser & Formatter — Escape, Minify, Validate — Web3 Tools",
       "subtitle": "Paste JSON or an escaped JSON string. Format, escape, or minify entirely in your browser.",
       "privacyNotice": "All parsing and formatting run locally in your browser. Your JSON never leaves your device.",
       "escape": "Escape",
@@ -365,6 +378,7 @@
     "jwtParser": {
       "name": "JWT Parser",
       "description": "Decode JWT tokens locally, inspect claims, and optionally verify signatures with a public key or HMAC secret.",
+      "seoTitle": "JWT Parser & Decoder — Verify Signature Locally — Web3 Tools",
       "subtitle": "Paste a JWT to decode header and payload. Optionally verify the signature with a public key or HMAC secret.",
       "privacyNotice": "All decoding and verification run locally in your browser. Your token and key never leave your device.",
       "tokenLabel": "JWT Token",
@@ -431,6 +445,7 @@
     "codec": {
       "name": "Codec",
       "description": "Encode and decode text locally with Base64, Base58, Hex, URL, and other common formats.",
+      "seoTitle": "Base64 / Base58 / Hex Codec — Encode & Decode — Web3 Tools",
       "subtitle": "Pick a format, paste text on the left, then encode or decode into the result panel.",
       "privacyNotice": "All encoding and decoding run locally in your browser. Your data never leaves your device.",
       "formatLabel": "Encoding format",

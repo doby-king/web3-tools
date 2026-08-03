@@ -35,10 +35,15 @@
     "web3": "Web3 工具",
     "general": "通用工具"
   },
+  "seo": {
+    "homeTitle": "Web3 工具 — 隐私优先的以太坊区块链工具集合",
+    "homeDescription": "免费开源 Web3 工具，100% 在浏览器本地运行：ETH 助记词生成器、Wei/GWei 单位换算、ABI 合约交互、ERC-4337 智能账户计算、测试网水龙头、JWT 解析等。"
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH 助记词生成器",
       "description": "本地生成 12/24 词 BIP-39 助记词，按 BIP-44 派生私钥与以太坊地址，数据不出浏览器。",
+      "seoTitle": "以太坊助记词与私钥生成器（BIP-39）— Web3 Tools",
       "subtitle": "本地生成 BIP-39 助记词，并按 BIP-44 标准派生以太坊私钥与地址。",
       "privacyNotice": "所有计算均在浏览器本地完成，不会发送任何网络请求，助记词与私钥不会离开你的设备",
       "securityWarning": "助记词即资产，请勿泄露给任何人；本工具生成的助记词建议仅用于学习 / 测试",
@@ -66,6 +71,7 @@
     "abiInteractor": {
       "name": "ABI 合约交互器",
       "description": "通过 ABI 与任意合约交互——读取状态或通过钱包发送交易。内置 25+ 常用网络，支持自定义 RPC。",
+      "seoTitle": "以太坊 ABI 解码与合约交互工具 — Web3 Tools",
       "subtitle": "提供合约 ABI 即可调用其读/写方法。连接 EIP-6963 钱包后可发送写入交易。",
       "privacyNotice": "Read 调用与 ABI 解析均在浏览器本地完成，RPC 请求直接发往你选择的节点，不经过任何中间服务器",
       "network": {
@@ -129,7 +135,9 @@
         "connectToWrite": "连接钱包后可使用写入方法",
         "payableBadge": "payable",
         "fixAbiFirst": "请先修复左侧 ABI 错误以查看方法列表",
-        "awaitingSetup": "输入有效的合约地址并选择 ABI 后，方法列表将显示在此处"
+        "awaitingSetup": "输入有效的合约地址并选择 ABI 后，方法列表将显示在此处",
+        "searchPlaceholder": "按方法名或选择器筛选（0x…）",
+        "searchEmpty": "没有匹配该名称或选择器的方法"
       },
       "rpc": {
         "tab": "RPC",
@@ -166,6 +174,7 @@
     "aaAddressCalculator": {
       "name": "AA 地址计算器",
       "description": "使用 CREATE2 在本地计算 ERC-4337 智能账户（AA）地址。支持 SimpleAccount、Safe、Coinbase、Alchemy、Kernel、Biconomy 等主流钱包。",
+      "seoTitle": "ERC-4337 智能账户地址计算器（CREATE2）— Web3 Tools",
       "subtitle": "计算多种品牌 ERC-4337 智能账户的反事实地址，所有计算均在本地完成。",
       "privacyNotice": "地址计算完全在浏览器本地完成。链上查询（部署状态、owner 查询）仅向公共 RPC 发送只读请求，不传输任何敏感数据",
       "network": "网络",
@@ -256,6 +265,7 @@
     "faucetHub": {
       "name": "Faucet Hub",
       "description": "精选多链 EVM 测试网水龙头列表，支持按网络或资产类型搜索与筛选。",
+      "seoTitle": "加密货币测试网水龙头大全 — EVM 链 — Web3 Tools",
       "subtitle": "浏览并筛选 EVM 链的测试网水龙头，所有链接将在新标签页中打开。",
       "testnetNotice": "以下所有水龙头均面向测试网，领取的代币无实际价值，仅用于开发和测试。",
       "securityWarning": "正规水龙头绝不会要求你提供助记词或私钥。任何索要助记词或私钥的网站均为诈骗。",
@@ -304,12 +314,14 @@
     "chainList": {
       "name": "Chain List",
       "description": "浏览 ChainList 的 EVM 链列表——一目了然查看 Chain ID、RPC 和浏览器。",
+      "seoTitle": "EVM 链列表 — Chain ID、RPC 与浏览器 — Web3 Tools",
       "subtitle": "内嵌 ChainList.org，方便快速查询 EVM 链信息。",
       "embedNotice": "本页面内嵌了 ChainList.org，如内容未加载请检查网络连接。"
     },
     "unitConverter": {
       "name": "单位换算器",
       "description": "代币数量在显示单位与最小单位之间换算——内置预设、链上 ERC-20 查询或自定义精度。",
+      "seoTitle": "Wei / GWei / ETH 单位换算与 ERC-20 精度查询 — Web3 Tools",
       "subtitle": "在人类可读单位与最小单位之间换算，基于 BigInt 无损精度。",
       "noticeLocal": "预设与自定义换算完全在浏览器本地完成；链上查询标签页会向所选网络发送一次只读 RPC 请求。",
       "tabPreset": "预设",
@@ -347,6 +359,7 @@
     "jsonParser": {
       "name": "JSON 解析器",
       "description": "本地解析、格式化、转义与压缩 JSON，支持可折叠预览、行号与错误位置提示。",
+      "seoTitle": "JSON 解析格式化工具 — 转义、压缩、校验 — Web3 Tools",
       "subtitle": "粘贴 JSON 或已转义的 JSON 字符串，在浏览器本地完成格式化、转义或压缩。",
       "privacyNotice": "所有解析与格式化均在浏览器本地完成，你的 JSON 不会离开本设备。",
       "escape": "转义",
@@ -365,6 +378,7 @@
     "jwtParser": {
       "name": "JWT 解析器",
       "description": "本地解码 JWT，查看声明字段，并可选用公钥或 HMAC 密钥验证签名。",
+      "seoTitle": "JWT 解析器 — 本地解码与签名验证 — Web3 Tools",
       "subtitle": "粘贴 JWT 以解码 header 与 payload。可选填入公钥或 HMAC 密钥以验证签名。",
       "privacyNotice": "所有解码与验签均在浏览器本地完成，你的 token 与密钥不会离开本设备。",
       "tokenLabel": "JWT Token",
@@ -431,6 +445,7 @@
     "codec": {
       "name": "编解码器",
       "description": "本地编解码文本，支持 Base64、Base58、Hex、URL 等常见格式。",
+      "seoTitle": "Base64 / Base58 / Hex 编解码工具 — Web3 Tools",
       "subtitle": "选择编码格式，在左侧粘贴文本，点击编码或解码查看结果。",
       "privacyNotice": "所有编解码均在浏览器本地完成，你的数据不会离开本设备。",
       "formatLabel": "编码格式",

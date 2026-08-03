@@ -35,10 +35,15 @@
     "web3": "Web3 도구",
     "general": "일반 도구"
   },
+  "seo": {
+    "homeTitle": "Web3 Tools — 프라이버시 우선 이더리움·블록체인 도구 모음",
+    "homeDescription": "무료 오픈소스 Web3 도구. 브라우저에서 100% 로컬로 실행: ETH 니모닉 생성기, Wei/GWei 단위 변환, ABI 인터랙터, ERC-4337 스마트 계정 계산기, 테스트넷 파우셋, JWT 파서 등."
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH 니모닉 생성기",
       "description": "BIP-39 니모닉(12/24단어)을 로컬에서 생성하고, BIP-44에 따라 개인 키와 이더리움 주소를 파생합니다. 데이터는 브라우저를 떠나지 않습니다.",
+      "seoTitle": "이더리움 니모닉·개인키 생성기 (BIP-39) — Web3 Tools",
       "subtitle": "BIP-39 니모닉을 로컬에서 생성하고, BIP-44 표준에 따라 이더리움 개인 키와 주소를 파생합니다.",
       "privacyNotice": "모든 연산은 브라우저에서 로컬로 수행되며, 어떠한 네트워크 요청도 전송되지 않습니다. 니모닉과 개인 키는 기기를 떠나지 않습니다",
       "securityWarning": "니모닉은 곧 자산입니다. 누구에게도 유출하지 마세요. 이 도구로 생성한 니모닉은 학습 / 테스트용으로만 사용하는 것을 권장합니다",
@@ -66,6 +71,7 @@
     "abiInteractor": {
       "name": "ABI 컨트랙트 인터랙터",
       "description": "ABI를 통해 모든 컨트랙트와 상호작용 — 상태 읽기 또는 지갑을 통한 트랜잭션 전송. 25개 이상의 네트워크를 내장하고 사용자 정의 RPC를 지원합니다.",
+      "seoTitle": "이더리움 ABI 디코더·컨트랙트 인터랙터 — Web3 Tools",
       "subtitle": "컨트랙트의 ABI만 제공하면 읽기/쓰기 함수를 호출할 수 있습니다. EIP-6963 지갑을 연결하면 쓰기 트랜잭션을 전송할 수 있습니다.",
       "privacyNotice": "읽기 호출과 ABI 파싱은 브라우저에서 로컬로 실행됩니다. RPC 요청은 선택한 엔드포인트로 직접 전송되며 중간 서버를 거치지 않습니다",
       "network": {
@@ -129,7 +135,9 @@
         "connectToWrite": "쓰기 함수를 사용하려면 지갑을 연결하세요",
         "payableBadge": "payable",
         "fixAbiFirst": "메서드 목록을 보려면 왼쪽의 ABI 오류를 수정하세요",
-        "awaitingSetup": "유효한 컨트랙트 주소를 입력하고 ABI를 선택하면 메서드 목록이 여기에 표시됩니다"
+        "awaitingSetup": "유효한 컨트랙트 주소를 입력하고 ABI를 선택하면 메서드 목록이 여기에 표시됩니다",
+        "searchPlaceholder": "이름 또는 셀렉터로 필터 (0x…)",
+        "searchEmpty": "해당 이름 또는 셀렉터와 일치하는 메서드가 없습니다"
       },
       "rpc": {
         "tab": "RPC",
@@ -166,6 +174,7 @@
     "aaAddressCalculator": {
       "name": "스마트 계정 계산기",
       "description": "CREATE2를 사용하여 ERC-4337 스마트 계정(AA) 주소를 로컬에서 계산. SimpleAccount, Safe, Coinbase, Alchemy, Kernel, Biconomy 등을 지원합니다.",
+      "seoTitle": "ERC-4337 스마트 계정 주소 계산기 (CREATE2) — Web3 Tools",
       "subtitle": "다양한 월렛 브랜드의 ERC-4337 스마트 계정 카운터팩추얼 주소를 계산합니다. 모든 계산은 로컬에서 실행됩니다.",
       "privacyNotice": "주소 계산은 전적으로 브라우저에서 로컬로 실행됩니다. 온체인 쿼리(배포 확인, owner 조회)는 공개 RPC에 읽기 전용 요청을 전송하며, 민감한 데이터는 전송되지 않습니다",
       "network": "네트워크",
@@ -256,6 +265,7 @@
     "faucetHub": {
       "name": "Faucet Hub",
       "description": "여러 EVM 체인의 테스트넷 파우셋 엄선 목록. 네트워크 또는 자산 유형별로 검색하고 필터링할 수 있습니다.",
+      "seoTitle": "암호화폐 테스트넷 파우셋 모음 — EVM 체인 — Web3 Tools",
       "subtitle": "EVM 체인의 테스트넷 파우셋을 탐색하고 필터링하세요. 모든 링크는 새 탭에서 열립니다.",
       "testnetNotice": "아래에 나열된 모든 파우셋은 테스트넷 전용입니다. 수령한 토큰은 실제 가치가 없으며 개발 및 테스트 목적으로만 사용됩니다.",
       "securityWarning": "정당한 파우셋은 니모닉이나 개인 키를 절대 요구하지 않습니다. 시드 구문이나 개인 키를 요청하는 사이트는 사기입니다.",
@@ -304,12 +314,14 @@
     "chainList": {
       "name": "Chain List",
       "description": "ChainList의 EVM 체인 목록을 탐색하세요 — Chain ID, RPC, 익스플로러를 한눈에 확인하세요.",
+      "seoTitle": "EVM 체인 목록 — 체인 ID·RPC·탐색기 — Web3 Tools",
       "subtitle": "ChainList.org를 임베드하여 EVM 체인 정보를 빠르게 조회할 수 있습니다.",
       "embedNotice": "이 페이지는 ChainList.org를 임베드합니다. 콘텐츠가 로드되지 않으면 네트워크 연결을 확인하세요."
     },
     "unitConverter": {
       "name": "단위 변환기",
       "description": "토큰 수량을 표시 단위와 최소 단위 간 변환 — 프리셋, 온체인 ERC-20 조회, 사용자 지정 decimals 지원.",
+      "seoTitle": "Wei / GWei / ETH 단위 변환·ERC-20 소수점 조회 — Web3 Tools",
       "subtitle": "사람이 읽는 단위와 최소 단위를 BigInt 기반 무손실 정밀도로 변환합니다.",
       "noticeLocal": "프리셋과 사용자 지정 변환은 모두 브라우저 로컬에서 처리됩니다. 온체인 조회 탭만 선택한 네트워크로 읽기 전용 RPC 요청을 1회 보냅니다.",
       "tabPreset": "프리셋",
@@ -347,6 +359,7 @@
     "jsonParser": {
       "name": "JSON 파서",
       "description": "JSON을 로컬에서 파싱·포맷·이스케이프·압축합니다. 접기 미리보기, 줄 번호, 오류 위치 힌트를 지원합니다.",
+      "seoTitle": "JSON 파서·포맷터 — 이스케이프·압축·검증 — Web3 Tools",
       "subtitle": "JSON 또는 이스케이프된 JSON 문자열을 붙여넣고, 브라우저에서 포맷·이스케이프·압축합니다.",
       "privacyNotice": "모든 파싱과 포맷은 브라우저에서 로컬로 수행됩니다. JSON은 기기를 떠나지 않습니다.",
       "escape": "이스케이프",
@@ -365,6 +378,7 @@
     "jwtParser": {
       "name": "JWT 파서",
       "description": "JWT를 로컬에서 디코딩하고 클레임을 확인하며, 공개키 또는 HMAC 비밀키로 서명을 검증할 수 있습니다.",
+      "seoTitle": "JWT 파서 — 로컬 디코딩·서명 검증 — Web3 Tools",
       "subtitle": "JWT를 붙여넣어 header와 payload를 디코딩하세요. 공개키 또는 HMAC 비밀키로 서명을 검증할 수 있습니다.",
       "privacyNotice": "모든 디코딩과 검증은 브라우저에서 로컬로 수행됩니다. 토큰과 키는 기기를 떠나지 않습니다.",
       "tokenLabel": "JWT Token",
@@ -431,6 +445,7 @@
     "codec": {
       "name": "코덱",
       "description": "Base64, Base58, Hex, URL 등 일반적인 형식으로 텍스트를 로컬에서 인코딩/디코딩합니다.",
+      "seoTitle": "Base64 / Base58 / Hex 코덱 — 인코딩·디코딩 — Web3 Tools",
       "subtitle": "형식을 선택하고 왼쪽에 텍스트를 붙여넣은 뒤 인코딩 또는 디코딩하세요.",
       "privacyNotice": "모든 인코딩과 디코딩은 브라우저에서 로컬로 수행됩니다. 데이터는 기기를 떠나지 않습니다.",
       "formatLabel": "인코딩 형식",

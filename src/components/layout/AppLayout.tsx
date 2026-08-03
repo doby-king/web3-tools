@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { GitHubIcon, MenuIcon, XIcon } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { applyPageMeta } from "@/lib/seo";
+import { tools } from "@/tools/registry";
 import { Header } from "./Header";
 import { ToolNav } from "./ToolSidebar";
 
@@ -13,6 +15,16 @@ export function AppLayout() {
   const location = useLocation();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isToolPage = location.pathname.startsWith("/tools");
+
+  // Per-route SEO meta: tool pages use their registry seoTitleKey, home uses site-level copy
+  useEffect(() => {
+    const tool = tools.find((item) => item.path === location.pathname);
+    if (tool) {
+      applyPageMeta(t(tool.seoTitleKey), t(tool.descriptionKey), tool.path);
+    } else {
+      applyPageMeta(t("seo.homeTitle"), t("seo.homeDescription"), "/");
+    }
+  }, [location.pathname, t]);
 
   return (
     <div

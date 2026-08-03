@@ -29,8 +29,10 @@ export interface ToolMeta {
   id: string;
   /** i18n key for the tool name; translations live in src/i18n/locales/*.json (en.json is the source of truth) */
   nameKey: ParseKeys;
-  /** i18n key for the tool's one-line description */
+  /** i18n key for the tool's one-line description; also used as the SEO meta description */
   descriptionKey: ParseKeys;
+  /** i18n key for the SEO page title (long-tail keyword style, e.g. "Wei / GWei Converter — Web3 Tools") */
+  seoTitleKey: ParseKeys;
   category: ToolCategoryId;
   icon?: ReactNode;
   path: string;
@@ -50,6 +52,7 @@ export const tools: ToolMeta[] = [
     id: "eth-mnemonic",
     nameKey: "tools.ethMnemonic.name",
     descriptionKey: "tools.ethMnemonic.description",
+    seoTitleKey: "tools.ethMnemonic.seoTitle",
     category: "web3",
     icon: createElement(KeyIcon, {
       size: 18,
@@ -62,6 +65,7 @@ export const tools: ToolMeta[] = [
     id: "abi-interactor",
     nameKey: "tools.abiInteractor.name",
     descriptionKey: "tools.abiInteractor.description",
+    seoTitleKey: "tools.abiInteractor.seoTitle",
     category: "web3",
     icon: createElement(CodeIcon, {
       size: 18,
@@ -74,6 +78,7 @@ export const tools: ToolMeta[] = [
     id: "aa-address-calculator",
     nameKey: "tools.aaAddressCalculator.name",
     descriptionKey: "tools.aaAddressCalculator.description",
+    seoTitleKey: "tools.aaAddressCalculator.seoTitle",
     category: "web3",
     icon: createElement(WalletIcon, {
       size: 18,
@@ -86,6 +91,7 @@ export const tools: ToolMeta[] = [
     id: "faucet-hub",
     nameKey: "tools.faucetHub.name",
     descriptionKey: "tools.faucetHub.description",
+    seoTitleKey: "tools.faucetHub.seoTitle",
     category: "web3",
     icon: createElement(DropletIcon, {
       size: 18,
@@ -98,6 +104,7 @@ export const tools: ToolMeta[] = [
     id: "chain-list",
     nameKey: "tools.chainList.name",
     descriptionKey: "tools.chainList.description",
+    seoTitleKey: "tools.chainList.seoTitle",
     category: "web3",
     icon: createElement(GlobeIcon, {
       size: 18,
@@ -110,6 +117,7 @@ export const tools: ToolMeta[] = [
     id: "unit-converter",
     nameKey: "tools.unitConverter.name",
     descriptionKey: "tools.unitConverter.description",
+    seoTitleKey: "tools.unitConverter.seoTitle",
     category: "web3",
     icon: createElement(SwapIcon, {
       size: 18,
@@ -122,6 +130,7 @@ export const tools: ToolMeta[] = [
     id: "json-parser",
     nameKey: "tools.jsonParser.name",
     descriptionKey: "tools.jsonParser.description",
+    seoTitleKey: "tools.jsonParser.seoTitle",
     category: "general",
     icon: createElement(BracesIcon, {
       size: 18,
@@ -134,6 +143,7 @@ export const tools: ToolMeta[] = [
     id: "jwt-parser",
     nameKey: "tools.jwtParser.name",
     descriptionKey: "tools.jwtParser.description",
+    seoTitleKey: "tools.jwtParser.seoTitle",
     category: "general",
     icon: createElement(JwtIcon, {
       size: 18,
@@ -146,6 +156,7 @@ export const tools: ToolMeta[] = [
     id: "codec",
     nameKey: "tools.codec.name",
     descriptionKey: "tools.codec.description",
+    seoTitleKey: "tools.codec.seoTitle",
     category: "general",
     icon: createElement(CodecIcon, {
       size: 18,

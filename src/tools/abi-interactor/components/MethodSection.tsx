@@ -96,10 +96,15 @@ export function MethodSection({
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between gap-2 px-4 py-3 text-left"
       >
-        <span className="font-mono text-sm font-medium text-text">
-          {fragment.name}
-          <span className="text-text-muted">
-            ({fragment.inputs.map((i) => i.type).join(", ")})
+        <span className="flex min-w-0 flex-1 flex-wrap items-baseline gap-x-2 gap-y-0.5">
+          <span className="font-mono text-sm font-medium text-text">
+            {fragment.name}
+            <span className="font-normal text-text-muted">
+              ({fragment.inputs.map((i) => i.type).join(", ")})
+            </span>
+          </span>
+          <span className="font-mono text-xs text-text-muted">
+            {fragment.selector}
           </span>
         </span>
         <div className="flex items-center gap-2">

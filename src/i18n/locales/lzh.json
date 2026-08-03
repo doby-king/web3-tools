@@ -35,10 +35,15 @@
     "web3": "Web3 之器",
     "general": "通用之器"
   },
+  "seo": {
+    "homeTitle": "Web3 之器 — 隱密為先，以太坊區塊鏈之器集",
+    "homeDescription": "免費開源之 Web3 之器，皆於瀏覽器本地行之：ETH 助記詞之生成、Wei/GWei 之換算、ABI 之交涉、ERC-4337 智帳之推算、試網之水龍頭、JWT 之解析等。"
+  },
   "tools": {
     "ethMnemonic": {
       "name": "ETH 助記詞生成器",
       "description": "於本地造 BIP-39 助記詞，或十二詞，或廿四詞，循 BIP-44 以衍私鑰及以太坊之址，資料不出瀏覽器。",
+      "seoTitle": "以太坊助記詞與私鑰生成器（BIP-39）— Web3 Tools",
       "subtitle": "於本地造 BIP-39 助記詞，循 BIP-44 之準，以衍以太坊私鑰與地址。",
       "privacyNotice": "凡所運算，皆於瀏覽器本地為之，不發分毫網絡之請；助記詞與私鑰，不離汝之設備",
       "securityWarning": "助記詞者，資產也，慎勿洩於他人；本器所造之詞，宜僅供習學、試驗之用",
@@ -66,6 +71,7 @@
     "abiInteractor": {
       "name": "ABI 合約交互器",
       "description": "以 ABI 與任意合約交——或讀其狀，或藉錢囊以發交易。內置廿五有餘之網，亦可自定 RPC。",
+      "seoTitle": "以太坊 ABI 解讀與合約交涉之器 — Web3 Tools",
       "subtitle": "供合約之 ABI，即可呼其讀寫之法。接 EIP-6963 錢囊，而後可發寫入之交易。",
       "privacyNotice": "讀取之呼與 ABI 之析，皆於瀏覽器本地為之；RPC 之請，徑達汝所擇之節點，不經中介之服器",
       "network": {
@@ -129,7 +135,9 @@
         "connectToWrite": "接錢囊後可用寫入之法",
         "payableBadge": "payable",
         "fixAbiFirst": "請先修左側 ABI 之誤，而後可見法目",
-        "awaitingSetup": "入有效之合約址並擇 ABI，法目將顯於此"
+        "awaitingSetup": "入有效之合約址並擇 ABI，法目將顯於此",
+        "searchPlaceholder": "以法名或選擇器篩之（0x…）",
+        "searchEmpty": "無合此名或選擇器之法"
       },
       "rpc": {
         "tab": "RPC",
@@ -166,6 +174,7 @@
     "aaAddressCalculator": {
       "name": "智帳址算器",
       "description": "以 CREATE2 算 ERC-4337 智帳之址於本地。兼 SimpleAccount、Safe、Coinbase、Alchemy、Kernel、Biconomy 諸家。",
+      "seoTitle": "ERC-4337 智帳地址推算器（CREATE2）— Web3 Tools",
       "subtitle": "算諸家 ERC-4337 智帳之未實址，皆於本地行之。",
       "privacyNotice": "址算皆於瀏覽器本地行之。鏈上之詢（部署與否、owner 之詢）唯送唯讀之請於公 RPC，不傳敏感之據",
       "network": "網絡",
@@ -256,6 +265,7 @@
     "faucetHub": {
       "name": "Faucet Hub",
       "description": "精選諸鏈 EVM 試網水龍頭之列，可依網絡、資產之類以尋之。",
+      "seoTitle": "試網水龍頭之彙 — EVM 諸鏈 — Web3 Tools",
       "subtitle": "覽而篩之 EVM 鏈試網水龍頭，凡鏈皆啟於新籤。",
       "testnetNotice": "下列水龍頭皆向試網而設，所領之幣無實值，唯供習學、試驗之用。",
       "securityWarning": "正水龙头絕不索汝助記詞或私鑰。凡索助記詞或私鑰之站，皆詐騙也。",
@@ -304,12 +314,14 @@
     "chainList": {
       "name": "Chain List",
       "description": "览 ChainList 之 EVM 链列—— Chain ID、RPC 与浏览器皆一览无遗。",
+      "seoTitle": "EVM 諸鏈之表 — Chain ID、RPC 與瀏覽之器 — Web3 Tools",
       "subtitle": "内嵌 ChainList.org，以便速查 EVM 链之信息。",
       "embedNotice": "此页内嵌 ChainList.org，若未加载请察网络之连。"
     },
     "unitConverter": {
       "name": "单位换算器",
       "description": "代币之数，于显示单位与最小单位间互转——内置预设、链上 ERC-20 之查、或自定义精度。",
+      "seoTitle": "Wei / GWei / ETH 單位換算與 ERC-20 精度之查 — Web3 Tools",
       "subtitle": "于可读单位与最小单位间互转，以 BigInt 算之，精而无损。",
       "noticeLocal": "预设与自定义之算，皆在浏览器本地为之；链上查询一页，则向所选网络发只读 RPC 之请。",
       "tabPreset": "预设",
@@ -347,6 +359,7 @@
     "jsonParser": {
       "name": "JSON 解析器",
       "description": "於本地解析、整飭、轉義與壓縮 JSON，可摺疊以覽，有行號，並示錯處。",
+      "seoTitle": "JSON 解析整飭之器 — 轉義、壓縮、校驗 — Web3 Tools",
       "subtitle": "貼入 JSON 或已轉義之 JSON 字串，於瀏覽器本地整飭、轉義或壓縮。",
       "privacyNotice": "凡解析與整飭，皆於瀏覽器本地為之，JSON 不離汝之設備。",
       "escape": "轉義",
@@ -365,6 +378,7 @@
     "jwtParser": {
       "name": "JWT 解析器",
       "description": "於本地解 JWT，覽其聲明，並可擇用公鑰或 HMAC 密鑰以驗簽名。",
+      "seoTitle": "JWT 解析之器 — 本地解碼與驗簽 — Web3 Tools",
       "subtitle": "貼入 JWT 以解 header 與 payload。可選填公鑰或 HMAC 密鑰以驗簽名。",
       "privacyNotice": "凡解碼與驗簽，皆於瀏覽器本地為之，token 與密鑰不離汝之設備。",
       "tokenLabel": "JWT Token",
@@ -431,6 +445,7 @@
     "codec": {
       "name": "編解碼器",
       "description": "於本地編解碼文本，可為 Base64、Base58、Hex、URL 等常見格式。",
+      "seoTitle": "Base64 / Base58 / Hex 編解碼之器 — Web3 Tools",
       "subtitle": "擇編碼格式，於左側貼入文本，點編碼或解碼以觀結果。",
       "privacyNotice": "凡編解碼，皆於瀏覽器本地為之，數據不離汝之設備。",
       "formatLabel": "編碼格式",
