@@ -296,6 +296,12 @@
       "colRequirements": "受給条件",
       "showMore": "+{{count}} 件",
       "showLess": "折りたたむ"
+    },
+    "chainList": {
+      "name": "Chain List",
+      "description": "ChainList の EVM チェーン一覧を参照 — Chain ID、RPC、エクスプローラーを一覧で確認できます。",
+      "subtitle": "ChainList.org を埋め込み、EVM チェーン情報を素早く確認できます。",
+      "embedNotice": "このページは ChainList.org を埋め込んでいます。内容が読み込まれない場合は、ネットワーク接続を確認してください。"
     }
   }
 }

@@ -9,6 +9,7 @@ import type { ParseKeys } from "i18next";
 import {
   CodeIcon,
   DropletIcon,
+  GlobeIcon,
   KeyIcon,
   WalletIcon,
 } from "@/components/ui/icons";
@@ -71,5 +72,16 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/faucet-hub`,
     component: lazy(() => import("@/tools/faucet-hub")),
+  },
+  {
+    id: "chain-list",
+    nameKey: "tools.chainList.name",
+    descriptionKey: "tools.chainList.description",
+    icon: createElement(GlobeIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/chain-list`,
+    component: lazy(() => import("@/tools/chain-list")),
   },
 ];

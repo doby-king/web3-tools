@@ -296,6 +296,12 @@
       "colRequirements": "領之需",
       "showMore": "+{{count}} 餘",
       "showLess": "斂之"
+    },
+    "chainList": {
+      "name": "Chain List",
+      "description": "览 ChainList 之 EVM 链列—— Chain ID、RPC 与浏览器皆一览无遗。",
+      "subtitle": "内嵌 ChainList.org，以便速查 EVM 链之信息。",
+      "embedNotice": "此页内嵌 ChainList.org，若未加载请察网络之连。"
     }
   }
 }

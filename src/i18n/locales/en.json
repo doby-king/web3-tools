@@ -296,6 +296,12 @@
       "colRequirements": "Requirements",
       "showMore": "+{{count}} more",
       "showLess": "Show less"
+    },
+    "chainList": {
+      "name": "Chain List",
+      "description": "Browse the EVM chain list from ChainList — chain IDs, RPCs, and explorers at a glance.",
+      "subtitle": "Embedded view of ChainList.org for quick EVM chain lookups.",
+      "embedNotice": "This page embeds ChainList.org. If the content does not load, please check your network connection."
     }
   }
 }

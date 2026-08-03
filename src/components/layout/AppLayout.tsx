@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { GitHubIcon, MenuIcon, XIcon } from "@/components/ui";
+import { cn } from "@/lib/cn";
 import { Header } from "./Header";
 import { ToolNav } from "./ToolSidebar";
 
@@ -14,17 +15,39 @@ export function AppLayout() {
   const isToolPage = location.pathname.startsWith("/tools");
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div
+      className={cn(
+        "flex flex-col",
+        isToolPage ? "h-screen overflow-hidden" : "min-h-screen",
+      )}
+    >
       <Header />
-      <main className="flex-1">
+      <main className={cn(isToolPage ? "min-h-0 flex-1" : "flex-1")}>
         {isToolPage ? (
-          <div className="mx-auto flex w-full max-w-[1400px]">
+          <div className="mx-auto flex h-full w-full">
             {/* Desktop sidebar */}
-            <aside className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-56 shrink-0 border-r border-border lg:block">
-              <ToolNav />
+            <aside className="hidden h-full w-56 shrink-0 border-r border-border lg:flex lg:flex-col">
+              <div className="flex-1 overflow-y-auto">
+                <ToolNav />
+              </div>
+              {/* Footer in sidebar for tool pages */}
+              <footer className="border-t border-border py-4 px-3">
+                <div className="flex items-center justify-center gap-1.5 text-xs text-text-muted">
+                  <span>{t("layout.footer")}</span>
+                  <a
+                    href={GITHUB_REPO}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t("common.github")}
+                    className="inline-flex text-text-muted transition-colors hover:text-text"
+                  >
+                    <GitHubIcon size={14} />
+                  </a>
+                </div>
+              </footer>
             </aside>
             {/* Content */}
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 flex-1 overflow-y-auto">
               <Outlet />
             </div>
           </div>
@@ -32,6 +55,24 @@ export function AppLayout() {
           <Outlet />
         )}
       </main>
+
+      {/* Footer at bottom of page for non-tool pages */}
+      {!isToolPage && (
+        <footer className="border-t border-border py-6">
+          <div className="mx-auto flex max-w-5xl items-center justify-center gap-1.5 px-4 text-xs text-text-muted sm:px-6">
+            <span>{t("layout.footer")}</span>
+            <a
+              href={GITHUB_REPO}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("common.github")}
+              className="inline-flex text-text-muted transition-colors hover:text-text"
+            >
+              <GitHubIcon size={14} />
+            </a>
+          </div>
+        </footer>
+      )}
 
       {/* Mobile: floating menu button + drawer (tool pages only) */}
       {isToolPage && (
@@ -72,21 +113,6 @@ export function AppLayout() {
           )}
         </>
       )}
-
-      <footer className="border-t border-border py-6">
-        <div className="mx-auto flex max-w-5xl items-center justify-center gap-1.5 px-4 text-xs text-text-muted sm:px-6">
-          <span>{t("layout.footer")}</span>
-          <a
-            href={GITHUB_REPO}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t("common.github")}
-            className="inline-flex text-text-muted transition-colors hover:text-text"
-          >
-            <GitHubIcon size={14} />
-          </a>
-        </div>
-      </footer>
     </div>
   );
 }
