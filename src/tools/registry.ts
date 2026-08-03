@@ -11,6 +11,7 @@ import {
   DropletIcon,
   GlobeIcon,
   KeyIcon,
+  SwapIcon,
   WalletIcon,
 } from "@/components/ui/icons";
 
@@ -83,5 +84,16 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/chain-list`,
     component: lazy(() => import("@/tools/chain-list")),
+  },
+  {
+    id: "unit-converter",
+    nameKey: "tools.unitConverter.name",
+    descriptionKey: "tools.unitConverter.description",
+    icon: createElement(SwapIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/unit-converter`,
+    component: lazy(() => import("@/tools/unit-converter")),
   },
 ];
