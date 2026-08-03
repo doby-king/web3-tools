@@ -11,6 +11,7 @@ import {
   CodeIcon,
   DropletIcon,
   GlobeIcon,
+  JwtIcon,
   KeyIcon,
   SwapIcon,
   WalletIcon,
@@ -127,6 +128,18 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/json-parser`,
     component: lazy(() => import("@/tools/json-parser")),
+  },
+  {
+    id: "jwt-parser",
+    nameKey: "tools.jwtParser.name",
+    descriptionKey: "tools.jwtParser.description",
+    category: "general",
+    icon: createElement(JwtIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/jwt-parser`,
+    component: lazy(() => import("@/tools/jwt-parser")),
   },
 ];
 
