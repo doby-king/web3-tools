@@ -316,7 +316,7 @@
       "description": "浏览 ChainList 的 EVM 链列表——一目了然查看 Chain ID、RPC 和浏览器。",
       "seoTitle": "EVM 链列表 — Chain ID、RPC 与浏览器 — Web3 Tools",
       "subtitle": "内嵌 ChainList.org，方便快速查询 EVM 链信息。",
-      "embedNotice": "本页面内嵌了 ChainList.org，如内容未加载请检查网络连接。"
+      "embedNotice": "本页面内嵌 ChainList.org，并会同步站点的亮/暗主题。如内容未加载请检查网络连接。"
     },
     "unitConverter": {
       "name": "单位换算器",

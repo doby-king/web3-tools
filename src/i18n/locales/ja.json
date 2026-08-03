@@ -316,7 +316,7 @@
       "description": "ChainList の EVM チェーン一覧を参照 — Chain ID、RPC、エクスプローラーを一覧で確認できます。",
       "seoTitle": "EVM チェーン一覧 — チェーン ID・RPC・エクスプローラー — Web3 Tools",
       "subtitle": "ChainList.org を埋め込み、EVM チェーン情報を素早く確認できます。",
-      "embedNotice": "このページは ChainList.org を埋め込んでいます。内容が読み込まれない場合は、ネットワーク接続を確認してください。"
+      "embedNotice": "このページは ChainList.org を埋め込み、サイトのライト/ダークテーマと同期します。内容が読み込まれない場合は、ネットワーク接続を確認してください。"
     },
     "unitConverter": {
       "name": "単位換算ツール",

@@ -316,7 +316,7 @@
       "description": "Browse the EVM chain list from ChainList — chain IDs, RPCs, and explorers at a glance.",
       "seoTitle": "EVM Chain List — Chain IDs, RPCs & Explorers — Web3 Tools",
       "subtitle": "Embedded view of ChainList.org for quick EVM chain lookups.",
-      "embedNotice": "This page embeds ChainList.org. If the content does not load, please check your network connection."
+      "embedNotice": "This page embeds ChainList.org and syncs its light/dark theme with yours. If the content does not load, please check your network connection."
     },
     "unitConverter": {
       "name": "Unit Converter",

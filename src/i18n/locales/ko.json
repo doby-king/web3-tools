@@ -316,7 +316,7 @@
       "description": "ChainList의 EVM 체인 목록을 탐색하세요 — Chain ID, RPC, 익스플로러를 한눈에 확인하세요.",
       "seoTitle": "EVM 체인 목록 — 체인 ID·RPC·탐색기 — Web3 Tools",
       "subtitle": "ChainList.org를 임베드하여 EVM 체인 정보를 빠르게 조회할 수 있습니다.",
-      "embedNotice": "이 페이지는 ChainList.org를 임베드합니다. 콘텐츠가 로드되지 않으면 네트워크 연결을 확인하세요."
+      "embedNotice": "이 페이지는 ChainList.org를 임베드하며, 사이트의 라이트/다크 테마와 동기화합니다. 콘텐츠가 로드되지 않으면 네트워크 연결을 확인하세요."
     },
     "unitConverter": {
       "name": "단위 변환기",
