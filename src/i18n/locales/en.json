@@ -309,7 +309,73 @@
       "colAssets": "Assets",
       "colRequirements": "Requirements",
       "showMore": "+{{count}} more",
-      "showLess": "Show less"
+      "showLess": "Show less",
+      "entries": {
+        "cronos": {
+          "description": "Official native gas faucet for the Cronos EVM testnet.",
+          "requirements": "Enter an EVM wallet address; limits and cooldown are shown on the page."
+        },
+        "circle": {
+          "description": "Official Circle test-asset faucet for stablecoin and cross-chain flow debugging.",
+          "requirements": "Enter a wallet address; each network and asset has its own rate limit."
+        },
+        "chainlink": {
+          "description": "Provides gas and Chainlink LINK across multiple EVM testnets.",
+          "requirements": "Connect a wallet; available networks, amounts, and eligibility rules update dynamically."
+        },
+        "alchemy": {
+          "description": "Alchemy-maintained multi-chain faucet directory with dedicated pages per network.",
+          "requirements": "Usually requires a free Alchemy account; limits vary by network."
+        },
+        "quicknode": {
+          "description": "Basic gas faucet covering common EVM testnets.",
+          "requirements": "Some networks may require login or social verification."
+        },
+        "googleCloud": {
+          "description": "Ethereum Sepolia gas faucet provided by Google Cloud.",
+          "requirements": "Enter a wallet address; subject to a daily claim limit."
+        },
+        "metamask": {
+          "description": "EVM test gas faucet from MetaMask developer tools.",
+          "requirements": "Sign in or enter a wallet address as required on the page."
+        },
+        "bnbChain": {
+          "description": "Official BNB Chain faucet for BSC and opBNB testnet gas.",
+          "requirements": "Enter a wallet address; claim frequency is limited."
+        },
+        "polygon": {
+          "description": "Native gas faucet for the Polygon PoS Amoy testnet.",
+          "requirements": "Enter a wallet address; the page may require Cloudflare verification."
+        },
+        "avalanche": {
+          "description": "Official Avalanche Core faucet for Fuji C-Chain test gas.",
+          "requirements": "Enter a C-Chain address; limits and verification follow the page."
+        },
+        "coinbaseCdp": {
+          "description": "Base Sepolia test-asset faucet from Coinbase Developer Platform.",
+          "requirements": "Requires CDP login; available assets depend on the console."
+        },
+        "optimism": {
+          "description": "OP Sepolia and Superchain test gas faucet from Optimism Console.",
+          "requirements": "Connect a wallet; supported scope and eligibility are maintained by the console."
+        },
+        "zksync": {
+          "description": "zkSync Sepolia test gas faucet aggregated in the zkSync Portal.",
+          "requirements": "Connect a wallet; the Portal shows currently available claim methods."
+        },
+        "mantle": {
+          "description": "Official native gas faucet for Mantle Sepolia.",
+          "requirements": "Enter a wallet address; claim limits and cooldown are shown on the page."
+        },
+        "sepoliaPow": {
+          "description": "Community faucet that mines Sepolia ETH via in-browser Proof of Work.",
+          "requirements": "Keep the page open to complete PoW; useful as a backup to account-based faucets."
+        },
+        "chainstack": {
+          "description": "Multi-chain test gas faucet provided by Chainstack.",
+          "requirements": "Requires a Chainstack account; network-level claim limits apply."
+        }
+      }
     },
     "chainList": {
       "name": "Chain List",

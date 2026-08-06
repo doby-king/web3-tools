@@ -14,37 +14,51 @@
 
 ## ✨ Features
 
-- 🔒 **Local, offline computation**: mnemonic generation, private key export and
-  address derivation all happen in the browser — zero network requests
-- 🌍 **Multi-language**: English (default), 中文, 文言文, 日本語, 한국어, switchable
-  in the header and persisted across visits
+- 🔒 **Privacy-first**: mnemonics, private keys, JWT secrets, and codec inputs are handled locally — no analytics or tracking scripts
+- 🌍 **Multi-language**: English (default), 中文, 文言文, 日本語, 한국어, switchable in the header and persisted across visits
 - 🌓 **Light / dark themes**: semantic color tokens + class-based dark mode, one-click toggle
 - 💾 **Local persistence**: backed by localforage (IndexedDB), each tool isolated in its own namespace
 - 🧩 **Extensible tool registry**: registering a single metadata entry auto-generates the route and home card
+- 🔍 **SEO-friendly builds**: Vite build + prerender snapshots for crawlers (`scripts/prerender.mjs`)
 
 ## 🛠 Tools
 
-| Tool                   | Description                                                                        | Path                  |
-| ---------------------- | ---------------------------------------------------------------------------------- | --------------------- |
-| ETH Mnemonic Generator | BIP-39 mnemonic generation, private key export, BIP-44 Ethereum address derivation | `/tools/eth-mnemonic` |
-| More tools on the way… | Issues / PRs are welcome                                                           | —                     |
+### Web3
+
+| Tool                     | Description                                                                                          | Path                          |
+| ------------------------ | ---------------------------------------------------------------------------------------------------- | ----------------------------- |
+| ETH Mnemonic Generator   | BIP-39 mnemonic generation, private key export, BIP-44 Ethereum address derivation                   | `/tools/eth-mnemonic`         |
+| ABI Interactor           | Call contract read/write methods via ABI; built-in networks, custom RPC, and wallet writes           | `/tools/abi-interactor`       |
+| Smart Account Calculator | ERC-4337 CREATE2 address calculation (SimpleAccount, Safe, Coinbase, Alchemy, Kernel, Biconomy, …) | `/tools/aa-address-calculator` |
+| Faucet Hub               | Curated testnet faucets across EVM chains — search and filter by network or asset                    | `/tools/faucet-hub`           |
+| Chain List               | Embedded ChainList.org view for chain IDs, RPCs, and explorers (theme-synced)                        | `/tools/chain-list`           |
+| Unit Converter           | Convert token amounts between display and base units — presets, ERC-20 lookup, or custom decimals    | `/tools/unit-converter`       |
+
+### General
+
+| Tool        | Description                                                                                | Path                 |
+| ----------- | ------------------------------------------------------------------------------------------ | -------------------- |
+| JSON Parser | Parse, format, escape, and minify JSON locally — foldable preview and error location hints | `/tools/json-parser` |
+| JWT Parser  | Decode JWTs locally, inspect claims, optionally verify with a public key or HMAC secret    | `/tools/jwt-parser`  |
+| Codec       | Encode/decode text with Base64, Base58, Hex, URL, and other common formats                 | `/tools/codec`       |
+
+More tools are welcome — open an issue or PR.
 
 ## 🔐 Security Notice
 
-- All computations involving mnemonics, private keys or seeds run **entirely in
-  your local browser**. This site never uploads, collects or stores any user data remotely.
+- Computations involving mnemonics, private keys, seeds, JWT secrets, or codec inputs run **in your local browser**. This site never uploads, collects, or stores user secrets remotely.
+- Tools that truly need the network (e.g. public RPC reads, faucet links, ChainList embed) talk **directly** to the endpoint you choose or a documented third party — no intermediary analytics backend.
 - The project contains **no analytics or tracking scripts whatsoever**.
-- ⚠️ The mnemonic generator is intended for **learning and testing only**. To
-  safeguard real assets, use audited professional solutions such as hardware
-  wallets, and always keep your mnemonic offline.
+- ⚠️ The mnemonic generator is intended for **learning and testing only**. To safeguard real assets, use audited professional solutions such as hardware wallets, and always keep your mnemonic offline.
 
 ## 🚀 Quick Start
 
 ```bash
 pnpm install   # Install dependencies
 pnpm dev       # Start the local dev server
-pnpm build     # Type check + production build
+pnpm build     # Type check + production build (+ prerender)
 pnpm lint      # Lint the codebase
+pnpm preview   # Preview the production build
 ```
 
 ## 🧱 Tech Stack
@@ -55,6 +69,7 @@ pnpm lint      # Lint the codebase
 - [react-router 7](https://reactrouter.com/) · [zustand](https://zustand.docs.pmnd.rs/) + [localforage](https://localforage.github.io/localForage/) · [TanStack Query](https://tanstack.com/query) + [axios](https://axios-http.com/)
 - [i18next](https://www.i18next.com/) + [react-i18next](https://react.i18next.com/) (en / zh / lzh / ja / ko, default en)
 - [ethers 6](https://docs.ethers.org/v6/) (local on-chain computation)
+- [jose](https://github.com/panva/jose) (JWT) · [@scure/base](https://github.com/paulmillr/scure-base) (codec)
 
 ## 📁 Project Structure
 
@@ -70,7 +85,20 @@ src/
 ├── styles/              # Theme tokens + animations
 └── tools/
     ├── registry.ts      # Tool registry (register and it just works)
-    └── eth-mnemonic/    # ETH mnemonic generator
+    ├── eth-mnemonic/
+    ├── abi-interactor/
+    ├── aa-address-calculator/
+    ├── faucet-hub/
+    ├── chain-list/
+    ├── unit-converter/
+    ├── json-parser/
+    ├── jwt-parser/
+    └── codec/
+scripts/
+└── prerender.mjs        # Build-time SEO prerender + sitemap
+worker/
+└── index.ts             # Cloudflare Worker (ChainList theme-aware embed proxy)
+wrangler.jsonc           # Cloudflare Workers static assets + SPA fallback
 ```
 
 ## 🧩 Adding a New Tool
@@ -96,8 +124,9 @@ UI rules in [.qoder/rules/ui-theme.md](.qoder/rules/ui-theme.md).
 
 ## 🚢 Deployment
 
-This project is an SPA using history routing; static hosts must rewrite 404s to `index.html`:
+Build with `pnpm build` (output in `dist/`). This is an SPA with history routing plus prerendered HTML snapshots.
 
+- **Cloudflare Workers**: configured via `wrangler.jsonc` (`assets.not_found_handling = "single-page-application"`). Do **not** use a catch-all `_redirects` rule like `/* /index.html 200` — on Workers it can rewrite JS/CSS to HTML and break the app.
 - **Vercel / Netlify**: handled automatically by default (or configure rewrite rules per their docs).
 - **GitHub Pages**: no rewrite support — use the `404.html` copy trick, or switch to hash routing.
 - **Sub-path deployment** (e.g. `https://example.com/web3-tools/`): set `base` in `vite.config.ts`.

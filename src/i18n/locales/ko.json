@@ -309,7 +309,73 @@
       "colAssets": "자산",
       "colRequirements": "수령 조건",
       "showMore": "+{{count}}개",
-      "showLess": "접기"
+      "showLess": "접기",
+      "entries": {
+        "cronos": {
+          "description": "Cronos EVM 테스트넷용 공식 네이티브 Gas 파우셋.",
+          "requirements": "EVM 지갑 주소를 입력하세요. 한도와 쿨다운은 페이지 기준입니다."
+        },
+        "circle": {
+          "description": "Circle 공식 테스트 자산 입구. 스테이블코인 및 크로스체인 자금 흐름 디버깅에 적합합니다.",
+          "requirements": "지갑 주소를 입력하세요. 네트워크와 자산마다 독립적인 빈도 제한이 있습니다."
+        },
+        "chainlink": {
+          "description": "여러 EVM 테스트넷에서 Gas와 Chainlink LINK를 제공합니다.",
+          "requirements": "지갑을 연결하세요. 사용 가능 네트워크, 수령량, 자격 규칙은 동적으로 업데이트됩니다."
+        },
+        "alchemy": {
+          "description": "Alchemy가 유지하는 멀티체인 파우셋 디렉터리. 대상 네트워크별 전용 페이지로 들어갈 수 있습니다.",
+          "requirements": "보통 무료 Alchemy 계정이 필요합니다. 네트워크마다 한도가 다릅니다."
+        },
+        "quicknode": {
+          "description": "주요 EVM 테스트넷을 아우르는 기본 Gas 수령 입구.",
+          "requirements": "일부 네트워크는 로그인 또는 소셜 인증이 필요할 수 있습니다."
+        },
+        "googleCloud": {
+          "description": "Google Cloud가 제공하는 Ethereum Sepolia Gas 파우셋.",
+          "requirements": "지갑 주소를 입력하세요. 일일 수령 한도가 적용됩니다."
+        },
+        "metamask": {
+          "description": "MetaMask 개발자 도구가 제공하는 EVM 테스트 Gas 입구.",
+          "requirements": "페이지 안내에 따라 로그인하거나 지갑 주소를 입력하세요."
+        },
+        "bnbChain": {
+          "description": "BNB Chain 공식 BSC 및 opBNB 테스트넷 Gas 파우셋.",
+          "requirements": "지갑 주소를 입력하세요. 수령 빈도 제한이 있습니다."
+        },
+        "polygon": {
+          "description": "Polygon PoS Amoy 테스트넷의 네이티브 Gas 입구.",
+          "requirements": "지갑 주소를 입력하세요. 페이지에서 Cloudflare 인증이 필요할 수 있습니다."
+        },
+        "avalanche": {
+          "description": "Avalanche Core 공식 Fuji C-Chain 테스트 Gas 파우셋.",
+          "requirements": "C-Chain 주소를 입력하세요. 한도와 인증 방식은 페이지 기준입니다."
+        },
+        "coinbaseCdp": {
+          "description": "Coinbase Developer Platform의 Base Sepolia 테스트 자산 입구.",
+          "requirements": "CDP 로그인이 필요합니다. 실제 선택 가능 자산은 콘솔 기준입니다."
+        },
+        "optimism": {
+          "description": "Optimism Console이 제공하는 OP Sepolia 및 Superchain 테스트 Gas 입구.",
+          "requirements": "지갑을 연결하세요. 지원 범위와 자격 규칙은 콘솔에서 동적으로 관리됩니다."
+        },
+        "zksync": {
+          "description": "zkSync Portal에 모아 둔 zkSync Sepolia 테스트 Gas 수령 입구.",
+          "requirements": "지갑을 연결하세요. Portal에 현재 사용 가능한 수령 방법이 표시됩니다."
+        },
+        "mantle": {
+          "description": "Mantle Sepolia 공식 네이티브 Gas 파우셋.",
+          "requirements": "지갑 주소를 입력하세요. 수령 한도와 쿨다운은 페이지 기준입니다."
+        },
+        "sepoliaPow": {
+          "description": "브라우저에서 Proof of Work를 완료해 Sepolia ETH를 받는 커뮤니티 입구.",
+          "requirements": "PoW를 마칠 때까지 페이지를 열어 두세요. 계정형 파우셋의 대안으로 적합합니다."
+        },
+        "chainstack": {
+          "description": "Chainstack가 제공하는 멀티체인 테스트 Gas 파우셋.",
+          "requirements": "Chainstack 계정 로그인이 필요합니다. 네트워크별 수령 한도가 있습니다."
+        }
+      }
     },
     "chainList": {
       "name": "Chain List",

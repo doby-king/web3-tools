@@ -1,3 +1,5 @@
+import type { ParseKeys } from "i18next";
+
 export const FAUCET_CHECKED_AT = "2026-07-27";
 
 export type FaucetSourceKind = "official" | "provider" | "community";
@@ -14,8 +16,8 @@ export type FaucetEntry = {
   networks: readonly string[];
   assets: readonly string[];
   assetKinds: readonly FaucetAssetKind[];
-  description: string;
-  requirements: string;
+  descriptionKey: ParseKeys;
+  requirementsKey: ParseKeys;
 };
 
 export type FaucetNetworkFilter =
@@ -34,34 +36,6 @@ export type FaucetNetworkFilter =
 
 export type FaucetAssetFilter = "all" | FaucetAssetKind;
 
-export const FAUCET_NETWORK_OPTIONS: readonly {
-  value: FaucetNetworkFilter;
-  label: string;
-}[] = [
-  { value: "all", label: "全部网络" },
-  { value: "multi", label: "多链入口" },
-  { value: "cronos", label: "Cronos" },
-  { value: "ethereum", label: "Ethereum" },
-  { value: "arbitrum", label: "Arbitrum" },
-  { value: "base", label: "Base" },
-  { value: "optimism", label: "Optimism" },
-  { value: "polygon", label: "Polygon" },
-  { value: "bnb", label: "BNB Chain" },
-  { value: "avalanche", label: "Avalanche" },
-  { value: "zksync", label: "zkSync" },
-  { value: "mantle", label: "Mantle" },
-] as const;
-
-export const FAUCET_ASSET_OPTIONS: readonly {
-  value: FaucetAssetFilter;
-  label: string;
-}[] = [
-  { value: "all", label: "全部资产" },
-  { value: "native", label: "原生 Gas" },
-  { value: "stablecoin", label: "USDC / 稳定币" },
-  { value: "link", label: "LINK" },
-] as const;
-
 export const FAUCETS: readonly FaucetEntry[] = [
   {
     id: "cronos",
@@ -73,8 +47,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Cronos Testnet"],
     assets: ["TCRO"],
     assetKinds: ["native"],
-    description: "Cronos EVM 测试网的官方原生 Gas 水龙头。",
-    requirements: "填写 EVM 钱包地址；额度和冷却时间以页面为准。",
+    descriptionKey: "tools.faucetHub.entries.cronos.description",
+    requirementsKey: "tools.faucetHub.entries.cronos.requirements",
   },
   {
     id: "circle",
@@ -102,8 +76,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     ],
     assets: ["USDC", "EURC", "cirBTC"],
     assetKinds: ["stablecoin"],
-    description: "Circle 官方测试资产入口，适合调试稳定币和跨链资金流。",
-    requirements: "填写钱包地址；每个网络和资产都有独立频率限制。",
+    descriptionKey: "tools.faucetHub.entries.circle.description",
+    requirementsKey: "tools.faucetHub.entries.circle.requirements",
   },
   {
     id: "chainlink",
@@ -125,8 +99,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     ],
     assets: ["Testnet gas", "LINK"],
     assetKinds: ["native", "link"],
-    description: "同时提供多条 EVM 测试网 Gas 和 Chainlink LINK。",
-    requirements: "连接钱包；可用网络、领取额度和资格规则动态更新。",
+    descriptionKey: "tools.faucetHub.entries.chainlink.description",
+    requirementsKey: "tools.faucetHub.entries.chainlink.requirements",
   },
   {
     id: "alchemy",
@@ -145,8 +119,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     ],
     assets: ["ETH", "POL", "tBNB", "Testnet gas"],
     assetKinds: ["native"],
-    description: "Alchemy 维护的多链水龙头目录，可按目标网络进入专用页面。",
-    requirements: "通常需要免费 Alchemy 账号；各网络额度不同。",
+    descriptionKey: "tools.faucetHub.entries.alchemy.description",
+    requirementsKey: "tools.faucetHub.entries.alchemy.requirements",
   },
   {
     id: "quicknode",
@@ -166,8 +140,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     ],
     assets: ["ETH", "AVAX", "POL", "tBNB", "Testnet gas"],
     assetKinds: ["native"],
-    description: "覆盖常用 EVM 测试网的基础 Gas 领取入口。",
-    requirements: "部分网络可能要求登录或完成社交验证。",
+    descriptionKey: "tools.faucetHub.entries.quicknode.description",
+    requirementsKey: "tools.faucetHub.entries.quicknode.requirements",
   },
   {
     id: "google-cloud",
@@ -179,8 +153,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Ethereum Sepolia"],
     assets: ["ETH"],
     assetKinds: ["native"],
-    description: "Google Cloud 提供的 Ethereum Sepolia Gas 水龙头。",
-    requirements: "填写钱包地址；实行每日领取额度。",
+    descriptionKey: "tools.faucetHub.entries.googleCloud.description",
+    requirementsKey: "tools.faucetHub.entries.googleCloud.requirements",
   },
   {
     id: "metamask",
@@ -192,8 +166,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Ethereum Sepolia", "Linea Sepolia"],
     assets: ["ETH", "Testnet gas"],
     assetKinds: ["native"],
-    description: "MetaMask 开发者工具提供的 EVM 测试 Gas 入口。",
-    requirements: "按照页面要求登录或填写钱包地址。",
+    descriptionKey: "tools.faucetHub.entries.metamask.description",
+    requirementsKey: "tools.faucetHub.entries.metamask.requirements",
   },
   {
     id: "bnb-chain",
@@ -205,8 +179,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["BNB Smart Chain Testnet", "opBNB Testnet"],
     assets: ["tBNB"],
     assetKinds: ["native"],
-    description: "BNB Chain 官方 BSC 和 opBNB 测试网 Gas 水龙头。",
-    requirements: "填写钱包地址；有领取频率限制。",
+    descriptionKey: "tools.faucetHub.entries.bnbChain.description",
+    requirementsKey: "tools.faucetHub.entries.bnbChain.requirements",
   },
   {
     id: "polygon",
@@ -218,8 +192,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Polygon Amoy"],
     assets: ["POL"],
     assetKinds: ["native"],
-    description: "Polygon PoS Amoy 测试网的原生 Gas 入口。",
-    requirements: "填写钱包地址；页面可能启用 Cloudflare 验证。",
+    descriptionKey: "tools.faucetHub.entries.polygon.description",
+    requirementsKey: "tools.faucetHub.entries.polygon.requirements",
   },
   {
     id: "avalanche",
@@ -231,8 +205,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Avalanche Fuji C-Chain"],
     assets: ["AVAX"],
     assetKinds: ["native"],
-    description: "Avalanche Core 官方 Fuji C-Chain 测试 Gas 水龙头。",
-    requirements: "填写 C-Chain 地址；额度和验证方式以页面为准。",
+    descriptionKey: "tools.faucetHub.entries.avalanche.description",
+    requirementsKey: "tools.faucetHub.entries.avalanche.requirements",
   },
   {
     id: "coinbase-cdp",
@@ -244,8 +218,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Base Sepolia"],
     assets: ["ETH", "USDC"],
     assetKinds: ["native", "stablecoin"],
-    description: "Coinbase Developer Platform 的 Base Sepolia 测试资产入口。",
-    requirements: "需要登录 CDP；实际可选资产以控制台为准。",
+    descriptionKey: "tools.faucetHub.entries.coinbaseCdp.description",
+    requirementsKey: "tools.faucetHub.entries.coinbaseCdp.requirements",
   },
   {
     id: "optimism",
@@ -257,8 +231,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["OP Sepolia", "Superchain testnets"],
     assets: ["ETH", "Testnet gas"],
     assetKinds: ["native"],
-    description: "Optimism Console 提供的 OP Sepolia 和 Superchain 测试 Gas 入口。",
-    requirements: "连接钱包；支持范围和资格规则由控制台动态维护。",
+    descriptionKey: "tools.faucetHub.entries.optimism.description",
+    requirementsKey: "tools.faucetHub.entries.optimism.requirements",
   },
   {
     id: "zksync",
@@ -270,8 +244,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["zkSync Sepolia"],
     assets: ["ETH", "Testnet gas"],
     assetKinds: ["native"],
-    description: "zkSync Portal 汇总的 zkSync Sepolia 测试 Gas 领取入口。",
-    requirements: "连接钱包；Portal 会展示当前可用的领取方式。",
+    descriptionKey: "tools.faucetHub.entries.zksync.description",
+    requirementsKey: "tools.faucetHub.entries.zksync.requirements",
   },
   {
     id: "mantle",
@@ -283,8 +257,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Mantle Sepolia"],
     assets: ["MNT"],
     assetKinds: ["native"],
-    description: "Mantle Sepolia 官方原生 Gas 水龙头。",
-    requirements: "填写钱包地址；领取额度和冷却时间以页面为准。",
+    descriptionKey: "tools.faucetHub.entries.mantle.description",
+    requirementsKey: "tools.faucetHub.entries.mantle.requirements",
   },
   {
     id: "sepolia-pow",
@@ -296,8 +270,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Ethereum Sepolia"],
     assets: ["ETH"],
     assetKinds: ["native"],
-    description: "通过浏览器完成 Proof of Work 获取 Sepolia ETH 的社区入口。",
-    requirements: "需要保持页面运行完成 PoW；适合作为账号水龙头的备用方案。",
+    descriptionKey: "tools.faucetHub.entries.sepoliaPow.description",
+    requirementsKey: "tools.faucetHub.entries.sepoliaPow.requirements",
   },
   {
     id: "chainstack",
@@ -309,8 +283,8 @@ export const FAUCETS: readonly FaucetEntry[] = [
     networks: ["Ethereum Sepolia", "Polygon Amoy", "BNB Chain Testnet"],
     assets: ["ETH", "POL", "tBNB"],
     assetKinds: ["native"],
-    description: "Chainstack 提供的多链测试 Gas 水龙头。",
-    requirements: "需要 Chainstack 账号登录；有网络级领取限额。",
+    descriptionKey: "tools.faucetHub.entries.chainstack.description",
+    requirementsKey: "tools.faucetHub.entries.chainstack.requirements",
   },
 ] as const;
 
@@ -344,7 +318,11 @@ export function filterFaucets(
     if (filters.network === "multi" && faucet.scope !== "multi") return false;
     if (filters.network !== "all" && filters.network !== "multi") {
       const matcher = NETWORK_MATCHERS[filters.network];
-      if (!faucet.networks.some((network) => network.toLowerCase().includes(matcher))) {
+      if (
+        !faucet.networks.some((network) =>
+          network.toLowerCase().includes(matcher),
+        )
+      ) {
         return false;
       }
     }
@@ -357,8 +335,6 @@ export function filterFaucets(
     const searchable = [
       faucet.name,
       faucet.provider,
-      faucet.description,
-      faucet.requirements,
       ...faucet.networks,
       ...faucet.assets,
     ]

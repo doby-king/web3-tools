@@ -309,7 +309,73 @@
       "colAssets": "資產",
       "colRequirements": "領之需",
       "showMore": "+{{count}} 餘",
-      "showLess": "斂之"
+      "showLess": "斂之",
+      "entries": {
+        "cronos": {
+          "description": "Cronos EVM 試網之官方原生 Gas 水龍頭。",
+          "requirements": "填 EVM 錢包地址；額度、冷卻以頁面為準。"
+        },
+        "circle": {
+          "description": "Circle 官方試資產之門，宜於驗穩定幣與跨鏈資金流。",
+          "requirements": "填錢包地址；各網絡、各資產皆有獨立頻限。"
+        },
+        "chainlink": {
+          "description": "兼供多條 EVM 試網 Gas 與 Chainlink LINK。",
+          "requirements": "連錢包；可用網絡、領額、資格之規皆隨時更新。"
+        },
+        "alchemy": {
+          "description": "Alchemy 所維之多鏈水龍頭目錄，可依目標網絡入專頁。",
+          "requirements": "常需免費 Alchemy 帳號；各網絡額度不同。"
+        },
+        "quicknode": {
+          "description": "覆常用 EVM 試網之基礎 Gas 領取之門。",
+          "requirements": "或需登入，或需社交驗證，視網絡而定。"
+        },
+        "googleCloud": {
+          "description": "Google Cloud 所供之 Ethereum Sepolia Gas 水龍頭。",
+          "requirements": "填錢包地址；日有領額之限。"
+        },
+        "metamask": {
+          "description": "MetaMask 開發工具所供之 EVM 試 Gas 之門。",
+          "requirements": "依頁面之求登入，或填錢包地址。"
+        },
+        "bnbChain": {
+          "description": "BNB Chain 官方 BSC 與 opBNB 試網 Gas 水龍頭。",
+          "requirements": "填錢包地址；有領取頻限。"
+        },
+        "polygon": {
+          "description": "Polygon PoS Amoy 試網之原生 Gas 之門。",
+          "requirements": "填錢包地址；頁面或啟 Cloudflare 驗證。"
+        },
+        "avalanche": {
+          "description": "Avalanche Core 官方 Fuji C-Chain 試 Gas 水龍頭。",
+          "requirements": "填 C-Chain 地址；額度、驗證以頁面為準。"
+        },
+        "coinbaseCdp": {
+          "description": "Coinbase Developer Platform 之 Base Sepolia 試資產之門。",
+          "requirements": "須登 CDP；可選資產以控制台為準。"
+        },
+        "optimism": {
+          "description": "Optimism Console 所供之 OP Sepolia 與 Superchain 試 Gas 之門。",
+          "requirements": "連錢包；支援範圍與資格之規由控制台隨時維之。"
+        },
+        "zksync": {
+          "description": "zkSync Portal 彙集之 zkSync Sepolia 試 Gas 領取之門。",
+          "requirements": "連錢包；Portal 示當前可用之領法。"
+        },
+        "mantle": {
+          "description": "Mantle Sepolia 官方原生 Gas 水龍頭。",
+          "requirements": "填錢包地址；領額與冷卻以頁面為準。"
+        },
+        "sepoliaPow": {
+          "description": "於瀏覽器完成 Proof of Work 以得 Sepolia ETH 之社群之門。",
+          "requirements": "須保持頁面運行以竟 PoW；可為帳號水龍頭之備。"
+        },
+        "chainstack": {
+          "description": "Chainstack 所供之多鏈試 Gas 水龍頭。",
+          "requirements": "須登 Chainstack 帳號；有網絡級領限。"
+        }
+      }
     },
     "chainList": {
       "name": "Chain List",

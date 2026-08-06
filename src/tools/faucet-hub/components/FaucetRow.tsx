@@ -61,7 +61,7 @@ export function FaucetRow({ faucet }: FaucetRowProps) {
             </div>
             <p className="mt-0.5 text-xs text-text-muted">{faucet.provider}</p>
             <p className="mt-1.5 text-xs text-text-secondary leading-relaxed">
-              {faucet.description}
+              {t(faucet.descriptionKey)}
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ export function FaucetRow({ faucet }: FaucetRowProps) {
       {/* Column 4: Requirements */}
       <td className="px-4 py-3.5 align-top">
         <p className="text-xs text-text-secondary leading-relaxed">
-          {faucet.requirements}
+          {t(faucet.requirementsKey)}
         </p>
       </td>
 

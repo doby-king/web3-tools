@@ -309,7 +309,73 @@
       "colAssets": "アセット",
       "colRequirements": "受給条件",
       "showMore": "+{{count}} 件",
-      "showLess": "折りたたむ"
+      "showLess": "折りたたむ",
+      "entries": {
+        "cronos": {
+          "description": "Cronos EVM テストネット向けの公式ネイティブ Gas ファセット。",
+          "requirements": "EVM ウォレットアドレスを入力。上限とクールダウンはページ表示に従います。"
+        },
+        "circle": {
+          "description": "Circle 公式のテスト資産入口。ステーブルコインやクロスチェーン資金フローの検証に適します。",
+          "requirements": "ウォレットアドレスを入力。ネットワークと資産ごとに独立した頻度制限があります。"
+        },
+        "chainlink": {
+          "description": "複数の EVM テストネットで Gas と Chainlink LINK を提供します。",
+          "requirements": "ウォレットを接続。利用可能なネットワーク、受給量、資格ルールは動的に更新されます。"
+        },
+        "alchemy": {
+          "description": "Alchemy が管理するマルチチェーンファセット一覧。対象ネットワークごとの専用ページへ入れます。",
+          "requirements": "通常は無料の Alchemy アカウントが必要。ネットワークごとに上限が異なります。"
+        },
+        "quicknode": {
+          "description": "主要な EVM テストネット向けの基本 Gas 受給入口。",
+          "requirements": "一部ネットワークではログインやソーシャル認証が必要な場合があります。"
+        },
+        "googleCloud": {
+          "description": "Google Cloud が提供する Ethereum Sepolia Gas ファセット。",
+          "requirements": "ウォレットアドレスを入力。日次の受給上限があります。"
+        },
+        "metamask": {
+          "description": "MetaMask 開発者ツールが提供する EVM テスト Gas 入口。",
+          "requirements": "ページの案内に従い、ログインするかウォレットアドレスを入力してください。"
+        },
+        "bnbChain": {
+          "description": "BNB Chain 公式の BSC / opBNB テストネット Gas ファセット。",
+          "requirements": "ウォレットアドレスを入力。受給頻度に制限があります。"
+        },
+        "polygon": {
+          "description": "Polygon PoS Amoy テストネットのネイティブ Gas 入口。",
+          "requirements": "ウォレットアドレスを入力。ページで Cloudflare 認証が求められる場合があります。"
+        },
+        "avalanche": {
+          "description": "Avalanche Core 公式の Fuji C-Chain テスト Gas ファセット。",
+          "requirements": "C-Chain アドレスを入力。上限と認証方式はページ表示に従います。"
+        },
+        "coinbaseCdp": {
+          "description": "Coinbase Developer Platform の Base Sepolia テスト資産入口。",
+          "requirements": "CDP へのログインが必要。実際に選択できる資産はコンソール表示に従います。"
+        },
+        "optimism": {
+          "description": "Optimism Console が提供する OP Sepolia / Superchain テスト Gas 入口。",
+          "requirements": "ウォレットを接続。対応範囲と資格ルールはコンソールが動的に管理します。"
+        },
+        "zksync": {
+          "description": "zkSync Portal に集約された zkSync Sepolia テスト Gas 受給入口。",
+          "requirements": "ウォレットを接続。Portal に現在利用可能な受給方法が表示されます。"
+        },
+        "mantle": {
+          "description": "Mantle Sepolia の公式ネイティブ Gas ファセット。",
+          "requirements": "ウォレットアドレスを入力。受給上限とクールダウンはページ表示に従います。"
+        },
+        "sepoliaPow": {
+          "description": "ブラウザ上の Proof of Work で Sepolia ETH を得るコミュニティ入口。",
+          "requirements": "PoW 完了までページを開いたままにしてください。アカウント型ファセットの予備として有用です。"
+        },
+        "chainstack": {
+          "description": "Chainstack が提供するマルチチェーンのテスト Gas ファセット。",
+          "requirements": "Chainstack アカウントへのログインが必要。ネットワーク単位の受給上限があります。"
+        }
+      }
     },
     "chainList": {
       "name": "Chain List",
