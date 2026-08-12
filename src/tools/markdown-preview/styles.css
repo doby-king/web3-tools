@@ -1,0 +1,63 @@
+/*
+ * Preview-only styles, scoped under .md-preview. Syntax highlighting token
+ * colors reuse the app's semantic palette variables (no new colors introduced).
+ */
+
+/* --- Code highlighting (highlight.js class names) --- */
+.md-preview .hljs-comment,
+.md-preview .hljs-quote {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.md-preview .hljs-keyword,
+.md-preview .hljs-selector-tag,
+.md-preview .hljs-literal,
+.md-preview .hljs-doctag {
+  color: var(--primary);
+}
+
+.md-preview .hljs-string,
+.md-preview .hljs-regexp,
+.md-preview .hljs-addition {
+  color: var(--success);
+}
+
+.md-preview .hljs-title,
+.md-preview .hljs-title.class_,
+.md-preview .hljs-title.function_,
+.md-preview .hljs-section,
+.md-preview .hljs-name,
+.md-preview .hljs-type,
+.md-preview .hljs-attribute {
+  color: var(--accent);
+}
+
+.md-preview .hljs-number,
+.md-preview .hljs-symbol,
+.md-preview .hljs-bullet,
+.md-preview .hljs-meta,
+.md-preview .hljs-selector-id,
+.md-preview .hljs-selector-class,
+.md-preview .hljs-deletion {
+  color: var(--warning);
+}
+
+.md-preview .hljs-variable,
+.md-preview .hljs-template-variable,
+.md-preview .hljs-params {
+  color: var(--text-secondary);
+}
+
+.md-preview .hljs-emphasis {
+  font-style: italic;
+}
+
+.md-preview .hljs-strong {
+  font-weight: 600;
+}
+
+/* --- Mermaid task / error text readability --- */
+.md-preview .edgeLabel {
+  color: var(--text);
+}

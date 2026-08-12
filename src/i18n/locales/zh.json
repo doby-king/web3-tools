@@ -602,6 +602,28 @@
         "invalidHtml": "HTML 实体解码失败。",
         "invalidUnicode": "无效的 Unicode 转义序列。"
       }
+    },
+    "markdownPreview": {
+      "name": "Markdown 预览",
+      "description": "左侧编辑 Markdown，右侧实时预览，支持 GFM 表格、代码高亮与内嵌 Mermaid 图表，滚动位置自动对齐。",
+      "seoTitle": "Markdown 编辑器与实时预览（支持 Mermaid 图表）— Web3 Tools",
+      "subtitle": "左侧编写 Markdown，右侧实时预览渲染结果，支持 GFM 语法与内嵌 Mermaid 图表。",
+      "privacyNotice": "渲染全程在浏览器本地完成，你的文档不会被上传到任何地方。",
+      "editorLabel": "编辑",
+      "previewLabel": "预览",
+      "syncScroll": "滚动同步",
+      "copySource": "复制 Markdown",
+      "clear": "清空",
+      "pageFullscreen": "网页全屏",
+      "exitPageFullscreen": "退出网页全屏",
+      "fullscreen": "全屏",
+      "exitFullscreen": "退出全屏",
+      "statsLines": "{{count}} 行",
+      "statsChars": "{{count}} 字符",
+      "empty": "在左侧输入 Markdown 即可查看预览",
+      "mermaidRendering": "图表渲染中…",
+      "mermaidError": "Mermaid 图表渲染失败：",
+      "sampleDoc": "# Markdown 预览\n\n在左侧编写 Markdown，右侧即时显示渲染结果。所有内容均在浏览器本地处理。\n\n## 文本样式\n\n**粗体**、*斜体*、~~删除线~~、`行内代码`以及[链接](https://example.com)。\n\n> 引用块用于标注重要说明。\n\n## 列表\n\n1. 有序列表\n2. 第二项\n\n- 无序列表\n- [x] 已完成任务\n- [ ] 待办任务\n\n## 表格\n\n| 语法 | 说明 |\n| ------ | ----------- |\n| 表头 | 标题 |\n| 单元格 | 内容 |\n\n## 代码\n\n```ts\nfunction greet(name: string) {\n  return `你好，${name}！`;\n}\n```\n\n## Mermaid 图表\n\n```mermaid\nflowchart LR\n  A[编辑器] -->|同步| B(预览)\n  B --> C{Mermaid}\n  C -->|成功| D[SVG]\n  C -->|失败| E[降级显示]\n```\n\n```mermaid\nsequenceDiagram\n  participant U as 用户\n  participant E as 编辑器\n  participant P as 预览\n  U->>E: 输入 Markdown\n  E->>P: 渲染 + 滚动同步\n```\n\n---\n\n试着编辑本文档——预览会跟随你的滚动位置。"
     }
   }
 }

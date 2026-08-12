@@ -602,6 +602,28 @@
         "invalidHtml": "HTML 實體解碼敗。",
         "invalidUnicode": "Unicode 轉義非法。"
       }
+    },
+    "markdownPreview": {
+      "name": "Markdown 覽文",
+      "description": "左輯 Markdown，右覽其成，表格、高亮、Mermaid 之圖皆備，卷動相隨。",
+      "seoTitle": "Markdown 輯覽之器 — 附 Mermaid 圖 — Web3 Tools",
+      "subtitle": "左輯 Markdown，右即覽其渲染之果，兼 GFM 與 Mermaid 之圖。",
+      "privacyNotice": "渲染皆於瀏覽器本地為之，汝之文不離汝之設備。",
+      "editorLabel": "輯",
+      "previewLabel": "覽",
+      "syncScroll": "卷動相隨",
+      "copySource": "錄 Markdown",
+      "clear": "清之",
+      "pageFullscreen": "滿屏",
+      "exitPageFullscreen": "退滿屏",
+      "fullscreen": "盡屏",
+      "exitFullscreen": "退盡屏",
+      "statsLines": "{{count}} 行",
+      "statsChars": "{{count}} 字",
+      "empty": "輯 Markdown 於左，即可覽其成",
+      "mermaidRendering": "圖方繪之…",
+      "mermaidError": "Mermaid 圖繪敗：",
+      "sampleDoc": "# Markdown 覽文\n\n輯 Markdown 於左，右即現其渲染之果。凡此諸事，皆於瀏覽器本地為之。\n\n## 文之式\n\n**粗**、*斜*、~~刪~~、`行內碼`，並[鏈](https://example.com)。\n\n> 引語之塊，所以標要語也。\n\n## 列\n\n1. 有序之列\n2. 其二\n\n- 無序之列\n- [x] 已畢之事\n- [ ] 待辦之事\n\n## 表\n\n| 語法 | 說明 |\n| ------ | ----------- |\n| 表頭 | 題 |\n| 格 | 文 |\n\n## 碼\n\n```ts\nfunction greet(name: string) {\n  return `你好，${name}！`;\n}\n```\n\n## Mermaid 圖\n\n```mermaid\nflowchart LR\n  A[輯器] -->|隨| B(覽)\n  B --> C{Mermaid}\n  C -->|成| D[SVG]\n  C -->|敗| E[降示]\n```\n\n```mermaid\nsequenceDiagram\n  participant U as 使用者\n  participant E as 輯器\n  participant P as 覽\n  U->>E: 輯 Markdown\n  E->>P: 渲染 + 卷動相隨\n```\n\n---\n\n試輯此文——覽隨汝之卷動。"
     }
   }
 }

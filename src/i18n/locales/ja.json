@@ -602,6 +602,28 @@
         "invalidHtml": "HTML エンティティのデコードに失敗しました。",
         "invalidUnicode": "無効な Unicode エスケープです。"
       }
+    },
+    "markdownPreview": {
+      "name": "Markdown プレビュー",
+      "description": "左で Markdown を編集し、右でリアルタイムプレビュー。GFM テーブル、コードハイライト、Mermaid 図表に対応し、スクロール位置も同期します。",
+      "seoTitle": "Markdown エディタ＆ライブプレビュー（Mermaid 対応）— Web3 Tools",
+      "subtitle": "左で Markdown を書き、右でレンダリング結果をリアルタイムに確認。GFM と Mermaid 図表に対応。",
+      "privacyNotice": "レンダリングはすべてブラウザ内で完結します。ドキュメントが外部に送信されることはありません。",
+      "editorLabel": "編集",
+      "previewLabel": "プレビュー",
+      "syncScroll": "スクロール同期",
+      "copySource": "Markdown をコピー",
+      "clear": "クリア",
+      "pageFullscreen": "ページ全画面",
+      "exitPageFullscreen": "ページ全画面を終了",
+      "fullscreen": "全画面",
+      "exitFullscreen": "全画面を終了",
+      "statsLines": "{{count}} 行",
+      "statsChars": "{{count}} 文字",
+      "empty": "左に Markdown を入力するとプレビューが表示されます",
+      "mermaidRendering": "図表をレンダリング中…",
+      "mermaidError": "Mermaid 図表のレンダリングに失敗しました：",
+      "sampleDoc": "# Markdown プレビュー\n\n左で Markdown を書くと、右にレンダリング結果がすぐに表示されます。すべてブラウザ内で処理されます。\n\n## テキストスタイル\n\n**太字**、*斜体*、~~取り消し線~~、`インラインコード`、[リンク](https://example.com)。\n\n> 引用ブロックは重要な注記に使います。\n\n## リスト\n\n1. 順序付きリスト\n2. 2 番目の項目\n\n- 順序なしリスト\n- [x] 完了したタスク\n- [ ] 未着手のタスク\n\n## テーブル\n\n| 構文 | 説明 |\n| ------ | ----------- |\n| ヘッダー | タイトル |\n| セル | 内容 |\n\n## コード\n\n```ts\nfunction greet(name: string) {\n  return `こんにちは、${name}！`;\n}\n```\n\n## Mermaid 図表\n\n```mermaid\nflowchart LR\n  A[エディタ] -->|同期| B(プレビュー)\n  B --> C{Mermaid}\n  C -->|成功| D[SVG]\n  C -->|失敗| E[フォールバック]\n```\n\n```mermaid\nsequenceDiagram\n  participant U as ユーザー\n  participant E as エディタ\n  participant P as プレビュー\n  U->>E: Markdown を入力\n  E->>P: レンダリング + スクロール同期\n```\n\n---\n\nこのドキュメントを編集してみてください。プレビューはスクロール位置に追従します。"
     }
   }
 }

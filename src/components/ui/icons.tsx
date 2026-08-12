@@ -253,6 +253,54 @@ export function SwapIcon(props: IconProps) {
   );
 }
 
+/** Markdown mark — used for the Markdown editor / preview tool */
+export function MarkdownIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <rect x="2" y="5" width="20" height="14" rx="2" />
+      <path d="M6.5 15.5v-7l2.5 3 2.5-3v7" />
+      <path d="M17 8.5v5" />
+      <path d="m14.8 11.7 2.2 2.3 2.2-2.3" />
+    </svg>
+  );
+}
+
+/** Corners expanding outward — enter page / browser fullscreen */
+export function MaximizeIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+      <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+      <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+      <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+    </svg>
+  );
+}
+
+/** Corners shrinking inward — exit page / browser fullscreen */
+export function MinimizeIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M8 3v3a2 2 0 0 1-2 2H3" />
+      <path d="M21 8h-3a2 2 0 0 1-2-2V3" />
+      <path d="M3 16h3a2 2 0 0 1 2 2v3" />
+      <path d="M16 21v-3a2 2 0 0 1 2-2h3" />
+    </svg>
+  );
+}
+
+/** Diagonal arrows expanding outward — enter native (browser) fullscreen */
+export function ExpandIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="m21 21-6-6m6 6v-4.8m0 4.8h-4.8" />
+      <path d="M3 16.2V21m0 0h4.8M3 21l6-6" />
+      <path d="M21 7.8V3m0 0h-4.8M21 3l-6 6" />
+      <path d="M3 7.8V3m0 0h4.8M3 3l6 6" />
+    </svg>
+  );
+}
+
 /** GitHub mark (filled glyph, not stroke-based) */
 export function GitHubIcon({ size = 16, ...props }: IconProps) {
   return (

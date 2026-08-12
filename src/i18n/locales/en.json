@@ -602,6 +602,28 @@
         "invalidHtml": "Failed to decode HTML entities.",
         "invalidUnicode": "Invalid Unicode escape sequence."
       }
+    },
+    "markdownPreview": {
+      "name": "Markdown Preview",
+      "description": "Edit Markdown with live preview, GFM tables, syntax highlighting, and built-in Mermaid diagrams. Scroll positions stay in sync.",
+      "seoTitle": "Markdown Editor & Live Preview with Mermaid Diagrams — Web3 Tools",
+      "subtitle": "Write Markdown on the left and preview the rendered result on the right — with GFM support and built-in Mermaid diagrams.",
+      "privacyNotice": "Rendering runs entirely in your browser. Your document is never uploaded anywhere.",
+      "editorLabel": "Editor",
+      "previewLabel": "Preview",
+      "syncScroll": "Scroll sync",
+      "copySource": "Copy Markdown",
+      "clear": "Clear",
+      "pageFullscreen": "Page Fullscreen",
+      "exitPageFullscreen": "Exit Page Fullscreen",
+      "fullscreen": "Fullscreen",
+      "exitFullscreen": "Exit Fullscreen",
+      "statsLines": "{{count}} lines",
+      "statsChars": "{{count}} chars",
+      "empty": "Start typing Markdown on the left to see the preview",
+      "mermaidRendering": "Rendering diagram...",
+      "mermaidError": "Mermaid diagram failed to render:",
+      "sampleDoc": "# Markdown Preview\n\nWrite Markdown on the left and see the rendered result instantly on the right. Everything runs locally in your browser.\n\n## Text Styles\n\n**Bold**, *italic*, ~~strikethrough~~, `inline code`, and [links](https://example.com).\n\n> Blockquotes highlight important notes.\n\n## Lists\n\n1. Ordered list\n2. Second item\n\n- Unordered list\n- [x] Completed task\n- [ ] Pending task\n\n## Table\n\n| Syntax | Description |\n| ------ | ----------- |\n| Header | Title |\n| Cell | Content |\n\n## Code\n\n```ts\nfunction greet(name: string) {\n  return `Hello, ${name}!`;\n}\n```\n\n## Mermaid Diagrams\n\n```mermaid\nflowchart LR\n  A[Editor] -->|sync| B(Preview)\n  B --> C{Mermaid}\n  C -->|ok| D[SVG]\n  C -->|error| E[Fallback]\n```\n\n```mermaid\nsequenceDiagram\n  participant U as User\n  participant E as Editor\n  participant P as Preview\n  U->>E: type Markdown\n  E->>P: render + scroll sync\n```\n\n---\n\nTry editing this document — the preview follows your scroll position."
     }
   }
 }

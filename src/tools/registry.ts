@@ -14,6 +14,7 @@ import {
   GlobeIcon,
   JwtIcon,
   KeyIcon,
+  MarkdownIcon,
   SwapIcon,
   WalletIcon,
 } from "@/components/ui/icons";
@@ -164,6 +165,19 @@ export const tools: ToolMeta[] = [
     }),
     path: `${TOOL_BASE_PATH}/codec`,
     component: lazy(() => import("@/tools/codec")),
+  },
+  {
+    id: "markdown-preview",
+    nameKey: "tools.markdownPreview.name",
+    descriptionKey: "tools.markdownPreview.description",
+    seoTitleKey: "tools.markdownPreview.seoTitle",
+    category: "general",
+    icon: createElement(MarkdownIcon, {
+      size: 18,
+      className: "text-primary shrink-0",
+    }),
+    path: `${TOOL_BASE_PATH}/markdown-preview`,
+    component: lazy(() => import("@/tools/markdown-preview")),
   },
 ];
 

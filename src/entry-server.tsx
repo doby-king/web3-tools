@@ -27,6 +27,7 @@ import EthMnemonic from "@/tools/eth-mnemonic";
 import FaucetHub from "@/tools/faucet-hub";
 import JsonParser from "@/tools/json-parser";
 import JwtParser from "@/tools/jwt-parser";
+import MarkdownPreview from "@/tools/markdown-preview";
 import UnitConverter from "@/tools/unit-converter";
 
 /** Fixed-English isolated instance — await before calling render() */
@@ -49,6 +50,7 @@ const eagerComponents: Record<string, ComponentType> = {
   "/tools/json-parser": JsonParser,
   "/tools/jwt-parser": JwtParser,
   "/tools/codec": Codec,
+  "/tools/markdown-preview": MarkdownPreview,
 };
 
 const toolRoutes = tools.map((tool) => ({
